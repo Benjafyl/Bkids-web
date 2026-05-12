@@ -2,25 +2,60 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #12314d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-nunito);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.font-display {
+  font-family: var(--font-baloo), "Comic Sans MS", cursive;
+  letter-spacing: 0;
+}
+
+.wave-top {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 46%,
+    88% 63%,
+    75% 43%,
+    63% 63%,
+    50% 43%,
+    38% 63%,
+    25% 43%,
+    13% 63%,
+    0 46%
+  );
+}
+
+.bubble-pattern {
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(255, 204, 51, 0.35) 0 18px, transparent 19px),
+    radial-gradient(circle at 84% 14%, rgba(255, 96, 120, 0.25) 0 24px, transparent 25px),
+    radial-gradient(circle at 75% 80%, rgba(0, 169, 199, 0.22) 0 30px, transparent 31px),
+    radial-gradient(circle at 18% 88%, rgba(10, 114, 206, 0.16) 0 24px, transparent 25px);
+}
+
+::selection {
+  background: #ffcc33;
+  color: #063f83;
 }

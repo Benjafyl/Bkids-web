@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BKids Web
+
+Primera versión funcional de la web de BKids, construida con Next.js, TypeScript y Tailwind CSS.
+
+La documentación del proyecto vive en [docs/README.md](./docs/README.md). Si eres un agente de IA o una persona que va a modificar el sitio, empieza por esa carpeta.
 
 ## Getting Started
 
