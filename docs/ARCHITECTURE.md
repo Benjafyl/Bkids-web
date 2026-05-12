@@ -35,6 +35,7 @@ src/
     TopBar.tsx
   data/
     site.ts
+    reviews.ts
 public/
   images/
 docs/
@@ -71,6 +72,7 @@ docs/
 - `CTASection`: bloque de llamada a la acción.
 - `ContactForm`: formulario cliente con validación básica.
 - `Footer`: footer con olas, logo, contacto e información legal.
+- `GoogleReviews`: bloque compacto de reseñas de Google para Inicio.
 
 ## Datos Centralizados
 
@@ -87,5 +89,7 @@ docs/
 - Condiciones de cumpleaños.
 - Packs iniciales.
 - Texto de talleres.
+
+`src/data/reviews.ts` concentra las reseñas visibles y los links de Google para ver o dejar reseñas.
 
 Cuando agregues contenido repetible, prefiere sumarlo ahí y mapearlo desde los componentes o páginas.

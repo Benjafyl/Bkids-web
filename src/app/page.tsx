@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { AttractionCard } from "@/components/AttractionCard";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviews } from "@/components/GoogleReviews";
 import { Hero } from "@/components/Hero";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { attractions, carouselImages, heroImages } from "@/data/site";
@@ -117,6 +118,8 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      <GoogleReviews />
 
       <CTASection
         title="Tienes una consulta?"

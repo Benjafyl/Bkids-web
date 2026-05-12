@@ -11,7 +11,7 @@ export const contact = {
   email: "contactobkidschile@gmail.com",
   schedule: {
     weekdays: "Lunes a viernes: 09:00 a 19:00 hrs",
-    weekends: "Sabado, domingo y festivos: 10:00 a 19:00 hrs",
+    weekends: "Sábado, domingo y festivos: 10:00 a 19:00 hrs",
   },
   mapUrl:
     "https://www.google.com/maps/search/?api=1&query=Camino%20El%20Alba%2012620%20Local%2016B%20Las%20Condes",
@@ -31,7 +31,7 @@ export const navItems = [
 
 export const heroImages = {
   home: "/images/hero-home.jpg",
-  about: "/images/hero-home.jpg",
+  about: "/images/hero-about.jpg",
   birthdays: "/images/hero-cumpleanos.jpg",
   workshops: "/images/hero-talleres.jpg",
   prices: "/images/hero-precios.jpg",
@@ -40,20 +40,20 @@ export const heroImages = {
 
 export const carouselImages = [
   {
-    src: "/images/juegos-laberinto.jpg",
-    alt: "Zona de laberinto infantil en BKids",
+    src: "/images/foto-comercial-1.jpg",
+    alt: "Familias disfrutando la piscina de pelotas en BKids",
   },
   {
-    src: "/images/piscina-pelotas.jpg",
-    alt: "Piscina de pelotas colorida en BKids",
+    src: "/images/espacio-juegos.jpg",
+    alt: "Espacio de juegos de BKids con niños y familias",
+  },
+  {
+    src: "/images/foto-comercial-2.jpg",
+    alt: "Niña jugando en la piscina de pelotas de BKids",
   },
   {
     src: "/images/tobogan.jpg",
-    alt: "Tobogán infantil acuático en BKids",
-  },
-  {
-    src: "/images/cumpleanos.jpg",
-    alt: "Celebración de cumpleaños infantil en BKids",
+    alt: "Tobogán amarillo de BKids",
   },
 ];
 
@@ -74,8 +74,8 @@ export const attractions = [
     description: "Bajadas entretenidas para sumar movimiento a cada visita.",
   },
   {
-    title: "Resfalin",
-    image: "/images/resfalin.jpg",
+    title: "Resbalín",
+    image: "/images/resbalin.jpg",
     description: "Diversión clásica para niños activos y curiosos.",
   },
   {
@@ -84,24 +84,25 @@ export const attractions = [
     description: "Juego sensorial para crear, construir y compartir.",
   },
   {
-    title: "Cama elástica",
+    title: "Cama saltarina",
     image: "/images/cama-elastica.jpg",
-    description: "Saltos seguros para liberar energia y pasarlo increible.",
+    description: "Saltos seguros para liberar energía y pasarlo increíble.",
   },
   {
     title: "Pared de legos",
     image: "/images/pared-legos.jpg",
-    description: "Un espacio para construir ideas con colores y creatividad.",
+    description:
+      "Imagen referencial del espacio de juegos; falta cargar una foto específica de pared de legos.",
   },
   {
     title: "Máquina interactiva de pelotas",
     image: "/images/maquina-pelotas.jpg",
-    description: "Juego dinamico para lanzar, apuntar y activar desafios.",
+    description: "Juego dinámico para lanzar, apuntar y activar desafíos.",
   },
   {
     title: "Área ninja",
     image: "/images/area-ninja.jpg",
-    description: "Obstaculos pensados para moverse, equilibrarse y superar retos.",
+    description: "Obstáculos pensados para moverse, equilibrarse y superar retos.",
   },
 ];
 

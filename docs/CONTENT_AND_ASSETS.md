@@ -54,7 +54,12 @@ hero-contacto.jpg
 juegos-laberinto.jpg
 piscina-pelotas.jpg
 tobogan.jpg
-resfalin.jpg
+resbalin.jpg
+espacio-juegos.jpg
+foto-comercial-1.jpg
+foto-comercial-2.jpg
+hero-about.jpg
+nosotros-equipo.jpg
 arenero.jpg
 cama-elastica.jpg
 pared-legos.jpg
@@ -96,3 +101,18 @@ El proyecto usa:
 - `Nunito` para textos legibles de interfaz.
 
 Las fuentes se configuran en `src/app/layout.tsx` y se aplican desde `src/app/globals.css`.
+
+## Reseñas De Google
+
+Las 2 reseñas visibles de Inicio se editan en:
+
+```text
+src/data/reviews.ts
+```
+
+En ese mismo archivo están centralizados los links:
+
+```text
+googleLinks.reviewsUrl
+googleLinks.writeReviewUrl
+```

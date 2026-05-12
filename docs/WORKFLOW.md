@@ -84,6 +84,12 @@ Edita `entryPrices` en `src/data/site.ts`.
 
 No cambies el componente `PriceCard` si solo varían los valores, títulos o descripciones.
 
+## Cambiar Reseñas De Google
+
+Edita `googleReviews` en `src/data/reviews.ts`.
+
+Los botones de la sección usan `googleLinks.reviewsUrl` y `googleLinks.writeReviewUrl` en el mismo archivo.
+
 ## Futuro Backend O Envío Real De Formulario
 
 Actualmente `ContactForm` solo valida en frontend y muestra un mensaje visual.
