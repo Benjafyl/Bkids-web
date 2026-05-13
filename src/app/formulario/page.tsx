@@ -5,6 +5,9 @@ import { Hero } from "@/components/Hero";
 import { contact, heroImages } from "@/data/site";
 
 export default function ContactPage() {
+  const mapEmbedUrl =
+    "https://www.google.com/maps?q=Camino%20El%20Alba%2012620%20Local%2016B%20Las%20Condes&output=embed";
+
   return (
     <>
       <Hero
@@ -56,20 +59,21 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1fr_0.4fr] lg:items-center">
             <div className="overflow-hidden rounded-[8px] bg-white p-2 shadow-xl shadow-sky-100">
-              <div className="flex min-h-[340px] items-center justify-center rounded-[8px] bg-[linear-gradient(135deg,#0a72ce,#00a9c7_50%,#ffcc33)] p-8 text-center text-white">
-                <div>
-                  <MapPin className="mx-auto h-12 w-12" />
-                  <h2 className="mt-4 font-display text-5xl font-black">Ubicacion BKids</h2>
-                  <p className="mx-auto mt-3 max-w-xl text-lg font-bold">{contact.address}</p>
-                </div>
-              </div>
+              <iframe
+                title="Mapa de BKids en Las Condes"
+                src={mapEmbedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="min-h-[340px] w-full rounded-[8px] border-0"
+              />
             </div>
             <div>
               <h2 className="font-display text-5xl font-black leading-none text-[#0a72ce]">
                 Encuentranos en Las Condes
               </h2>
               <p className="mt-4 text-lg font-semibold leading-8 text-slate-600">
-                Este espacio queda listo para reemplazar por un mapa embebido si lo prefieren.
+                Revisa la ubicacion exacta de BKids, planifica tu visita y abre la ruta en Google
+                Maps con un solo click.
               </p>
               <Link
                 href={contact.mapUrl}

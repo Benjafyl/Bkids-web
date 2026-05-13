@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GraduationCap, Sparkles } from "lucide-react";
+import { GraduationCap, Sparkles, Users, WandSparkles } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { heroImages, workshopCopy } from "@/data/site";
+
+const workshopPoints = [
+  "Actividades pensadas para aprender jugando.",
+  "Espacios seguros, cercanos y estimulantes.",
+  "Posibilidad de sumar horarios, edades y cupos cuando estén listos.",
+];
 
 export default function WorkshopsPage() {
   return (
@@ -18,14 +24,13 @@ export default function WorkshopsPage() {
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
-          <div className="relative">
-            <div className="absolute -left-5 -top-5 h-24 w-24 rounded-full bg-[#ffcc33]" />
+          <div className="relative overflow-hidden rounded-[32px] bg-white shadow-2xl shadow-sky-100 ring-1 ring-sky-100">
             <Image
-              src="/images/talleres-generico.jpg"
-              alt="Talleres y afterschool BKids"
+              src="/images/foto-comercial-2.jpg"
+              alt="Niños y familias compartiendo en BKids"
               width={850}
-              height={700}
-              className="relative rounded-[8px] object-cover shadow-2xl shadow-sky-100"
+              height={760}
+              className="h-full w-full object-cover"
             />
           </div>
 
@@ -38,13 +43,41 @@ export default function WorkshopsPage() {
               Aprender jugando en un entorno seguro
             </h1>
             <p className="mt-5 text-lg font-semibold leading-8 text-slate-600">{workshopCopy}</p>
-            <div className="mt-7 rounded-[8px] bg-[#ffcc33] p-6 text-[#063f83]">
-              <Sparkles className="h-8 w-8" />
-              <p className="mt-3 text-base font-black">
-                Esta sección queda preparada para sumar talleres definitivos, horarios, edades,
-                cupos y valores.
-              </p>
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-3">
+              <article className="rounded-[24px] bg-[#fff7da] p-5 ring-1 ring-yellow-100">
+                <Users className="h-8 w-8 text-[#ef3854]" />
+                <p className="mt-3 text-sm font-bold leading-6 text-slate-700">
+                  Actividades para compartir, explorar y participar en grupo.
+                </p>
+              </article>
+              <article className="rounded-[24px] bg-[#e9f9ff] p-5 ring-1 ring-sky-100">
+                <Sparkles className="h-8 w-8 text-[#0a72ce]" />
+                <p className="mt-3 text-sm font-bold leading-6 text-slate-700">
+                  Un formato flexible para presentar temas, edades y horarios.
+                </p>
+              </article>
+              <article className="rounded-[24px] bg-[#eefcf5] p-5 ring-1 ring-emerald-100">
+                <WandSparkles className="h-8 w-8 text-[#00a9c7]" />
+                <p className="mt-3 text-sm font-bold leading-6 text-slate-700">
+                  Experiencias creativas y entretenidas para seguir creciendo.
+                </p>
+              </article>
             </div>
+
+            <div className="mt-7 rounded-[28px] bg-[#ffcc33] p-6 text-[#063f83]">
+              <p className="text-sm font-black uppercase tracking-[0.16em]">Base preparada</p>
+              <p className="mt-3 text-base font-black leading-7">
+                Esta sección queda lista para sumar talleres definitivos, horarios, edades, cupos y
+                valores cuando se definan.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm font-bold leading-6 text-[#31557c]">
+                {workshopPoints.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+
             <Link
               href="/formulario"
               className="mt-7 inline-flex rounded-full bg-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-sky-200 transition hover:bg-[#045ca9]"
@@ -56,7 +89,7 @@ export default function WorkshopsPage() {
       </section>
 
       <CTASection
-        title="Quieres saber cuándo parten?"
+        title="¿Quieres saber cuándo parten?"
         text="Déjanos tus datos y te contactamos cuando estén disponibles los talleres y actividades afterschool."
         buttonLabel="Ir al formulario"
         href="/formulario"

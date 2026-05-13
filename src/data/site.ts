@@ -35,7 +35,7 @@ export const heroImages = {
   birthdays: "/images/hero-cumpleanos.jpg",
   workshops: "/images/hero-talleres.jpg",
   prices: "/images/hero-precios.jpg",
-  contact: "/images/hero-contacto.jpg",
+  contact: "/images/foto-comercial-1.jpg",
 };
 
 export const carouselImages = [
@@ -92,7 +92,7 @@ export const attractions = [
     title: "Pared de legos",
     image: "/images/pared-legos.jpg",
     description:
-      "Imagen referencial del espacio de juegos; falta cargar una foto específica de pared de legos.",
+      "Imagen referencial del espacio de juegos; falta cargar una foto específica de la pared de legos.",
   },
   {
     title: "Máquina interactiva de pelotas",
@@ -110,38 +110,38 @@ export const entryPrices = [
   {
     title: "1 hora",
     price: "$7.000",
-    detail: "Entrada individual para jugar y explorar.",
+    detail: "Entrada individual para jugar, explorar y disfrutar el espacio con calma.",
     highlight: true,
   },
   {
     title: "20 minutos",
     price: "$4.000",
-    detail: "Ideal para una visita corta y entretenida.",
+    detail: "Ideal para una visita corta, una prueba o una pasada rápida por BKids.",
   },
   {
     title: "Pack familiar",
     price: "$18.000",
-    detail: "3 niños / 1 hora.",
+    detail: "3 niños por 1 hora para venir en familia o con amigos.",
   },
 ];
 
 export const birthdayConditions = [
-  "Reserva sujeta a disponibilidad.",
-  "Confirmación previa del horario.",
-  "Condiciones y alternativas de packs serán actualizadas próximamente.",
+  "Reserva sujeta a disponibilidad de fecha y horario.",
+  "La confirmación final se realiza de manera previa.",
+  "Los packs y servicios pueden ajustarse cuando se definan todas las alternativas.",
 ];
 
 export const birthdayPacks = [
   {
     title: "Cumpleaños personalizados",
     description:
-      "Una estructura lista para sumar packs, horarios, servicios incluidos y detalles de celebraciones temáticas.",
+      "Dejamos la estructura lista para sumar packs, horarios, servicios incluidos y detalles de celebraciones temáticas.",
     image: "/images/cumpleanos.jpg",
   },
 ];
 
 export const workshopCopy =
-  "Próximamente tendremos talleres y actividades afterschool pensadas para que los niños aprendan, jueguen y desarrollen nuevas habilidades en un entorno seguro y entretenido.";
+  "Próximamente tendremos talleres y actividades afterschool pensadas para que los niños aprendan, jueguen y desarrollen nuevas habilidades en un entorno seguro, entretenido y acompañado.";
 
 export const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/" },

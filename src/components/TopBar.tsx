@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { contact } from "@/data/site";
 
@@ -7,6 +7,10 @@ export function TopBar() {
     <div className="bg-[#0a72ce] text-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-2 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 font-black">
+            <Clock3 className="h-3.5 w-3.5" aria-hidden="true" />
+            {contact.schedule.weekdays}
+          </span>
           <span className="inline-flex items-center gap-1.5">
             <Phone className="h-3.5 w-3.5" aria-hidden="true" />
             {contact.phone}

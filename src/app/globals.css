@@ -59,3 +59,33 @@ button {
   background: #ffcc33;
   color: #063f83;
 }
+
+@keyframes reviewSlideNext {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reviewSlidePrev {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reviews-slide-next {
+  animation: reviewSlideNext 0.45s ease both;
+}
+
+.reviews-slide-prev {
+  animation: reviewSlidePrev 0.45s ease both;
+}
