@@ -4,8 +4,16 @@ export const siteMeta = {
     "Centro de entretención infantil, cumpleaños, talleres y juegos para niños en Las Condes.",
 };
 
-export const contact = {
+export const location = {
   address: "Camino El Alba 12.620, Local 16B, Las Condes",
+  mapsUrl:
+    "https://www.google.com/maps/place/Bkids+Stay+and+Play/data=!4m2!3m1!1s0x0:0x18d716bf682bcc03?sa=X&ved=1t:2428&ictx=111",
+  embedUrl:
+    "https://www.google.com/maps?q=Bkids%20Stay%20and%20Play%20Camino%20El%20Alba%2012620%20Local%2016B%20Las%20Condes&output=embed",
+};
+
+export const contact = {
+  address: location.address,
   legalAddress: "Camino El Alba 12.620 Local 16 B, Las Condes",
   phone: "+56 9 8711 7154",
   email: "contactobkidschile@gmail.com",
@@ -13,8 +21,7 @@ export const contact = {
     weekdays: "Lunes a viernes: 09:00 a 19:00 hrs",
     weekends: "Sábado, domingo y festivos: 10:00 a 19:00 hrs",
   },
-  mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=Camino%20El%20Alba%2012620%20Local%2016B%20Las%20Condes",
+  mapUrl: location.mapsUrl,
 };
 
 export const legal = {
@@ -37,6 +44,25 @@ export const heroImages = {
   prices: "/images/hero-precios.jpg",
   contact: "/images/foto-comercial-1.jpg",
 };
+
+export const homeHeroSlides = [
+  {
+    src: "/images/hero-home.jpg",
+    alt: "Niña jugando en la piscina de pelotas de BKids",
+  },
+  {
+    src: "/images/espacio-juegos.jpg",
+    alt: "Familias jugando en el espacio principal de BKids",
+  },
+  {
+    src: "/images/tobogan.jpg",
+    alt: "Tobogán amarillo de BKids",
+  },
+  {
+    src: "/images/piscina-pelotas.jpg",
+    alt: "Piscina de pelotas de BKids",
+  },
+];
 
 export const carouselImages = [
   {
@@ -74,7 +100,7 @@ export const attractions = [
     description: "Bajadas entretenidas para sumar movimiento a cada visita.",
   },
   {
-    title: "Resbalín",
+    title: "Resfalín",
     image: "/images/resbalin.jpg",
     description: "Diversión clásica para niños activos y curiosos.",
   },
@@ -87,12 +113,6 @@ export const attractions = [
     title: "Cama saltarina",
     image: "/images/cama-elastica.jpg",
     description: "Saltos seguros para liberar energía y pasarlo increíble.",
-  },
-  {
-    title: "Pared de legos",
-    image: "/images/pared-legos.jpg",
-    description:
-      "Imagen referencial del espacio de juegos; falta cargar una foto específica de la pared de legos.",
   },
   {
     title: "Máquina interactiva de pelotas",

@@ -19,10 +19,15 @@ export function TopBar() {
             <Mail className="h-3.5 w-3.5" aria-hidden="true" />
             {contact.email}
           </span>
-          <span className="inline-flex items-center gap-1.5">
+          <Link
+            href={contact.mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 transition hover:text-[#ffcc33]"
+          >
             <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
             {contact.address}
-          </span>
+          </Link>
         </div>
         <div className="flex items-center gap-3">
           <Link

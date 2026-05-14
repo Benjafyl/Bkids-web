@@ -12,6 +12,7 @@ Ahí se pueden modificar sin tocar layout:
 
 - Título y descripción SEO.
 - Dirección, teléfono, correo y horarios.
+- Link de Google Maps y URL embebida del mapa (`location.mapsUrl` y `location.embedUrl`).
 - Razón social y RUT.
 - Menú de navegación.
 - Imágenes usadas por página.

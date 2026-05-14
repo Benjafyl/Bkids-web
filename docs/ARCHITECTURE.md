@@ -25,11 +25,14 @@ src/
   components/
     AttractionCard.tsx
     ContactForm.tsx
+    BirthdayWorkshopsSection.tsx
     CTASection.tsx
     Footer.tsx
     Header.tsx
     Hero.tsx
+    HeroCarousel.tsx
     ImageCarousel.tsx
+    LocationHoursSection.tsx
     Navbar.tsx
     PriceCard.tsx
     TopBar.tsx
@@ -53,7 +56,7 @@ docs/
 
 ## Páginas
 
-- `/`: Inicio con hero, carrusel, atracciones, bloques de cumpleaños/talleres y CTA.
+- `/`: Inicio con hero, atracciones, bloques de cumpleaños/talleres, horarios/ubicación, reseñas y CTA.
 - `/quienes-somos`: historia, misión y valores de marca.
 - `/cumpleanos`: estructura de packs, condiciones y CTA.
 - `/talleres`: contenido genérico de talleres/afterschool y CTA.
@@ -70,6 +73,10 @@ docs/
 - `AttractionCard`: tarjeta para atracciones.
 - `PriceCard`: tarjeta para precios.
 - `CTASection`: bloque de llamada a la acción.
+- `HeroCarousel`: hero interactivo de Inicio con imagen de fondo, controles y puntos.
+- `AttractionsSection`: grilla compacta de atracciones de Inicio.
+- `BirthdayWorkshopsSection`: cards comerciales de Cumpleaños y Talleres en Inicio.
+- `LocationHoursSection`: bloque de visita con horarios, contacto y mapa.
 - `ContactForm`: formulario cliente con validación básica.
 - `Footer`: footer con olas, logo, contacto e información legal.
 - `GoogleReviews`: bloque compacto de reseñas de Google para Inicio.

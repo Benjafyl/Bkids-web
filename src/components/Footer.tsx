@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { contact, legal } from "@/data/site";
 
 export function Footer() {
@@ -41,10 +42,15 @@ export function Footer() {
                 <Phone className="h-5 w-5 shrink-0 text-[#ffcc33]" />
                 {contact.phone}
               </p>
-              <p className="flex gap-2">
+              <Link
+                href={contact.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-2 transition hover:text-[#ffcc33]"
+              >
                 <MapPin className="h-5 w-5 shrink-0 text-[#ffcc33]" />
                 {contact.address}
-              </p>
+              </Link>
             </div>
           </div>
         </div>

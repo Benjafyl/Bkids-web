@@ -2,12 +2,9 @@ import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { Hero } from "@/components/Hero";
-import { contact, heroImages } from "@/data/site";
+import { contact, heroImages, location } from "@/data/site";
 
 export default function ContactPage() {
-  const mapEmbedUrl =
-    "https://www.google.com/maps?q=Camino%20El%20Alba%2012620%20Local%2016B%20Las%20Condes&output=embed";
-
   return (
     <>
       <Hero
@@ -61,7 +58,7 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded-[8px] bg-white p-2 shadow-xl shadow-sky-100">
               <iframe
                 title="Mapa de BKids en Las Condes"
-                src={mapEmbedUrl}
+                src={location.embedUrl}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="min-h-[340px] w-full rounded-[8px] border-0"
