@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Heart, Sparkles } from "lucide-react";
+import { AboutGalleryCarousel } from "@/components/AboutGalleryCarousel";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { heroImages } from "@/data/site";
@@ -30,31 +30,24 @@ const gallery = [
   {
     src: "/images/nosotros-equipo.jpg",
     alt: "Equipo de BKids compartiendo en la piscina de pelotas",
-    className: "lg:col-span-2",
-  },
-  {
-    src: "/images/foto-comercial-2.jpg",
-    alt: "Niña disfrutando la piscina de pelotas en BKids",
-    className: "",
   },
   {
     src: "/images/foto-comercial-1.jpg",
     alt: "Familias y niños disfrutando los juegos en BKids",
-    className: "lg:col-span-2",
+  },
+  {
+    src: "/images/foto-comercial-2.jpg",
+    alt: "Niña disfrutando la piscina de pelotas en BKids",
   },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <Hero
-        title="Quiénes somos"
-        subtitle="Be happy on the sea"
-        image={heroImages.about}
-      />
+      <Hero title="Quiénes somos" subtitle="Be happy on the sea" image={heroImages.about} />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.88fr_1.12fr] lg:items-center lg:px-8">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
               <Heart className="h-4 w-4" />
@@ -95,22 +88,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {gallery.map((item) => (
-              <div
-                key={item.src}
-                className={`overflow-hidden rounded-[32px] bg-white shadow-xl shadow-sky-100 ring-1 ring-sky-100 ${item.className}`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={900}
-                  height={700}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <AboutGalleryCarousel slides={gallery} />
         </div>
       </section>
 
