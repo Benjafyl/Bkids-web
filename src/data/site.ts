@@ -37,48 +37,48 @@ export const navItems = [
 ];
 
 export const heroImages = {
-  home: "/images/hero-home.jpg",
-  about: "/images/hero-about.jpg",
-  birthdays: "/images/hero-cumpleanos.jpg",
-  workshops: "/images/hero-talleres.jpg",
-  prices: "/images/hero-precios.jpg",
-  contact: "/images/foto-comercial-1.jpg",
+  home: "/images/hero-home-local.jpg",
+  about: "/images/hero-home-local.jpg",
+  birthdays: "/images/foto-divertida-marco.jpg",
+  workshops: "/images/maquina-grupal.jpg",
+  prices: "/images/espacio-principal-bkids.jpg",
+  contact: "/images/contacto-familia.jpg",
 };
 
 export const homeHeroSlides = [
   {
-    src: "/images/hero-home.jpg",
+    src: "/images/hero-home-local.jpg",
     alt: "Niña jugando en la piscina de pelotas de BKids",
   },
   {
-    src: "/images/espacio-juegos.jpg",
+    src: "/images/espacio-principal-bkids.jpg",
     alt: "Familias jugando en el espacio principal de BKids",
   },
   {
-    src: "/images/tobogan.jpg",
+    src: "/images/maquina-grupal.jpg",
     alt: "Tobogán amarillo de BKids",
   },
   {
-    src: "/images/piscina-pelotas.jpg",
+    src: "/images/salto-trampolin.jpg",
     alt: "Piscina de pelotas de BKids",
   },
 ];
 
 export const carouselImages = [
   {
-    src: "/images/foto-comercial-1.jpg",
+    src: "/images/about-familia.jpg",
     alt: "Familias disfrutando la piscina de pelotas en BKids",
   },
   {
-    src: "/images/espacio-juegos.jpg",
+    src: "/images/about-juego-grupal.jpg",
     alt: "Espacio de juegos de BKids con niños y familias",
   },
   {
-    src: "/images/foto-comercial-2.jpg",
+    src: "/images/juego-arenero.jpg",
     alt: "Niña jugando en la piscina de pelotas de BKids",
   },
   {
-    src: "/images/tobogan.jpg",
+    src: "/images/foto-divertida-marco.jpg",
     alt: "Tobogán amarillo de BKids",
   },
 ];
@@ -86,12 +86,12 @@ export const carouselImages = [
 export const attractions = [
   {
     title: "Laberinto",
-    image: "/images/juegos-laberinto.jpg",
+    image: "/images/espacio-principal-bkids.jpg",
     description: "Circuitos para explorar, trepar y descubrir nuevos caminos.",
   },
   {
     title: "Piscina de pelotas",
-    image: "/images/piscina-pelotas.jpg",
+    image: "/images/about-juego-grupal.jpg",
     description: "Un mar de colores para saltar, imaginar y jugar libremente.",
   },
   {
@@ -106,7 +106,7 @@ export const attractions = [
   },
   {
     title: "Arenero",
-    image: "/images/arenero.jpg",
+    image: "/images/juego-arenero.jpg",
     description: "Juego sensorial para crear, construir y compartir.",
   },
   {
@@ -116,7 +116,7 @@ export const attractions = [
   },
   {
     title: "Máquina interactiva de pelotas",
-    image: "/images/maquina-pelotas.jpg",
+    image: "/images/maquina-grupal.jpg",
     description: "Juego dinámico para lanzar, apuntar y activar desafíos.",
   },
   {
@@ -156,7 +156,7 @@ export const birthdayPacks = [
     title: "Cumpleaños personalizados",
     description:
       "Dejamos la estructura lista para sumar packs, horarios, servicios incluidos y detalles de celebraciones temáticas.",
-    image: "/images/cumpleanos.jpg",
+    image: "/images/cumple-bienvenida.jpg",
   },
 ];
 

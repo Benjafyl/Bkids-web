@@ -26,7 +26,7 @@ export default function WorkshopsPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
           <div className="relative overflow-hidden rounded-[32px] bg-white shadow-2xl shadow-sky-100 ring-1 ring-sky-100">
             <Image
-              src="/images/foto-comercial-2.jpg"
+              src="/images/taller-legos.jpg"
               alt="Niños y familias compartiendo en BKids"
               width={850}
               height={760}

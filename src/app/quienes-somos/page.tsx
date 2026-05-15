@@ -28,15 +28,15 @@ const highlights = [
 
 const gallery = [
   {
-    src: "/images/nosotros-equipo.jpg",
+    src: "/images/about-familia.jpg",
     alt: "Equipo de BKids compartiendo en la piscina de pelotas",
   },
   {
-    src: "/images/foto-comercial-1.jpg",
+    src: "/images/hero-home-local.jpg",
     alt: "Familias y niños disfrutando los juegos en BKids",
   },
   {
-    src: "/images/foto-comercial-2.jpg",
+    src: "/images/about-juego-grupal.jpg",
     alt: "Niña disfrutando la piscina de pelotas en BKids",
   },
 ];
