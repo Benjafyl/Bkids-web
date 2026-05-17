@@ -20,6 +20,8 @@ export default function BirthdaysPage() {
         image={heroImages.birthdays}
         ctaLabel="Consultar por cumpleaños"
         ctaHref="/formulario"
+        variant="immersive"
+        eyebrow="Celebraciones BKids"
       />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">

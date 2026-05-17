@@ -38,16 +38,18 @@ export const navItems = [
 
 export const heroImages = {
   home: "/images/hero-home-local.jpg",
-  about: "/images/hero-home-local.jpg",
-  birthdays: "/images/foto-divertida-marco.jpg",
-  workshops: "/images/maquina-grupal.jpg",
+  about: "/images/equipo-bkids-conocenos.jpg",
+  birthdays: "/images/cumpleanos-celebracion.jpg",
+  workshops: "/images/taller-legos.jpg",
   prices: "/images/espacio-principal-bkids.jpg",
   contact: "/images/contacto-familia.jpg",
 };
 
 export const homeHeroSlides = [
   {
-    src: "/images/hero-home-local.jpg",
+    type: "video" as const,
+    src: "/images/hero-home-video.mp4",
+    poster: "/images/hero-home-local.jpg",
     alt: "Niña jugando en la piscina de pelotas de BKids",
   },
   {
@@ -55,11 +57,11 @@ export const homeHeroSlides = [
     alt: "Familias jugando en el espacio principal de BKids",
   },
   {
-    src: "/images/maquina-grupal.jpg",
+    src: "/images/tobogan-nino.jpg",
     alt: "Tobogán amarillo de BKids",
   },
   {
-    src: "/images/salto-trampolin.jpg",
+    src: "/images/maquina-pelotas-ninos.jpg",
     alt: "Piscina de pelotas de BKids",
   },
 ];
@@ -96,12 +98,12 @@ export const attractions = [
   },
   {
     title: "Tobogán",
-    image: "/images/tobogan.jpg",
+    image: "/images/tobogan-nino.jpg",
     description: "Bajadas entretenidas para sumar movimiento a cada visita.",
   },
   {
-    title: "Resfalín",
-    image: "/images/resbalin.jpg",
+    title: "Resfalin",
+    image: "/images/resfalin-ninos.jpg",
     description: "Diversión clásica para niños activos y curiosos.",
   },
   {
@@ -116,7 +118,7 @@ export const attractions = [
   },
   {
     title: "Máquina interactiva de pelotas",
-    image: "/images/maquina-grupal.jpg",
+    image: "/images/maquina-pelotas-ninos.jpg",
     description: "Juego dinámico para lanzar, apuntar y activar desafíos.",
   },
   {
@@ -156,7 +158,7 @@ export const birthdayPacks = [
     title: "Cumpleaños personalizados",
     description:
       "Dejamos la estructura lista para sumar packs, horarios, servicios incluidos y detalles de celebraciones temáticas.",
-    image: "/images/cumple-bienvenida.jpg",
+    image: "/images/cumpleanos-celebracion.jpg",
   },
 ];
 

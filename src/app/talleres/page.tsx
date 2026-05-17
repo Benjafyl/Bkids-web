@@ -20,6 +20,9 @@ export default function WorkshopsPage() {
         image={heroImages.workshops}
         ctaLabel="Consultar talleres"
         ctaHref="/formulario"
+        variant="split"
+        eyebrow="Aprender jugando"
+        badge="Creatividad y juego"
       />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">

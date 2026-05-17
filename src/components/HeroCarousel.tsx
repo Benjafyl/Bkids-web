@@ -6,7 +6,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type HeroSlide = {
+  type?: "image" | "video";
   src: string;
+  poster?: string;
   alt: string;
 };
 
@@ -61,21 +63,43 @@ export function HeroCarousel({
         const wasPrevious = index === previousIndex;
 
         return (
-          <Image
-            key={slide.src}
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            priority={index === 0}
-            sizes="100vw"
-            className={`object-cover transition-all duration-700 ease-out ${
-              isActive
-                ? "scale-100 opacity-100"
-                : wasPrevious
-                  ? "scale-105 opacity-0"
-                  : "scale-[1.02] opacity-0"
-            }`}
-          />
+          slide.type === "video" ? (
+            <video
+              key={slide.src}
+              className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out ${
+                isActive
+                  ? "scale-100 opacity-100"
+                  : wasPrevious
+                    ? "scale-105 opacity-0"
+                    : "scale-[1.02] opacity-0"
+              }`}
+              aria-label={slide.alt}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={slide.poster}
+            >
+              <source src={slide.src} type="video/mp4" />
+            </video>
+          ) : (
+            <Image
+              key={slide.src}
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              className={`object-cover transition-all duration-700 ease-out ${
+                isActive
+                  ? "scale-100 opacity-100"
+                  : wasPrevious
+                    ? "scale-105 opacity-0"
+                    : "scale-[1.02] opacity-0"
+              }`}
+            />
+          )
         );
       })}
 

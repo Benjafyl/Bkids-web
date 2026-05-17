@@ -28,7 +28,7 @@ const highlights = [
 
 const gallery = [
   {
-    src: "/images/about-familia.jpg",
+    src: "/images/equipo-bkids-conocenos.jpg",
     alt: "Equipo de BKids compartiendo en la piscina de pelotas",
   },
   {
@@ -44,7 +44,14 @@ const gallery = [
 export default function AboutPage() {
   return (
     <>
-      <Hero title="Quiénes somos" subtitle="Be happy on the sea" image={heroImages.about} />
+      <Hero
+        title="Quiénes somos"
+        subtitle="Un proyecto familiar pensado para crear momentos felices, seguros y llenos de juego."
+        image={heroImages.about}
+        variant="collage"
+        secondaryImage="/images/about-juego-grupal.jpg"
+        badge="Be happy on the sea"
+      />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.88fr_1.12fr] lg:items-center lg:px-8">

@@ -68,6 +68,12 @@ maquina-pelotas.jpg
 area-ninja.jpg
 talleres-generico.jpg
 cumpleanos.jpg
+hero-home-video.mp4
+maquina-pelotas-ninos.jpg
+cumpleanos-celebracion.jpg
+resfalin-ninos.jpg
+tobogan-nino.jpg
+equipo-bkids-conocenos.jpg
 ```
 
 ## Reglas Para Reemplazar Imágenes

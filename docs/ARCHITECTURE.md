@@ -68,7 +68,7 @@ docs/
 - `TopBar`: barra azul superior con contacto y redes.
 - `Navbar`: navegación principal responsive.
 - `Header`: compone `TopBar` y `Navbar`.
-- `Hero`: hero reusable con imagen, título, subtítulo y CTA opcional.
+- `Hero`: hero reusable con variantes `immersive`, `split`, `compact` y `collage`.
 - `ImageCarousel`: carrusel cliente con autoavance y controles.
 - `AttractionCard`: tarjeta para atracciones.
 - `PriceCard`: tarjeta para precios.

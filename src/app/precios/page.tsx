@@ -14,6 +14,8 @@ export default function PricesPage() {
         image={heroImages.prices}
         ctaLabel="Consultar disponibilidad"
         ctaHref="/formulario"
+        variant="compact"
+        eyebrow="Entradas y consultas"
       />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">

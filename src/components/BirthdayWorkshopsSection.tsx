@@ -8,7 +8,7 @@ const homeCards = [
     text: "Un espacio entretenido, seguro y lleno de juegos para vivir una celebración inolvidable.",
     buttonLabel: "Consultar cumpleaños",
     href: "/cumpleanos",
-    image: "/images/ninos-red.jpg",
+    image: "/images/cumpleanos-celebracion.jpg",
     alt: "Cumpleaños infantiles en BKids",
     accent: "bg-[#ffcc33] text-[#063f83]",
   },
