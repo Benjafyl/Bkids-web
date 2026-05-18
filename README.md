@@ -1,40 +1,93 @@
 # BKids Web
 
-Primera versión funcional de la web de BKids, construida con Next.js, TypeScript y Tailwind CSS.
+Sitio web de BKids construido con Next.js, TypeScript y Tailwind CSS.
 
-La documentación del proyecto vive en [docs/README.md](./docs/README.md). Si eres un agente de IA o una persona que va a modificar el sitio, empieza por esa carpeta.
+La documentacion del proyecto vive en `docs/`. Si eres un agente de IA o una persona que va a modificar el sitio, empieza por esa carpeta.
 
-## Getting Started
-
-First, run the development server:
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build local
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+El proyecto esta configurado con `output: "export"` en `next.config.ts`, por lo que el build genera la carpeta estatica `out/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Docker
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Construir la imagen:
 
-## Deploy on Vercel
+```bash
+docker build -t bkids-web .
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ejecutar el contenedor localmente:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+docker run --rm -p 8080:80 bkids-web
+```
+
+Abrir:
+
+```text
+http://localhost:8080
+```
+
+El contenedor final usa `nginx:alpine` y escucha internamente en el puerto `80`.
+
+## Dockploy
+
+Crear una app nueva e independiente para BKids. No reutilizar apps, contenedores, carpetas ni configuraciones de otros sitios del servidor.
+
+Configuracion sugerida:
+
+```text
+App name: bkids-web
+Repo: Benjafyl/Bkids-web
+Branch: main
+Build Type: Dockerfile
+Docker File: Dockerfile
+Docker Context Path: .
+Container Port: 80
+```
+
+Dominios:
+
+```text
+bkids.cl
+www.bkids.cl
+```
+
+Routing:
+
+```text
+Path: /
+Internal Path: /
+Strip Path: off
+HTTPS en Dockploy: off
+```
+
+Cloudflare maneja HTTPS publico y el tunel `servidor-byc` envia trafico a `http://localhost:80` del servidor. Dockploy + Traefik se encargan de enrutar por hostname hacia el contenedor correspondiente.
+
+## Flujo para publicar cambios
+
+```bash
+npm run build
+docker build -t bkids-web .
+docker run --rm -p 8080:80 bkids-web
+git add .
+git commit -m "dockeriza bkids para dockploy"
+git push
+```
