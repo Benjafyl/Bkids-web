@@ -4,6 +4,14 @@ export const siteMeta = {
     "Centro de entretención infantil, cumpleaños, talleres y juegos para niños en Las Condes.",
 };
 
+export const comingSoon = {
+  enabled: true,
+  eyebrow: "BKids Las Condes",
+  title: "Muy pronto",
+  text: "Estamos preparando una nueva experiencia para jugar, celebrar y compartir en familia.",
+  image: "/images/hero-home-local.jpg",
+};
+
 export const location = {
   address: "Camino El Alba 12.620, Local 16B, Las Condes",
   mapsUrl:

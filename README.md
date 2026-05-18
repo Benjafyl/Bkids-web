@@ -25,6 +25,24 @@ npm run build
 
 El proyecto esta configurado con `output: "export"` en `next.config.ts`, por lo que el build genera la carpeta estatica `out/`.
 
+## Pantalla temporal "Muy pronto"
+
+El sitio puede quedar oculto temporalmente con una pantalla de "Muy pronto" sin borrar el avance de la web.
+
+Para activar o desactivar esta pantalla, editar `src/data/site.ts`:
+
+```ts
+export const comingSoon = {
+  enabled: true,
+  // ...
+};
+```
+
+- `enabled: true`: muestra solo la pantalla temporal en todas las rutas.
+- `enabled: false`: muestra el sitio completo.
+
+Despues de cambiarlo, volver a construir y desplegar.
+
 ## Docker
 
 Construir la imagen:

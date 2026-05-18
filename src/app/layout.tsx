@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Baloo_2, Nunito } from "next/font/google";
+import { ComingSoon } from "@/components/ComingSoon";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { siteMeta } from "@/data/site";
+import { comingSoon, siteMeta } from "@/data/site";
 import "./globals.css";
 
 const baloo = Baloo_2({
@@ -40,9 +41,15 @@ export default function RootLayout({
       className={`${baloo.variable} ${nunito.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {comingSoon.enabled ? (
+          <ComingSoon />
+        ) : (
+          <>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );
