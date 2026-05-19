@@ -5,7 +5,7 @@ export const siteMeta = {
 };
 
 export const comingSoon = {
-  enabled: true,
+  enabled: false,
   eyebrow: "BKids Las Condes",
   title: "Muy pronto",
   text: "Estamos preparando una nueva experiencia para jugar, celebrar y compartir en familia.",
