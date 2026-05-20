@@ -2,7 +2,7 @@
 
 import { Send } from "lucide-react";
 import Script from "next/script";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 type FormState = {
   name: string;
@@ -31,14 +31,39 @@ const initialState: FormState = {
   message: "",
 };
 
-const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
 export function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaSiteKey, setRecaptchaSiteKey] = useState("");
+  const [isRecaptchaConfigLoading, setIsRecaptchaConfigLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadRecaptchaConfig() {
+      try {
+        const response = await fetch("/api/recaptcha", { cache: "no-store" });
+        const data = (await response.json().catch(() => null)) as { siteKey?: string } | null;
+
+        if (isMounted) {
+          setRecaptchaSiteKey(data?.siteKey ?? "");
+        }
+      } finally {
+        if (isMounted) {
+          setIsRecaptchaConfigLoading(false);
+        }
+      }
+    }
+
+    loadRecaptchaConfig();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   function validate() {
     const nextErrors: FormErrors = {};
@@ -52,6 +77,10 @@ export function ContactForm() {
   }
 
   async function getRecaptchaToken() {
+    if (isRecaptchaConfigLoading) {
+      throw new Error("reCAPTCHA se está cargando. Inténtalo nuevamente en unos segundos.");
+    }
+
     if (!recaptchaSiteKey) return "";
 
     const grecaptcha = window.grecaptcha;

@@ -63,6 +63,7 @@ docs/
 - `/talleres`: contenido genérico de talleres, actividades y CTA.
 - `/precios`: cards de entradas y secciones de cumpleaños/talleres.
 - `/formulario`: datos de contacto, formulario con envío real por `/api/contact` y ubicación.
+- `/api/recaptcha`: entrega la site key pública de reCAPTCHA en runtime para Docker/Dockploy.
 
 ## Componentes
 

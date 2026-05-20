@@ -52,6 +52,9 @@ CONTACT_FORM_TO_EMAIL=contactobkitschile@gmail.com
 solo se usa en el backend. Si `RECAPTCHA_SECRET_KEY` no esta configurada, el endpoint omite la
 validacion reCAPTCHA para permitir desarrollo local sin romper el sitio.
 
+En Docker/Dockploy la site key se lee en runtime desde `/api/recaptcha`, por lo que debe estar
+configurada como variable de entorno de la app desplegada antes de hacer redeploy.
+
 ## Pantalla temporal "Muy pronto"
 
 El sitio puede quedar oculto temporalmente con una pantalla de "Muy pronto" sin borrar el avance de la web.
