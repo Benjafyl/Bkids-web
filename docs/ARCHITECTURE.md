@@ -7,13 +7,14 @@
 - TypeScript
 - Tailwind CSS v4
 - `lucide-react` para iconos generales
-- Sin backend
+- Endpoint backend `/api/contact` para envío del formulario por SMTP
 
 ## Estructura Principal
 
 ```text
 src/
   app/
+    api/contact/route.ts
     page.tsx
     layout.tsx
     globals.css
@@ -59,9 +60,9 @@ docs/
 - `/`: Inicio con hero, atracciones, bloques de cumpleaños/talleres, horarios/ubicación, reseñas y CTA.
 - `/quienes-somos`: historia, misión y valores de marca.
 - `/cumpleanos`: estructura de packs, condiciones y CTA.
-- `/talleres`: contenido genérico de talleres/afterschool y CTA.
+- `/talleres`: contenido genérico de talleres, actividades y CTA.
 - `/precios`: cards de entradas y secciones de cumpleaños/talleres.
-- `/formulario`: datos de contacto, formulario y ubicación.
+- `/formulario`: datos de contacto, formulario con envío real por `/api/contact` y ubicación.
 
 ## Componentes
 
@@ -77,7 +78,7 @@ docs/
 - `AttractionsSection`: grilla compacta de atracciones de Inicio.
 - `BirthdayWorkshopsSection`: cards comerciales de Cumpleaños y Talleres en Inicio.
 - `LocationHoursSection`: bloque de visita con horarios, contacto y mapa.
-- `ContactForm`: formulario cliente con validación básica.
+- `ContactForm`: formulario cliente con validación básica y envío a `/api/contact`.
 - `Footer`: footer con olas, logo, contacto e información legal.
 - `GoogleReviews`: bloque compacto de reseñas de Google para Inicio.
 
@@ -96,6 +97,10 @@ docs/
 - Condiciones de cumpleaños.
 - Packs iniciales.
 - Texto de talleres.
+- Link centralizado de WhatsApp.
+- Galería de recap de talleres.
+
+El formulario usa variables de entorno SMTP. No hardcodear credenciales ni exponer secretos en componentes cliente.
 
 `src/data/reviews.ts` concentra las reseñas visibles y los links de Google para ver o dejar reseñas.
 

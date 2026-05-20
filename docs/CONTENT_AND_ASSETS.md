@@ -13,6 +13,7 @@ Ahí se pueden modificar sin tocar layout:
 - Título y descripción SEO.
 - Dirección, teléfono, correo y horarios.
 - Link de Google Maps y URL embebida del mapa (`location.mapsUrl` y `location.embedUrl`).
+- Link de WhatsApp (`contact.whatsappUrl` y `socialLinks.whatsapp`).
 - Razón social y RUT.
 - Menú de navegación.
 - Imágenes usadas por página.
@@ -74,6 +75,10 @@ cumpleanos-celebracion.jpg
 resfalin-ninos.jpg
 tobogan-nino.jpg
 equipo-bkids-conocenos.jpg
+cumpleanos-header.jpg
+cumpleanos-info.jpg
+quienes-somos-familia-secundaria.jpg
+taller-invierno-recap.jpg
 ```
 
 ## Reglas Para Reemplazar Imágenes
@@ -123,3 +128,7 @@ En ese mismo archivo están centralizados los links:
 googleLinks.reviewsUrl
 googleLinks.writeReviewUrl
 ```
+
+## Formulario De Contacto
+
+El formulario envía a `/api/contact` y usa SMTP en servidor. Configura las variables de `.env.example` en desarrollo o Dockploy. Para cambiar el destinatario, edita solo `CONTACT_FORM_TO_EMAIL`.

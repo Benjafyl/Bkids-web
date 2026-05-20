@@ -24,12 +24,14 @@ export const contact = {
   address: location.address,
   legalAddress: "Camino El Alba 12.620 Local 16 B, Las Condes",
   phone: "+56 9 8711 7154",
-  email: "contactobkidschile@gmail.com",
+  email: "contactobkitschile@gmail.com",
   schedule: {
     weekdays: "Lunes a viernes: 09:00 a 19:00 hrs",
     weekends: "Sábado, domingo y festivos: 10:00 a 19:00 hrs",
   },
   mapUrl: location.mapsUrl,
+  whatsappUrl:
+    "https://wa.me/56987117154?text=Hola%20BKids%2C%20quiero%20hacer%20una%20consulta.",
 };
 
 export const legal = {
@@ -47,7 +49,7 @@ export const navItems = [
 export const heroImages = {
   home: "/images/hero-home-local.jpg",
   about: "/images/equipo-bkids-conocenos.jpg",
-  birthdays: "/images/cumpleanos-celebracion.jpg",
+  birthdays: "/images/cumpleanos-header.jpg",
   workshops: "/images/taller-legos.jpg",
   prices: "/images/espacio-principal-bkids.jpg",
   contact: "/images/contacto-familia.jpg",
@@ -130,6 +132,11 @@ export const attractions = [
     description: "Juego dinámico para lanzar, apuntar y activar desafíos.",
   },
   {
+    title: "Plataforma interactiva",
+    image: "/images/maquina-grupal.jpg",
+    description: "Un espacio dinámico para moverse, descubrir y jugar en equipo.",
+  },
+  {
     title: "Área ninja",
     image: "/images/area-ninja.jpg",
     description: "Obstáculos pensados para moverse, equilibrarse y superar retos.",
@@ -166,14 +173,38 @@ export const birthdayPacks = [
     title: "Cumpleaños personalizados",
     description:
       "Dejamos la estructura lista para sumar packs, horarios, servicios incluidos y detalles de celebraciones temáticas.",
-    image: "/images/cumpleanos-celebracion.jpg",
+    image: "/images/cumpleanos-info.jpg",
   },
 ];
 
 export const workshopCopy =
-  "Próximamente tendremos talleres y actividades afterschool pensadas para que los niños aprendan, jueguen y desarrollen nuevas habilidades en un entorno seguro, entretenido y acompañado.";
+  "Próximamente tendremos talleres y actividades pensadas para que los niños aprendan, jueguen y desarrollen nuevas habilidades en un entorno seguro, entretenido y acompañado.";
 
-export const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/" },
-  { label: "Facebook", href: "https://www.facebook.com/" },
+export const socialLinks = {
+  instagram: "https://www.instagram.com/",
+  facebook: "https://www.facebook.com/",
+  whatsapp: contact.whatsappUrl,
+};
+
+export const workshopRecap = [
+  {
+    title: "Taller de invierno",
+    image: "/images/taller-invierno-recap.jpg",
+    alt: "Información de talleres de invierno BKids",
+  },
+  {
+    title: "Actividades creativas",
+    image: "/images/taller-legos.jpg",
+    alt: "Niños participando en actividades creativas en BKids",
+  },
+  {
+    title: "Talleres por temporada",
+    image: "/images/talleres-generico.jpg",
+    alt: "Talleres infantiles por temporada en BKids",
+  },
+  {
+    title: "Experiencias especiales",
+    image: "/images/cumple-bienvenida.jpg",
+    alt: "Niños llegando a una experiencia especial en BKids",
+  },
 ];

@@ -1,6 +1,24 @@
-import { Clock3, Mail, MapPin, Phone } from "lucide-react";
+import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
-import { contact } from "@/data/site";
+import { contact, socialLinks } from "@/data/site";
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true" fill="none">
+      <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17" cy="7" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true" fill="currentColor">
+      <path d="M14.1 8.3V6.9c0-.7.5-.9.9-.9h2V3h-2.8c-3 0-3.8 2.2-3.8 3.7v1.6H8v3.2h2.4V21h3.7v-9.5h2.6l.4-3.2h-3Z" />
+    </svg>
+  );
+}
 
 export function TopBar() {
   return (
@@ -31,18 +49,31 @@ export function TopBar() {
         </div>
         <div className="flex items-center gap-3">
           <Link
-            href="https://www.instagram.com/"
+            href={socialLinks.instagram}
             aria-label="Instagram de BKids"
-            className="rounded-full px-2 py-1 text-[11px] font-black transition hover:bg-white/15"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
           >
-            IG
+            <InstagramIcon />
           </Link>
           <Link
-            href="https://www.facebook.com/"
+            href={socialLinks.facebook}
             aria-label="Facebook de BKids"
-            className="rounded-full px-2 py-1 text-[11px] font-black transition hover:bg-white/15"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
           >
-            FB
+            <FacebookIcon />
+          </Link>
+          <Link
+            href={socialLinks.whatsapp}
+            aria-label="WhatsApp de BKids"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-400 text-[#063f83] transition hover:bg-emerald-300"
+          >
+            <MessageCircle className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </div>

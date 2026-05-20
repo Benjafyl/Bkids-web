@@ -16,6 +16,7 @@ export function CTASection({
   variant = "blue",
 }: CTASectionProps) {
   const isCoral = variant === "coral";
+  const isExternal = href.startsWith("http");
 
   return (
     <section
@@ -30,6 +31,8 @@ export function CTASection({
         </div>
         <Link
           href={href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
           className="shrink-0 rounded-full bg-white px-7 py-4 text-sm font-black uppercase text-[#0a72ce] shadow-xl transition hover:-translate-y-0.5"
         >
           {buttonLabel}

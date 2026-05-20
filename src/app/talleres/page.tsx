@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GraduationCap, Sparkles, Users, WandSparkles } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
-import { heroImages, workshopCopy } from "@/data/site";
+import { contact, heroImages, workshopCopy, workshopRecap } from "@/data/site";
 
 const workshopPoints = [
   "Actividades pensadas para aprender jugando.",
@@ -19,11 +19,51 @@ export default function WorkshopsPage() {
         subtitle="Diversión sin fin"
         image={heroImages.workshops}
         ctaLabel="Consultar talleres"
-        ctaHref="/formulario"
+        ctaHref={contact.whatsappUrl}
         variant="split"
         eyebrow="Aprender jugando"
         badge="Creatividad y juego"
       />
+
+      <section className="bg-[#e9f9ff] py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-black uppercase text-[#ef3854] shadow-sm">
+              Recap BKids
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
+              Así se viven nuestros talleres
+            </h2>
+            <p className="mt-4 text-base font-semibold leading-7 text-slate-600 sm:text-lg">
+              Actividades creativas, entretenidas y pensadas para que los niños aprendan jugando.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 min-[520px]:grid-cols-2 lg:grid-cols-4">
+            {workshopRecap.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[24px] bg-white shadow-xl shadow-sky-100 ring-1 ring-sky-100"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 520px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-2xl font-black leading-none text-[#0a72ce]">
+                    {item.title}
+                  </h3>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
@@ -40,7 +80,7 @@ export default function WorkshopsPage() {
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-[#e9f9ff] px-4 py-2 text-sm font-black uppercase text-[#0a72ce]">
               <GraduationCap className="h-4 w-4" />
-              Talleres / Afterschool
+              Talleres y actividades
             </p>
             <h1 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
               Aprender jugando en un entorno seguro
@@ -82,8 +122,10 @@ export default function WorkshopsPage() {
             </div>
 
             <Link
-              href="/formulario"
-              className="mt-7 inline-flex rounded-full bg-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-sky-200 transition hover:bg-[#045ca9]"
+              href={contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex rounded-full bg-emerald-500 px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-emerald-100 transition hover:bg-emerald-600"
             >
               Consultar talleres
             </Link>
@@ -93,7 +135,7 @@ export default function WorkshopsPage() {
 
       <CTASection
         title="¿Quieres saber cuándo parten?"
-        text="Déjanos tus datos y te contactamos cuando estén disponibles los talleres y actividades afterschool."
+        text="Déjanos tus datos y te contactamos cuando estén disponibles los talleres y actividades."
         buttonLabel="Ir al formulario"
         href="/formulario"
       />

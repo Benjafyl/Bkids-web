@@ -4,7 +4,7 @@ import { CTASection } from "@/components/CTASection";
 import { GoogleReviews } from "@/components/GoogleReviews";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { LocationHoursSection } from "@/components/LocationHoursSection";
-import { homeHeroSlides } from "@/data/site";
+import { contact, homeHeroSlides } from "@/data/site";
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
         eyebrow="Diversión sin fin"
         title="Sumérgete en nuestra aventura"
         subtitle="Un espacio alegre, seguro y lleno de juegos para niños y familias."
-        ctaLabel="Ver precios entradas"
-        ctaHref="/precios"
+        ctaLabel="Comprar / Reservar"
+        ctaHref={contact.whatsappUrl}
         slides={homeHeroSlides}
       />
 

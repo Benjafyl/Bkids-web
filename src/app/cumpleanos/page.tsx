@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CalendarHeart, CheckCircle2, Gift, Sparkles } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
-import { birthdayConditions, birthdayPacks, heroImages } from "@/data/site";
+import { birthdayConditions, birthdayPacks, contact, heroImages } from "@/data/site";
 
 const birthdayHighlights = [
   "Espacio entretenido para compartir con amigos y familia.",
@@ -19,7 +19,7 @@ export default function BirthdaysPage() {
         subtitle="Ven a jugar y a reír"
         image={heroImages.birthdays}
         ctaLabel="Consultar por cumpleaños"
-        ctaHref="/formulario"
+        ctaHref={contact.whatsappUrl}
         variant="immersive"
         eyebrow="Celebraciones BKids"
       />
@@ -75,8 +75,10 @@ export default function BirthdaysPage() {
                     ))}
                   </div>
                   <Link
-                    href="/formulario"
-                    className="mt-6 inline-flex rounded-full bg-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-white"
+                    href={contact.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
                   >
                     Consultar por cumpleaños
                   </Link>
@@ -115,8 +117,8 @@ export default function BirthdaysPage() {
       <CTASection
         title="Agenda una celebración"
         text="Escríbenos y revisamos disponibilidad, horarios y alternativas para celebrar en BKids."
-        buttonLabel="Ir al formulario"
-        href="/formulario"
+        buttonLabel="Hablar por WhatsApp"
+        href={contact.whatsappUrl}
         variant="coral"
       />
     </>

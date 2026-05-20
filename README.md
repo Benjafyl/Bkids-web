@@ -23,7 +23,27 @@ http://localhost:3000
 npm run build
 ```
 
-El proyecto esta configurado con `output: "export"` en `next.config.ts`, por lo que el build genera la carpeta estatica `out/`.
+El proyecto corre como Next.js server para soportar el endpoint `/api/contact`.
+
+## Variables de entorno
+
+Crear un `.env.local` para desarrollo o configurar estas variables en Dockploy:
+
+```bash
+CONTACT_FORM_TO_EMAIL=benjafyl@gmail.com
+CONTACT_FORM_FROM_EMAIL=contactobkitschile@gmail.com
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=contactobkitschile@gmail.com
+SMTP_PASS=GMAIL_APP_PASSWORD
+```
+
+Para que las consultas lleguen al correo oficial de BKids, cambiar solo:
+
+```bash
+CONTACT_FORM_TO_EMAIL=contactobkitschile@gmail.com
+```
 
 ## Pantalla temporal "Muy pronto"
 
@@ -63,7 +83,7 @@ Abrir:
 http://localhost:8080
 ```
 
-El contenedor final usa `nginx:alpine` y escucha internamente en el puerto `80`.
+El contenedor final usa el servidor standalone de Next.js y escucha internamente en el puerto `80`.
 
 ## Dockploy
 
@@ -80,6 +100,8 @@ Docker File: Dockerfile
 Docker Context Path: .
 Container Port: 80
 ```
+
+Configurar las variables de entorno del formulario en la app de Dockploy antes de desplegar.
 
 Dominios:
 

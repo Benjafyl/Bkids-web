@@ -31,6 +31,7 @@ export function HeroCarousel({
 }: HeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(slides.length - 1);
+  const ctaIsExternal = ctaHref.startsWith("http");
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -137,6 +138,8 @@ export function HeroCarousel({
           </p>
           <Link
             href={ctaHref}
+            target={ctaIsExternal ? "_blank" : undefined}
+            rel={ctaIsExternal ? "noopener noreferrer" : undefined}
             className="mt-8 inline-flex rounded-full bg-[#ffcc33] px-8 py-4 text-base font-black uppercase text-[#063f83] shadow-xl shadow-sky-950/20 transition hover:-translate-y-0.5 hover:bg-[#ffd95a]"
           >
             {ctaLabel}

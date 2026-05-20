@@ -67,8 +67,10 @@ export function LocationHoursSection() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/formulario"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-white shadow-lg shadow-sky-100 transition hover:-translate-y-0.5 hover:bg-[#045ca9]"
+                  href={contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white shadow-lg shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-600"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Escribir ahora

@@ -18,9 +18,13 @@ type HeroProps = {
 function HeroCta({ ctaLabel, ctaHref }: Pick<HeroProps, "ctaLabel" | "ctaHref">) {
   if (!ctaLabel || !ctaHref) return null;
 
+  const isExternal = ctaHref.startsWith("http");
+
   return (
     <Link
       href={ctaHref}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className="mt-8 inline-flex rounded-full bg-[#ffcc33] px-7 py-4 text-base font-black uppercase text-[#063f83] shadow-xl shadow-sky-900/20 transition hover:-translate-y-0.5 hover:bg-[#ffd95a]"
     >
       {ctaLabel}

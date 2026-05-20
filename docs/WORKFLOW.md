@@ -35,6 +35,22 @@ npm run build
 
 Ambos deben pasar.
 
+## Variables De Entorno Del Formulario
+
+Para probar el envío real de correos, configura:
+
+```bash
+CONTACT_FORM_TO_EMAIL=benjafyl@gmail.com
+CONTACT_FORM_FROM_EMAIL=contactobkitschile@gmail.com
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=contactobkitschile@gmail.com
+SMTP_PASS=GMAIL_APP_PASSWORD
+```
+
+No subas contraseñas reales. En Dockploy, estas variables van en la configuración de la app.
+
 ## Revisión Visual Recomendada
 
 Revisar al menos:
@@ -92,7 +108,7 @@ Los botones de la sección usan `googleLinks.reviewsUrl` y `googleLinks.writeRev
 
 ## Futuro Backend O Envío Real De Formulario
 
-Actualmente `ContactForm` solo valida en frontend y muestra un mensaje visual.
+Actualmente `ContactForm` valida en frontend, envía a `/api/contact` y muestra estado de éxito o error.
 
 Si se agrega envío real:
 

@@ -10,7 +10,7 @@ El sitio ya tiene las páginas principales, navegación, formulario visual con v
 
 - Revisa primero `src/data/site.ts`; gran parte del contenido editable vive ahí.
 - Mantén el stack actual: Next.js App Router, TypeScript y Tailwind CSS.
-- No agregues backend salvo que la tarea lo pida explícitamente.
+- Mantén el backend limitado al endpoint `/api/contact`, salvo que la tarea pida otra cosa explícitamente.
 - No dupliques contenido hardcodeado si puede vivir en `src/data/site.ts`.
 - Conserva rutas limpias: `/`, `/quienes-somos`, `/cumpleanos`, `/talleres`, `/precios`, `/formulario`.
 - Mantén la estética BKids: azul fuerte, celeste, turquesa, rojo/coral, amarillo y rosado.
@@ -26,6 +26,7 @@ El sitio ya tiene las páginas principales, navegación, formulario visual con v
 - Cambiar hero: `src/components/Hero.tsx`.
 - Cambiar carrusel: `src/components/ImageCarousel.tsx`.
 - Cambiar formulario y validaciones: `src/components/ContactForm.tsx`.
+- Cambiar envío real del formulario: `src/app/api/contact/route.ts`.
 - Cambiar look global, olas, tipografías o tokens visuales: `src/app/globals.css`.
 - Reemplazar imágenes: `public/images/`.
 

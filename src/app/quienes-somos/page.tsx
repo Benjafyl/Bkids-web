@@ -3,7 +3,7 @@ import { CheckCircle2, Heart, Sparkles } from "lucide-react";
 import { AboutGalleryCarousel } from "@/components/AboutGalleryCarousel";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
-import { heroImages } from "@/data/site";
+import { contact, heroImages } from "@/data/site";
 
 const values = [
   {
@@ -32,8 +32,8 @@ const gallery = [
     alt: "Equipo de BKids compartiendo en la piscina de pelotas",
   },
   {
-    src: "/images/hero-home-local.jpg",
-    alt: "Familias y niños disfrutando los juegos en BKids",
+    src: "/images/quienes-somos-familia-secundaria.jpg",
+    alt: "Mamá junto a sus niños disfrutando BKids",
   },
   {
     src: "/images/about-juego-grupal.jpg",
@@ -49,7 +49,7 @@ export default function AboutPage() {
         subtitle="Un proyecto familiar pensado para crear momentos felices, seguros y llenos de juego."
         image={heroImages.about}
         variant="collage"
-        secondaryImage="/images/about-juego-grupal.jpg"
+        secondaryImage="/images/quienes-somos-familia-secundaria.jpg"
         badge="Be happy on the sea"
       />
 
@@ -87,10 +87,12 @@ export default function AboutPage() {
                 Contactar
               </Link>
               <Link
-                href="/cumpleanos"
+                href={contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex rounded-full border-2 border-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-[#0a72ce] transition hover:-translate-y-0.5 hover:bg-[#0a72ce] hover:text-white"
               >
-                Ver cumpleaños
+                Consultar cumpleaños
               </Link>
             </div>
           </div>

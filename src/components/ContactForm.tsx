@@ -25,6 +25,8 @@ export function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function validate() {
     const nextErrors: FormErrors = {};
@@ -37,15 +39,47 @@ export function ContactForm() {
     return nextErrors;
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextErrors = validate();
     setErrors(nextErrors);
     setSubmitted(false);
+    setSubmitError("");
 
     if (Object.keys(nextErrors).length === 0) {
-      setSubmitted(true);
-      setForm(initialState);
+      setIsSubmitting(true);
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...form,
+            sourcePage: window.location.href,
+          }),
+        });
+
+        const result = (await response.json().catch(() => null)) as
+          | { ok?: boolean; errors?: FormErrors; message?: string }
+          | null;
+
+        if (!response.ok || !result?.ok) {
+          if (result?.errors) setErrors(result.errors);
+          setSubmitError(
+            result?.message ?? "No pudimos enviar tu mensaje. Inténtalo nuevamente.",
+          );
+          return;
+        }
+
+        setSubmitted(true);
+        setForm(initialState);
+      } catch {
+        setSubmitError("No pudimos enviar tu mensaje. Inténtalo nuevamente.");
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   }
 
@@ -115,15 +149,22 @@ export function ContactForm() {
 
         <button
           type="submit"
+          disabled={isSubmitting}
           className="inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-sky-200 transition hover:bg-[#045ca9]"
         >
           <Send className="h-4 w-4" />
-          Enviar
+          {isSubmitting ? "Enviando..." : "Enviar"}
         </button>
 
         {submitted ? (
           <p className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-extrabold text-emerald-700">
             Gracias por contactarnos. Te responderemos pronto.
+          </p>
+        ) : null}
+
+        {submitError ? (
+          <p className="rounded-2xl bg-red-50 px-4 py-3 text-sm font-extrabold text-[#ef3854]">
+            {submitError}
           </p>
         ) : null}
       </div>

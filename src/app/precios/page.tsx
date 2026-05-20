@@ -3,7 +3,7 @@ import { Cake, Clock, GraduationCap, Sparkles } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { PriceCard } from "@/components/PriceCard";
-import { entryPrices, heroImages } from "@/data/site";
+import { contact, entryPrices, heroImages } from "@/data/site";
 
 export default function PricesPage() {
   return (
@@ -13,7 +13,7 @@ export default function PricesPage() {
         subtitle="Revisa todos nuestros precios"
         image={heroImages.prices}
         ctaLabel="Consultar disponibilidad"
-        ctaHref="/formulario"
+        ctaHref={contact.whatsappUrl}
         variant="compact"
         eyebrow="Entradas y consultas"
       />
@@ -87,8 +87,10 @@ export default function PricesPage() {
               celebrar en BKids, te ayudamos a revisar las mejores alternativas.
             </p>
             <Link
-              href="/formulario"
-              className="mt-6 inline-flex rounded-full bg-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-white"
+              href={contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
             >
               Consultar
             </Link>
@@ -97,15 +99,17 @@ export default function PricesPage() {
           <article className="rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
             <GraduationCap className="h-10 w-10 text-[#00a9c7]" />
             <h2 className="mt-4 font-display text-4xl font-black text-[#0a72ce]">
-              Talleres / Afterschool
+              Talleres y actividades
             </h2>
             <p className="mt-3 text-base font-semibold leading-7 text-slate-600">
               Los talleres y actividades se irán actualizando con sus horarios, edades y valores.
               Si te interesa, podemos avisarte cuando estén disponibles.
             </p>
             <Link
-              href="/formulario"
-              className="mt-6 inline-flex rounded-full bg-[#ef3854] px-6 py-3 text-sm font-black uppercase text-white"
+              href={contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
             >
               Consultar
             </Link>
@@ -116,8 +120,8 @@ export default function PricesPage() {
       <CTASection
         title="Consulta disponibilidad"
         text="Confirma horarios, entradas, cumpleaños o talleres antes de tu visita."
-        buttonLabel="Ir al formulario"
-        href="/formulario"
+        buttonLabel="Hablar por WhatsApp"
+        href={contact.whatsappUrl}
         variant="coral"
       />
     </>
