@@ -81,6 +81,7 @@ quienes-somos-familia-secundaria.jpg
 taller-invierno-recap.jpg
 quienes-somos-foto-nosotros.jpg
 quienes-somos-equipo-secundaria.jpg
+icono-whatsapp.png
 ```
 
 ## Reglas Para Reemplazar Imágenes

@@ -32,6 +32,7 @@ export const contact = {
   mapUrl: location.mapsUrl,
   whatsappUrl:
     "https://wa.me/56987117154?text=Hola%20BKids%2C%20quiero%20hacer%20una%20consulta.",
+  whatsappIcon: "/images/icono-whatsapp.png",
 };
 
 export const legal = {

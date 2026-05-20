@@ -28,16 +28,16 @@ const highlights = [
 
 const gallery = [
   {
-    src: "/images/equipo-bkids-conocenos.jpg",
-    alt: "Equipo de BKids compartiendo en la piscina de pelotas",
-  },
-  {
     src: "/images/quienes-somos-foto-nosotros.jpg",
     alt: "Familia BKids compartiendo en el espacio de juegos",
   },
   {
     src: "/images/quienes-somos-equipo-secundaria.jpg",
     alt: "Equipo BKids compartiendo con niños en la piscina de pelotas",
+  },
+  {
+    src: "/images/about-juego-grupal.jpg",
+    alt: "Niños y familias disfrutando los juegos de BKids",
   },
 ];
 

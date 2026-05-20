@@ -1,4 +1,5 @@
-import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock3, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { contact, socialLinks } from "@/data/site";
 
@@ -71,9 +72,15 @@ export function TopBar() {
             aria-label="WhatsApp de BKids"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-400 text-[#063f83] transition hover:bg-emerald-300"
+            className="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white transition hover:scale-105"
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
+            <Image
+              src={contact.whatsappIcon}
+              alt=""
+              width={32}
+              height={32}
+              className="h-full w-full object-cover"
+            />
           </Link>
         </div>
       </div>
