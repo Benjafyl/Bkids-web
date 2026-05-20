@@ -32,33 +32,33 @@ export default function WorkshopsPage() {
               Recap BKids
             </p>
             <h2 className="mt-4 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
-              Así se viven nuestros talleres
+              Recopilación de talleres pasados
             </h2>
             <p className="mt-4 text-base font-semibold leading-7 text-slate-600 sm:text-lg">
-              Actividades creativas, entretenidas y pensadas para que los niños aprendan jugando.
+              Un vistazo a las actividades, celebraciones y experiencias que hemos vivido junto a
+              los niños y sus familias.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 min-[520px]:grid-cols-2 lg:grid-cols-4">
-            {workshopRecap.map((item) => (
+          <div className="mt-9 grid auto-rows-[180px] gap-4 min-[520px]:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[170px]">
+            {workshopRecap.map((item, index) => (
               <article
                 key={item.title}
-                className="overflow-hidden rounded-[24px] bg-white shadow-xl shadow-sky-100 ring-1 ring-sky-100"
+                className={`group relative overflow-hidden rounded-[28px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white ${
+                  index === 0 ? "min-[520px]:col-span-2 lg:row-span-2" : ""
+                } ${index === 4 ? "lg:col-span-2" : ""}`}
               >
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 520px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-2xl font-black leading-none text-[#0a72ce]">
-                    {item.title}
-                  </h3>
-                </div>
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 520px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#063f83]/75 via-[#063f83]/12 to-transparent" />
+                <h3 className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/92 px-4 py-3 font-display text-2xl font-black leading-none text-[#0a72ce] shadow-lg shadow-slate-900/10">
+                  {item.title}
+                </h3>
               </article>
             ))}
           </div>

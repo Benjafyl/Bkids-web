@@ -47,9 +47,13 @@ SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=contactobkitschile@gmail.com
 SMTP_PASS=GMAIL_APP_PASSWORD
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
+RECAPTCHA_SECRET_KEY=
+RECAPTCHA_MIN_SCORE=0.5
 ```
 
 No subas contraseñas reales. En Dockploy, estas variables van en la configuración de la app.
+La site key de reCAPTCHA puede exponerse al cliente; la secret key debe quedar solo en servidor.
 
 ## Revisión Visual Recomendada
 

@@ -3,6 +3,7 @@ import { Baloo_2, Nunito } from "next/font/google";
 import { ComingSoon } from "@/components/ComingSoon";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { comingSoon, siteMeta } from "@/data/site";
 import "./globals.css";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <WhatsAppFloatingButton />
           </>
         )}
       </body>

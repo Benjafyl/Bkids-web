@@ -79,6 +79,8 @@ cumpleanos-header.jpg
 cumpleanos-info.jpg
 quienes-somos-familia-secundaria.jpg
 taller-invierno-recap.jpg
+quienes-somos-foto-nosotros.jpg
+quienes-somos-equipo-secundaria.jpg
 ```
 
 ## Reglas Para Reemplazar Imágenes
@@ -132,3 +134,6 @@ googleLinks.writeReviewUrl
 ## Formulario De Contacto
 
 El formulario envía a `/api/contact` y usa SMTP en servidor. Configura las variables de `.env.example` en desarrollo o Dockploy. Para cambiar el destinatario, edita solo `CONTACT_FORM_TO_EMAIL`.
+
+El formulario también soporta reCAPTCHA v3 con `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`,
+`RECAPTCHA_SECRET_KEY` y `RECAPTCHA_MIN_SCORE`.

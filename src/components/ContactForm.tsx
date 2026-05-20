@@ -1,6 +1,7 @@
 "use client";
 
 import { Send } from "lucide-react";
+import Script from "next/script";
 import { FormEvent, useState } from "react";
 
 type FormState = {
@@ -13,6 +14,15 @@ type FormState = {
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
 
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const initialState: FormState = {
   name: "",
   email: "",
@@ -20,6 +30,8 @@ const initialState: FormState = {
   type: "Entrada",
   message: "",
 };
+
+const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 export function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
@@ -39,6 +51,25 @@ export function ContactForm() {
     return nextErrors;
   }
 
+  async function getRecaptchaToken() {
+    if (!recaptchaSiteKey) return "";
+
+    const grecaptcha = window.grecaptcha;
+
+    if (!grecaptcha) {
+      throw new Error("reCAPTCHA no está listo. Inténtalo nuevamente en unos segundos.");
+    }
+
+    return new Promise<string>((resolve, reject) => {
+      grecaptcha.ready(() => {
+        grecaptcha
+          .execute(recaptchaSiteKey, { action: "contact_form" })
+          .then(resolve)
+          .catch(reject);
+      });
+    });
+  }
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextErrors = validate();
@@ -50,6 +81,7 @@ export function ContactForm() {
       setIsSubmitting(true);
 
       try {
+        const recaptchaToken = await getRecaptchaToken();
         const response = await fetch("/api/contact", {
           method: "POST",
           headers: {
@@ -58,6 +90,7 @@ export function ContactForm() {
           body: JSON.stringify({
             ...form,
             sourcePage: window.location.href,
+            recaptchaToken,
           }),
         });
 
@@ -75,8 +108,12 @@ export function ContactForm() {
 
         setSubmitted(true);
         setForm(initialState);
-      } catch {
-        setSubmitError("No pudimos enviar tu mensaje. Inténtalo nuevamente.");
+      } catch (error) {
+        setSubmitError(
+          error instanceof Error
+            ? error.message
+            : "No pudimos enviar tu mensaje. Inténtalo nuevamente.",
+        );
       } finally {
         setIsSubmitting(false);
       }
@@ -85,6 +122,12 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="rounded-[8px] bg-white p-6 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-8">
+      {recaptchaSiteKey ? (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`}
+          strategy="afterInteractive"
+        />
+      ) : null}
       <div className="grid gap-5">
         <label className="grid gap-2 text-sm font-extrabold text-slate-700">
           Nombre

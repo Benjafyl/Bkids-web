@@ -32,12 +32,12 @@ const gallery = [
     alt: "Equipo de BKids compartiendo en la piscina de pelotas",
   },
   {
-    src: "/images/quienes-somos-familia-secundaria.jpg",
-    alt: "Mamá junto a sus niños disfrutando BKids",
+    src: "/images/quienes-somos-foto-nosotros.jpg",
+    alt: "Familia BKids compartiendo en el espacio de juegos",
   },
   {
-    src: "/images/about-juego-grupal.jpg",
-    alt: "Niña disfrutando la piscina de pelotas en BKids",
+    src: "/images/quienes-somos-equipo-secundaria.jpg",
+    alt: "Equipo BKids compartiendo con niños en la piscina de pelotas",
   },
 ];
 

@@ -81,6 +81,7 @@ docs/
 - `ContactForm`: formulario cliente con validación básica y envío a `/api/contact`.
 - `Footer`: footer con olas, logo, contacto e información legal.
 - `GoogleReviews`: bloque compacto de reseñas de Google para Inicio.
+- `WhatsAppFloatingButton`: botón fijo global que abre el WhatsApp centralizado en `src/data/site.ts`.
 
 ## Datos Centralizados
 
@@ -99,6 +100,7 @@ docs/
 - Texto de talleres.
 - Link centralizado de WhatsApp.
 - Galería de recap de talleres.
+- Links de Instagram, Facebook y WhatsApp.
 
 El formulario usa variables de entorno SMTP. No hardcodear credenciales ni exponer secretos en componentes cliente.
 

@@ -181,30 +181,46 @@ export const workshopCopy =
   "Próximamente tendremos talleres y actividades pensadas para que los niños aprendan, jueguen y desarrollen nuevas habilidades en un entorno seguro, entretenido y acompañado.";
 
 export const socialLinks = {
-  instagram: "https://www.instagram.com/",
-  facebook: "https://www.facebook.com/",
+  instagram:
+    "https://www.instagram.com/bkids_chile?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  facebook: "https://www.facebook.com/profile.php?id=61581802253114#",
   whatsapp: contact.whatsappUrl,
 };
 
 export const workshopRecap = [
   {
-    title: "Taller de invierno",
+    title: "Día de la madre",
+    image: "/images/quienes-somos-foto-nosotros.jpg",
+    alt: "Familia compartiendo una actividad especial en BKids",
+  },
+  {
+    title: "Talleres de verano",
+    image: "/images/taller-legos.jpg",
+    alt: "Niños participando en actividades creativas en BKids",
+  },
+  {
+    title: "Talleres de invierno",
     image: "/images/taller-invierno-recap.jpg",
     alt: "Información de talleres de invierno BKids",
   },
   {
     title: "Actividades creativas",
-    image: "/images/taller-legos.jpg",
-    alt: "Niños participando en actividades creativas en BKids",
+    image: "/images/talleres-generico.jpg",
+    alt: "Talleres infantiles y actividades creativas en BKids",
+  },
+  {
+    title: "Festividades",
+    image: "/images/cumple-bienvenida.jpg",
+    alt: "Niños llegando a una celebración especial en BKids",
+  },
+  {
+    title: "Eventos especiales",
+    image: "/images/foto-divertida-marco.jpg",
+    alt: "Experiencia especial de juegos y celebración en BKids",
   },
   {
     title: "Talleres por temporada",
-    image: "/images/talleres-generico.jpg",
-    alt: "Talleres infantiles por temporada en BKids",
-  },
-  {
-    title: "Experiencias especiales",
-    image: "/images/cumple-bienvenida.jpg",
-    alt: "Niños llegando a una experiencia especial en BKids",
+    image: "/images/cumpleanos-info.jpg",
+    alt: "Actividad por temporada en BKids",
   },
 ];

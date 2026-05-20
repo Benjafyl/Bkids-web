@@ -37,6 +37,9 @@ SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=contactobkitschile@gmail.com
 SMTP_PASS=GMAIL_APP_PASSWORD
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
+RECAPTCHA_SECRET_KEY=
+RECAPTCHA_MIN_SCORE=0.5
 ```
 
 Para que las consultas lleguen al correo oficial de BKids, cambiar solo:
@@ -44,6 +47,10 @@ Para que las consultas lleguen al correo oficial de BKids, cambiar solo:
 ```bash
 CONTACT_FORM_TO_EMAIL=contactobkitschile@gmail.com
 ```
+
+`NEXT_PUBLIC_RECAPTCHA_SITE_KEY` es publica y se usa en el formulario. `RECAPTCHA_SECRET_KEY`
+solo se usa en el backend. Si `RECAPTCHA_SECRET_KEY` no esta configurada, el endpoint omite la
+validacion reCAPTCHA para permitir desarrollo local sin romper el sitio.
 
 ## Pantalla temporal "Muy pronto"
 

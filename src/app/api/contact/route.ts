@@ -7,6 +7,7 @@ type ContactPayload = {
   type?: unknown;
   message?: unknown;
   sourcePage?: unknown;
+  recaptchaToken?: unknown;
 };
 
 type ContactData = {
@@ -21,6 +22,13 @@ type ContactData = {
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const runtime = "nodejs";
+
+type RecaptchaVerifyResponse = {
+  success: boolean;
+  score?: number;
+  action?: string;
+  "error-codes"?: string[];
+};
 
 function asString(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -57,6 +65,58 @@ function getSmtpConfig() {
     toEmail: process.env.CONTACT_FORM_TO_EMAIL,
     fromEmail: process.env.CONTACT_FORM_FROM_EMAIL,
   };
+}
+
+function getRecaptchaConfig() {
+  const minScore = Number(process.env.RECAPTCHA_MIN_SCORE ?? 0.5);
+
+  return {
+    secretKey: process.env.RECAPTCHA_SECRET_KEY,
+    minScore: Number.isFinite(minScore) ? minScore : 0.5,
+  };
+}
+
+async function verifyRecaptcha(token: string) {
+  const config = getRecaptchaConfig();
+
+  if (!config.secretKey) {
+    console.warn("RECAPTCHA_SECRET_KEY is not configured; skipping reCAPTCHA verification.");
+    return { ok: true };
+  }
+
+  if (!token) {
+    return {
+      ok: false,
+      message: "No pudimos validar reCAPTCHA. Inténtalo nuevamente.",
+    };
+  }
+
+  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      secret: config.secretKey,
+      response: token,
+    }),
+  });
+
+  const result = (await response.json()) as RecaptchaVerifyResponse;
+
+  if (
+    !result.success ||
+    result.action !== "contact_form" ||
+    (typeof result.score === "number" && result.score < config.minScore)
+  ) {
+    console.warn("reCAPTCHA validation failed:", result);
+    return {
+      ok: false,
+      message: "No pudimos validar que seas una persona. Inténtalo nuevamente.",
+    };
+  }
+
+  return { ok: true };
 }
 
 function getMissingConfig(config: ReturnType<typeof getSmtpConfig>) {
@@ -121,6 +181,12 @@ export async function POST(request: Request) {
 
     if (Object.keys(errors).length > 0) {
       return Response.json({ ok: false, errors }, { status: 400 });
+    }
+
+    const recaptcha = await verifyRecaptcha(asString(payload.recaptchaToken));
+
+    if (!recaptcha.ok) {
+      return Response.json({ ok: false, message: recaptcha.message }, { status: 403 });
     }
 
     const config = getSmtpConfig();
