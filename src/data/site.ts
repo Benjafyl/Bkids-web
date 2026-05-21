@@ -98,12 +98,12 @@ export const carouselImages = [
 export const attractions = [
   {
     title: "Laberinto",
-    image: "/images/espacio-principal-bkids.jpg",
+    image: "/images/attractions/laberinto-bkids.jpg",
     description: "Circuitos para explorar, trepar y descubrir nuevos caminos.",
   },
   {
     title: "Piscina de pelotas",
-    image: "/images/about-juego-grupal.jpg",
+    image: "/images/attractions/piscina-de-pelotas-bkids.jpg",
     description: "Un mar de colores para saltar, imaginar y jugar libremente.",
   },
   {
@@ -123,7 +123,7 @@ export const attractions = [
   },
   {
     title: "Cama saltarina",
-    image: "/images/cama-elastica.jpg",
+    image: "/images/attractions/cama-saltarina-bkids.jpg",
     description: "Saltos seguros para liberar energía y pasarlo increíble.",
   },
   {
@@ -133,12 +133,12 @@ export const attractions = [
   },
   {
     title: "Plataforma interactiva",
-    image: "/images/maquina-grupal.jpg",
+    image: "/images/attractions/plataforma-interactiva-bkids.jpg",
     description: "Un espacio dinámico para moverse, descubrir y jugar en equipo.",
   },
   {
     title: "Área ninja",
-    image: "/images/area-ninja.jpg",
+    image: "/images/attractions/area-ninja-bkids.jpg",
     description: "Obstáculos pensados para moverse, equilibrarse y superar retos.",
   },
 ];

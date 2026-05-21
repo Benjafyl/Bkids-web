@@ -87,6 +87,11 @@ quienes-somos-familia-secundaria.jpg
 taller-invierno-recap.jpg
 quienes-somos-foto-nosotros.jpg
 quienes-somos-equipo-secundaria.jpg
+attractions/area-ninja-bkids.jpg
+attractions/cama-saltarina-bkids.jpg
+attractions/laberinto-bkids.jpg
+attractions/plataforma-interactiva-bkids.jpg
+attractions/piscina-de-pelotas-bkids.jpg
 ```
 
 Documentos:
