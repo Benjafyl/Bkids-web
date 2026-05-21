@@ -40,6 +40,7 @@ src/
   data/
     birthday.ts
     site.ts
+    workshops.ts
     reviews.ts
 public/
   images/
@@ -84,6 +85,7 @@ docs/
 - `Footer`: footer con olas, logo, contacto e información legal.
 - `GoogleReviews`: bloque compacto de reseñas de Google para Inicio.
 - `WhatsAppFloatingButton`: botón fijo global que abre el WhatsApp centralizado en `src/data/site.ts`.
+- `WorkshopsHero`, `WorkshopGallery`, `WorkshopInfoSection`, `WorkshopCTA`: secciones visuales de la página Talleres.
 
 ## Datos Centralizados
 
@@ -112,3 +114,5 @@ Cuando agregues contenido repetible, prefiere sumarlo ahí y mapearlo desde los 
 
 `src/data/birthday.ts` concentra los packs de cumpleaños, valores por día, horarios, condiciones,
 extras, opciones de snack y link al PDF completo.
+
+`src/data/workshops.ts` concentra la galería, textos, highlights y CTA de la página Talleres.

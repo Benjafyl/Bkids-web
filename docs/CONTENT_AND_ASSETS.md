@@ -92,6 +92,13 @@ attractions/cama-saltarina-bkids.jpg
 attractions/laberinto-bkids.jpg
 attractions/plataforma-interactiva-bkids.jpg
 attractions/piscina-de-pelotas-bkids.jpg
+workshops/taller-bkids-01.jpg
+workshops/taller-bkids-02.jpg
+workshops/taller-bkids-03.jpg
+workshops/taller-bkids-04.jpg
+workshops/taller-bkids-05.jpg
+workshops/taller-bkids-06.jpg
+workshops/taller-bkids-07.jpg
 ```
 
 Documentos:
