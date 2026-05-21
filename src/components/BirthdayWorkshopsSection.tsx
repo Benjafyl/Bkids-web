@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { contact } from "@/data/site";
 
 const homeCards = [
   {
     title: "Celebra su cumpleaños en BKids",
     text: "Un espacio entretenido, seguro y lleno de juegos para vivir una celebración inolvidable.",
     buttonLabel: "Consultar cumpleaños",
-    href: contact.whatsappUrl,
+    href: "/cumpleanos",
     image: "/images/cumpleanos-header.jpg",
     alt: "Cumpleaños infantiles en BKids",
     accent: "bg-[#ffcc33] text-[#063f83]",
@@ -17,7 +16,7 @@ const homeCards = [
     title: "Talleres y actividades",
     text: "Actividades pensadas para aprender, jugar y desarrollar nuevas habilidades en un entorno entretenido.",
     buttonLabel: "Consultar talleres",
-    href: contact.whatsappUrl,
+    href: "/talleres",
     image: "/images/taller-legos.jpg",
     alt: "Talleres infantiles en BKids",
     accent: "bg-white text-[#0a72ce]",
@@ -60,8 +59,6 @@ export function BirthdayWorkshopsSection() {
                 </p>
                 <Link
                   href={card.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className={`mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-black uppercase shadow-lg transition hover:-translate-y-0.5 ${card.accent}`}
                 >
                   {card.buttonLabel}
