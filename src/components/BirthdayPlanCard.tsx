@@ -63,14 +63,16 @@ export function BirthdayPlanCard({ plan }: BirthdayPlanCardProps) {
           </li>
         ))}
       </ul>
-      <Link
-        href={getBirthdayWhatsappUrl(`Hola BKids, quiero consultar por el ${plan.name} de cumpleaños.`)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`mt-7 inline-flex justify-center rounded-full px-5 py-3 text-sm font-black uppercase transition hover:-translate-y-0.5 ${theme.button}`}
-      >
-        Consultar este plan
-      </Link>
+      <div className="mt-auto pt-7">
+        <Link
+          href={getBirthdayWhatsappUrl(`Hola BKids, quiero consultar por el ${plan.name} de cumpleaños.`)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex w-full justify-center rounded-full px-5 py-3 text-sm font-black uppercase transition hover:-translate-y-0.5 ${theme.button}`}
+        >
+          Consultar este plan
+        </Link>
+      </div>
     </article>
   );
 }
