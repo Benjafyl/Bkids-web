@@ -25,15 +25,24 @@ export function WorkshopsHero() {
           <p className="mt-5 max-w-xl text-lg font-semibold leading-8 text-slate-700">
             {workshopsHero.text}
           </p>
-          <Link
-            href={workshopWhatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-7 py-4 text-sm font-black uppercase text-white shadow-xl shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-600"
-          >
-            Consultar talleres
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href={workshopWhatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-7 py-4 text-sm font-black uppercase text-white shadow-xl shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-600"
+            >
+              Consultar por WhatsApp
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/formulario"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-black uppercase text-[#0a72ce] shadow-xl shadow-sky-100 ring-1 ring-sky-100 transition hover:-translate-y-0.5"
+            >
+              Consultar por correo
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
 
         <div className="relative min-h-[430px] sm:min-h-[540px]">

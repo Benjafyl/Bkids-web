@@ -10,25 +10,45 @@ type HeroProps = {
   image: string;
   ctaLabel?: string;
   ctaHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
   variant?: HeroVariant;
   secondaryImage?: string;
   badge?: string;
 };
 
-function HeroCta({ ctaLabel, ctaHref }: Pick<HeroProps, "ctaLabel" | "ctaHref">) {
+function HeroCta({
+  ctaLabel,
+  ctaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
+}: Pick<HeroProps, "ctaLabel" | "ctaHref" | "secondaryCtaLabel" | "secondaryCtaHref">) {
   if (!ctaLabel || !ctaHref) return null;
 
   const isExternal = ctaHref.startsWith("http");
+  const secondaryIsExternal = secondaryCtaHref?.startsWith("http") ?? false;
 
   return (
-    <Link
-      href={ctaHref}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
-      className="mt-8 inline-flex rounded-full bg-[#ffcc33] px-7 py-4 text-base font-black uppercase text-[#063f83] shadow-xl shadow-sky-900/20 transition hover:-translate-y-0.5 hover:bg-[#ffd95a]"
-    >
-      {ctaLabel}
-    </Link>
+    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <Link
+        href={ctaHref}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className="inline-flex justify-center rounded-full bg-[#ffcc33] px-7 py-4 text-base font-black uppercase text-[#063f83] shadow-xl shadow-sky-900/20 transition hover:-translate-y-0.5 hover:bg-[#ffd95a]"
+      >
+        {ctaLabel}
+      </Link>
+      {secondaryCtaLabel && secondaryCtaHref ? (
+        <Link
+          href={secondaryCtaHref}
+          target={secondaryIsExternal ? "_blank" : undefined}
+          rel={secondaryIsExternal ? "noopener noreferrer" : undefined}
+          className="inline-flex justify-center rounded-full bg-white px-7 py-4 text-base font-black uppercase text-[#0a72ce] shadow-xl shadow-sky-900/20 transition hover:-translate-y-0.5"
+        >
+          {secondaryCtaLabel}
+        </Link>
+      ) : null}
+    </div>
   );
 }
 
@@ -39,6 +59,8 @@ export function Hero({
   image,
   ctaLabel,
   ctaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
   variant = "immersive",
   secondaryImage,
   badge,
@@ -59,7 +81,12 @@ export function Hero({
             <p className="mt-5 max-w-2xl text-xl font-extrabold leading-8 text-slate-600 sm:text-2xl">
               {subtitle}
             </p>
-            <HeroCta ctaLabel={ctaLabel} ctaHref={ctaHref} />
+            <HeroCta
+              ctaLabel={ctaLabel}
+              ctaHref={ctaHref}
+              secondaryCtaLabel={secondaryCtaLabel}
+              secondaryCtaHref={secondaryCtaHref}
+            />
           </div>
 
           <div className="relative min-h-[330px] overflow-hidden rounded-[32px] border-4 border-white bg-white shadow-2xl shadow-sky-100 sm:min-h-[440px]">
@@ -91,7 +118,12 @@ export function Hero({
             <p className="mt-5 max-w-2xl text-xl font-extrabold leading-8 text-white/92">
               {subtitle}
             </p>
-            <HeroCta ctaLabel={ctaLabel} ctaHref={ctaHref} />
+            <HeroCta
+              ctaLabel={ctaLabel}
+              ctaHref={ctaHref}
+              secondaryCtaLabel={secondaryCtaLabel}
+              secondaryCtaHref={secondaryCtaHref}
+            />
           </div>
           <div className="relative min-h-[280px] lg:min-h-full">
             <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
@@ -118,7 +150,12 @@ export function Hero({
             <p className="mt-5 max-w-2xl text-xl font-extrabold leading-8 text-slate-600 sm:text-2xl">
               {subtitle}
             </p>
-            <HeroCta ctaLabel={ctaLabel} ctaHref={ctaHref} />
+            <HeroCta
+              ctaLabel={ctaLabel}
+              ctaHref={ctaHref}
+              secondaryCtaLabel={secondaryCtaLabel}
+              secondaryCtaHref={secondaryCtaHref}
+            />
           </div>
 
           <div className="relative min-h-[430px]">
@@ -163,7 +200,12 @@ export function Hero({
           <p className="mt-5 max-w-2xl text-xl font-extrabold text-white sm:text-2xl">
             {subtitle}
           </p>
-          <HeroCta ctaLabel={ctaLabel} ctaHref={ctaHref} />
+          <HeroCta
+            ctaLabel={ctaLabel}
+            ctaHref={ctaHref}
+            secondaryCtaLabel={secondaryCtaLabel}
+            secondaryCtaHref={secondaryCtaHref}
+          />
         </div>
       </div>
     </section>

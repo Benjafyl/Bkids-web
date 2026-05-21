@@ -84,7 +84,7 @@ export default function AboutPage() {
                 href="/formulario"
                 className="inline-flex rounded-full bg-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-sky-200 transition hover:-translate-y-0.5 hover:bg-[#045ca9]"
               >
-                Contactar
+                Consultar por correo
               </Link>
               <Link
                 href={contact.whatsappUrl}
@@ -92,7 +92,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="inline-flex rounded-full border-2 border-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-[#0a72ce] transition hover:-translate-y-0.5 hover:bg-[#0a72ce] hover:text-white"
               >
-                Consultar cumpleaños
+                Consultar por WhatsApp
               </Link>
             </div>
           </div>
@@ -145,8 +145,10 @@ export default function AboutPage() {
       <CTASection
         title="Ven a conocernos"
         text="Te esperamos en Las Condes para vivir una experiencia infantil segura, alegre y llena de momentos especiales."
-        buttonLabel="Contactar"
-        href="/formulario"
+        buttonLabel="Consultar por WhatsApp"
+        href={contact.whatsappUrl}
+        secondaryButtonLabel="Consultar por correo"
+        secondaryHref="/formulario"
       />
     </>
   );

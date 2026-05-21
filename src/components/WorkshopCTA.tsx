@@ -28,7 +28,7 @@ export function WorkshopCTA() {
             href="/formulario"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-black uppercase text-[#0a72ce] shadow-xl transition hover:-translate-y-0.5"
           >
-            Ir al formulario
+            Consultar por correo
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

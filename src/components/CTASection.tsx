@@ -5,6 +5,8 @@ type CTASectionProps = {
   text: string;
   buttonLabel: string;
   href: string;
+  secondaryButtonLabel?: string;
+  secondaryHref?: string;
   variant?: "blue" | "coral";
 };
 
@@ -13,10 +15,13 @@ export function CTASection({
   text,
   buttonLabel,
   href,
+  secondaryButtonLabel,
+  secondaryHref,
   variant = "blue",
 }: CTASectionProps) {
   const isCoral = variant === "coral";
   const isExternal = href.startsWith("http");
+  const secondaryIsExternal = secondaryHref?.startsWith("http") ?? false;
 
   return (
     <section
@@ -29,14 +34,26 @@ export function CTASection({
           <h2 className="font-display text-4xl font-black sm:text-5xl">{title}</h2>
           <p className="mt-3 max-w-2xl text-lg font-semibold text-white/90">{text}</p>
         </div>
-        <Link
-          href={href}
-          target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noopener noreferrer" : undefined}
-          className="shrink-0 rounded-full bg-white px-7 py-4 text-sm font-black uppercase text-[#0a72ce] shadow-xl transition hover:-translate-y-0.5"
-        >
-          {buttonLabel}
-        </Link>
+        <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+          <Link
+            href={href}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            className="rounded-full bg-emerald-500 px-7 py-4 text-center text-sm font-black uppercase text-white shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-600"
+          >
+            {buttonLabel}
+          </Link>
+          {secondaryButtonLabel && secondaryHref ? (
+            <Link
+              href={secondaryHref}
+              target={secondaryIsExternal ? "_blank" : undefined}
+              rel={secondaryIsExternal ? "noopener noreferrer" : undefined}
+              className="rounded-full bg-white px-7 py-4 text-center text-sm font-black uppercase text-[#0a72ce] shadow-xl transition hover:-translate-y-0.5"
+            >
+              {secondaryButtonLabel}
+            </Link>
+          ) : null}
+        </div>
       </div>
     </section>
   );

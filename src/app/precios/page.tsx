@@ -12,8 +12,10 @@ export default function PricesPage() {
         title="Precios"
         subtitle="Revisa todos nuestros precios"
         image={heroImages.prices}
-        ctaLabel="Consultar disponibilidad"
+        ctaLabel="Consultar por WhatsApp"
         ctaHref={contact.whatsappUrl}
+        secondaryCtaLabel="Consultar por correo"
+        secondaryCtaHref="/formulario"
         variant="compact"
         eyebrow="Entradas y consultas"
       />
@@ -86,14 +88,22 @@ export default function PricesPage() {
               Los packs de cumpleaños pueden variar según disponibilidad y formato. Si quieres
               celebrar en BKids, te ayudamos a revisar las mejores alternativas.
             </p>
-            <Link
-              href={contact.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
-            >
-              Consultar
-            </Link>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href={contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
+              >
+                Consultar por WhatsApp
+              </Link>
+              <Link
+                href="/formulario"
+                className="inline-flex justify-center rounded-full border-2 border-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-[#0a72ce] transition hover:bg-[#0a72ce] hover:text-white"
+              >
+                Consultar por correo
+              </Link>
+            </div>
           </article>
 
           <article className="rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
@@ -105,14 +115,22 @@ export default function PricesPage() {
               Los talleres y actividades se irán actualizando con sus horarios, edades y valores.
               Si te interesa, podemos avisarte cuando estén disponibles.
             </p>
-            <Link
-              href={contact.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
-            >
-              Consultar
-            </Link>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href={contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
+              >
+                Consultar por WhatsApp
+              </Link>
+              <Link
+                href="/formulario"
+                className="inline-flex justify-center rounded-full border-2 border-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-[#0a72ce] transition hover:bg-[#0a72ce] hover:text-white"
+              >
+                Consultar por correo
+              </Link>
+            </div>
           </article>
         </div>
       </section>
@@ -120,8 +138,10 @@ export default function PricesPage() {
       <CTASection
         title="Consulta disponibilidad"
         text="Confirma horarios, entradas, cumpleaños o talleres antes de tu visita."
-        buttonLabel="Hablar por WhatsApp"
+        buttonLabel="Consultar por WhatsApp"
         href={contact.whatsappUrl}
+        secondaryButtonLabel="Consultar por correo"
+        secondaryHref="/formulario"
         variant="coral"
       />
     </>

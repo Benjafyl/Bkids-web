@@ -15,15 +15,23 @@ export function BirthdayFinalCTA() {
             tipo de celebración.
           </p>
         </div>
-        <Link
-          href={getBirthdayWhatsappUrl("Hola BKids, quiero consultar por los packs de cumpleaños.")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-4 text-sm font-black uppercase text-white shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-600"
-        >
-          Consultar por WhatsApp
-          <ArrowRight className="h-4 w-4" />
-        </Link>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <Link
+            href={getBirthdayWhatsappUrl("Hola BKids, quiero consultar por los packs de cumpleaños.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-4 text-sm font-black uppercase text-white shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-600"
+          >
+            Consultar por WhatsApp
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/formulario"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-black uppercase text-[#0a72ce] shadow-xl transition hover:-translate-y-0.5"
+          >
+            Consultar por correo
+          </Link>
+        </div>
       </div>
     </section>
   );

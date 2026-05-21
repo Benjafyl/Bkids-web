@@ -17,8 +17,10 @@ export default function BirthdaysPage() {
         title="Cumpleaños"
         subtitle="Ven a jugar y a reír"
         image={heroImages.birthdays}
-        ctaLabel="Consultar cumpleaños"
+        ctaLabel="Consultar por WhatsApp"
         ctaHref={getBirthdayWhatsappUrl("Hola BKids, quiero consultar por los packs de cumpleaños.")}
+        secondaryCtaLabel="Consultar por correo"
+        secondaryCtaHref="/formulario"
         variant="immersive"
         eyebrow="Celebraciones BKids"
       />

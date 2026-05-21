@@ -99,12 +99,19 @@ workshops/taller-bkids-04.jpg
 workshops/taller-bkids-05.jpg
 workshops/taller-bkids-06.jpg
 workshops/taller-bkids-07.jpg
+workshops/taller-mesa-gorritos-bkids.jpg
 ```
 
 Documentos:
 
 ```text
 packs-cumpleanos-bkids.pdf
+```
+
+Videos:
+
+```text
+videos/workshops/talleres-bkids-loop.mp4
 ```
 
 ## Reglas Para Reemplazar Imágenes

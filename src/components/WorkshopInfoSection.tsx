@@ -1,18 +1,19 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import { workshopHighlights, workshopInfo, workshopWhatsappUrl } from "@/data/workshops";
+import { CheckCircle2, Sparkles } from "lucide-react";
+import { workshopHighlights, workshopInfo } from "@/data/workshops";
 
 export function WorkshopInfoSection() {
   return (
     <section className="bubble-pattern bg-[#e9f9ff] py-16 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
         <div className="relative overflow-hidden rounded-[34px] bg-white shadow-2xl shadow-sky-100 ring-8 ring-white">
-          <Image
-            src={workshopInfo.image}
-            alt="Niños participando en talleres y actividades BKids"
-            width={950}
-            height={980}
+          <video
+            src={workshopInfo.video}
+            poster={workshopInfo.poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-label="Talleres y actividades BKids"
             className="h-[420px] w-full object-cover sm:h-[560px]"
           />
         </div>
@@ -39,25 +40,6 @@ export function WorkshopInfoSection() {
                 <span>{item}</span>
               </div>
             ))}
-          </div>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href={workshopWhatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-4 text-sm font-black uppercase text-white shadow-lg shadow-emerald-100 transition hover:-translate-y-0.5 hover:bg-emerald-600"
-            >
-              Consultar talleres por WhatsApp
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/formulario"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-black uppercase text-[#0a72ce] shadow-lg shadow-sky-100 ring-1 ring-sky-100 transition hover:-translate-y-0.5"
-            >
-              Ir al formulario
-              <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </div>

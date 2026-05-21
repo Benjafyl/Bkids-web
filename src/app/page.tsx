@@ -4,7 +4,7 @@ import { CTASection } from "@/components/CTASection";
 import { GoogleReviews } from "@/components/GoogleReviews";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { LocationHoursSection } from "@/components/LocationHoursSection";
-import { homeHeroSlides } from "@/data/site";
+import { contact, homeHeroSlides } from "@/data/site";
 
 export default function Home() {
   return (
@@ -26,8 +26,10 @@ export default function Home() {
       <CTASection
         title="¿Tienes una consulta?"
         text="Escríbenos para revisar horarios, disponibilidad, cumpleaños o talleres."
-        buttonLabel="Ir al formulario"
-        href="/formulario"
+        buttonLabel="Consultar por WhatsApp"
+        href={contact.whatsappUrl}
+        secondaryButtonLabel="Consultar por correo"
+        secondaryHref="/formulario"
         variant="coral"
       />
     </>
