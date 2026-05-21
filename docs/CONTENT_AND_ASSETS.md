@@ -44,6 +44,12 @@ Todas las imágenes públicas viven en:
 public/images/
 ```
 
+Los documentos descargables viven en:
+
+```text
+public/docs/
+```
+
 Lista de imágenes preparadas para reemplazo:
 
 ```text
@@ -81,6 +87,12 @@ quienes-somos-familia-secundaria.jpg
 taller-invierno-recap.jpg
 quienes-somos-foto-nosotros.jpg
 quienes-somos-equipo-secundaria.jpg
+```
+
+Documentos:
+
+```text
+packs-cumpleanos-bkids.pdf
 ```
 
 ## Reglas Para Reemplazar Imágenes

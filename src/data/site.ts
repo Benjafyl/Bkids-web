@@ -162,21 +162,6 @@ export const entryPrices = [
   },
 ];
 
-export const birthdayConditions = [
-  "Reserva sujeta a disponibilidad de fecha y horario.",
-  "La confirmación final se realiza de manera previa.",
-  "Los packs y servicios pueden ajustarse cuando se definan todas las alternativas.",
-];
-
-export const birthdayPacks = [
-  {
-    title: "Cumpleaños personalizados",
-    description:
-      "Dejamos la estructura lista para sumar packs, horarios, servicios incluidos y detalles de celebraciones temáticas.",
-    image: "/images/cumpleanos-info.jpg",
-  },
-];
-
 export const workshopCopy =
   "Próximamente tendremos talleres y actividades pensadas para que los niños aprendan, jueguen y desarrollen nuevas habilidades en un entorno seguro, entretenido y acompañado.";
 

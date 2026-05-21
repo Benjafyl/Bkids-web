@@ -21,6 +21,7 @@ El sitio ya tiene las páginas principales, navegación, formulario visual con v
 ## Dónde Tocar Según La Tarea
 
 - Cambiar textos, precios, teléfonos, mail, dirección, atracciones o condiciones: `src/data/site.ts`.
+- Cambiar packs, precios, horarios, condiciones o extras de cumpleaños: `src/data/birthday.ts`.
 - Cambiar estructura de una página: `src/app/**/page.tsx`.
 - Cambiar header, navegación o footer: `src/components/Header.tsx`, `TopBar.tsx`, `Navbar.tsx`, `Footer.tsx`.
 - Cambiar hero: `src/components/Hero.tsx`.

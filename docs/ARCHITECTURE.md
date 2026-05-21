@@ -38,6 +38,7 @@ src/
     PriceCard.tsx
     TopBar.tsx
   data/
+    birthday.ts
     site.ts
     reviews.ts
 public/
@@ -108,3 +109,6 @@ El formulario usa variables de entorno SMTP. No hardcodear credenciales ni expon
 `src/data/reviews.ts` concentra las reseñas visibles y los links de Google para ver o dejar reseñas.
 
 Cuando agregues contenido repetible, prefiere sumarlo ahí y mapearlo desde los componentes o páginas.
+
+`src/data/birthday.ts` concentra los packs de cumpleaños, valores por día, horarios, condiciones,
+extras, opciones de snack y link al PDF completo.
