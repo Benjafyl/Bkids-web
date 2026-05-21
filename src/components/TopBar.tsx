@@ -1,25 +1,7 @@
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { contact, socialLinks } from "@/data/site";
-
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true" fill="none">
-      <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" strokeWidth="2" />
-      <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="2" />
-      <circle cx="17" cy="7" r="1.1" fill="currentColor" />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true" fill="currentColor">
-      <path d="M14.1 8.3V6.9c0-.7.5-.9.9-.9h2V3h-2.8c-3 0-3.8 2.2-3.8 3.7v1.6H8v3.2h2.4V21h3.7v-9.5h2.6l.4-3.2h-3Z" />
-    </svg>
-  );
-}
 
 export function TopBar() {
   return (
@@ -51,36 +33,30 @@ export function TopBar() {
         <div className="flex items-center gap-3">
           <Link
             href={socialLinks.instagram}
-            aria-label="Instagram de BKids"
+            aria-label="Instagram BKids"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#1b8de6] text-white transition hover:scale-105 hover:opacity-90"
           >
-            <InstagramIcon />
+            <FaInstagram className="h-5 w-5" aria-hidden="true" />
           </Link>
           <Link
             href={socialLinks.facebook}
-            aria-label="Facebook de BKids"
+            aria-label="Facebook BKids"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#126fd1] text-white transition hover:scale-105 hover:opacity-90"
           >
-            <FacebookIcon />
+            <FaFacebookF className="h-5 w-5" aria-hidden="true" />
           </Link>
           <Link
             href={socialLinks.whatsapp}
             aria-label="WhatsApp de BKids"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white transition hover:scale-105"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#25d366] text-white transition hover:scale-105 hover:opacity-90"
           >
-            <Image
-              src={contact.whatsappIcon}
-              alt=""
-              width={32}
-              height={32}
-              className="h-full w-full object-cover"
-            />
+            <FaWhatsapp className="h-5 w-5" aria-hidden="true" />
           </Link>
         </div>
       </div>
