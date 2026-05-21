@@ -19,7 +19,7 @@ export function AttractionsSection() {
           </p>
         </div>
 
-        <div className="mt-9 grid gap-5 min-[520px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-9 grid gap-5 min-[520px]:grid-cols-2 lg:grid-cols-3">
           {attractions.map((attraction) => (
             <AttractionCard key={attraction.title} {...attraction} />
           ))}

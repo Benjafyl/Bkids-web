@@ -1,9 +1,11 @@
 const googleBusinessUrl =
   "https://www.google.com/search?sca_esv=902c31b61ac8c1b2&hl=es-419&sxsrf=ANbL-n790ScBZZf5ZHbEyPlyY-LCUAeyPw:1778604952946&q=bkids&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOVbFGNqF6iuHXWQgPUS2WQeLy8cPib_73v0OoecM66ZeZe9QeEJfXWzwwN7iOYHiwBKqOiMs5h4FCZxKOUy3TRF15xZmKAsyVXCdq_xe8zDE9DPf3w%3D%3D&sa=X&ved=2ahUKEwjl56njm7SUAxXRGbkGHeUYNSQQrrQLegQIHBAA&biw=1920&bih=911&dpr=1";
+const googleWriteReviewUrl =
+  "https://www.google.com/search?sca_esv=902c31b61ac8c1b2&hl=es-419&sxsrf=ANbL-n790ScBZZf5ZHbEyPlyY-LCUAeyPw:1778604952946&q=bkids&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOVbFGNqF6iuHXWQgPUS2WQeLy8cPib_73v0OoecM66ZeZe9QeEJfXWzwwN7iOYHiwBKqOiMs5h4FCZxKOUy3TRF15xZmKAsyVXCdq_xe8zDE9DPf3w%3D%3D&sa=X&ved=2ahUKEwjl56njm7SUAxXRGbkGHeUYNSQQrrQLegQIHBAA&biw=1920&bih=911&dpr=1#lrd=0x9662cd0028ae26cf:0x18d716bf682bcc03,3,,,,";
 
 export const googleLinks = {
   reviewsUrl: googleBusinessUrl,
-  writeReviewUrl: googleBusinessUrl,
+  writeReviewUrl: googleWriteReviewUrl,
 };
 
 export const googleReviews = [
