@@ -51,7 +51,7 @@ export const heroImages = {
   about: "/images/equipo-bkids-conocenos.jpg",
   birthdays: "/images/cumpleanos-header.jpg",
   workshops: "/images/workshops/taller-bkids-02.jpg",
-  prices: "/images/espacio-principal-bkids.jpg",
+  prices: "/images/heroes/hero-precios-bkids.jpg",
   contact: "/images/contacto-familia.jpg",
 };
 

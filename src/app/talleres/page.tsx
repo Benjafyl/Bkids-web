@@ -7,8 +7,8 @@ export default function WorkshopsPage() {
   return (
     <>
       <WorkshopsHero />
-      <WorkshopGallery />
       <WorkshopInfoSection />
+      <WorkshopGallery />
       <WorkshopCTA />
     </>
   );

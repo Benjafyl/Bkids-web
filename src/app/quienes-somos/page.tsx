@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, Heart, Sparkles } from "lucide-react";
+import { CheckCircle2, Heart, ShieldCheck, Sparkles, SmilePlus } from "lucide-react";
 import { AboutGalleryCarousel } from "@/components/AboutGalleryCarousel";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
@@ -8,15 +8,18 @@ import { contact, heroImages } from "@/data/site";
 const values = [
   {
     title: "Juego con sentido",
-    text: "Creamos experiencias donde la diversión también ayuda a explorar, compartir y aprender.",
+    text: "Creamos experiencias donde los niños se divierten, exploran y aprenden jugando.",
+    icon: Sparkles,
   },
   {
     title: "Espacio seguro",
-    text: "Cuidamos cada detalle para que niños, niñas y familias disfruten con tranquilidad.",
+    text: "Cuidamos cada detalle para que las familias se sientan tranquilas mientras los niños disfrutan.",
+    icon: ShieldCheck,
   },
   {
     title: "Atención cercana",
-    text: "Queremos que cada visita se sienta amable, ordenada y pensada para pasarlo bien.",
+    text: "Acompañamos cada visita con un trato amable, familiar y preocupado.",
+    icon: SmilePlus,
   },
 ];
 
@@ -53,15 +56,77 @@ export default function AboutPage() {
         badge="Be happy on the sea"
       />
 
+      <section className="bg-[#e9f9ff] py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black uppercase text-[#ef3854] shadow-sm">
+              <Heart className="h-4 w-4" />
+              Pilares BKids
+            </p>
+            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
+              Lo que nos mueve
+            </h2>
+          </div>
+
+          <div className="mt-9 grid gap-5 md:grid-cols-3">
+            {values.map((value) => {
+              const Icon = value.icon;
+
+              return (
+                <article
+                  key={value.title}
+                  className="h-full rounded-[30px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ffcc33] text-[#063f83]">
+                    <Icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mt-6 font-display text-4xl font-black leading-none text-[#0a72ce]">
+                    {value.title}
+                  </h3>
+                  <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
+                    {value.text}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="max-w-4xl rounded-[36px] bg-[#e9f9ff] p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
+            <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
+              <Sparkles className="h-4 w-4" />
+              Nuestra historia
+            </p>
+            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
+              Nuestra historia
+            </h2>
+            <div className="mt-6 space-y-5 text-lg font-semibold leading-8 text-slate-600">
+              <p>
+                BKids nace desde una necesidad real: crear un lugar entretenido, seguro y cercano
+                donde los niños puedan jugar, explorar y compartir, mientras sus familias disfrutan
+                con tranquilidad.
+              </p>
+              <p>
+                Diseñamos un espacio pensado para acompañar la infancia con experiencias alegres,
+                creativas y llenas de momentos memorables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bubble-pattern bg-white py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.88fr_1.12fr] lg:items-center lg:px-8">
-          <div>
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="max-w-4xl">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
               <Heart className="h-4 w-4" />
               Somos BKids
             </p>
             <h1 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
-              Creemos momentos mágicos para niños y familias
+              Creamos momentos mágicos para niños y familias
             </h1>
             <p className="mt-6 text-lg font-semibold leading-8 text-slate-600">
               En BKids creemos que la infancia está llena de descubrimientos, juego y recuerdos
@@ -96,49 +161,21 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-
-          <AboutGalleryCarousel slides={gallery} />
         </div>
       </section>
 
-      <section className="bg-[#e9f9ff] py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[1fr_0.9fr] lg:items-start lg:px-8">
-          <div className="rounded-[36px] bg-white p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
+      <section className="bg-[#f6fcff] py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="mb-8 max-w-3xl">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black uppercase text-[#ef3854] shadow-sm">
               <Sparkles className="h-4 w-4" />
-              Nuestra historia
+              Equipo BKids
             </p>
-            <div className="mt-6 space-y-5 text-lg font-semibold leading-8 text-slate-600">
-              <p>
-                BKids nace desde una motivación muy simple y muy importante: ofrecer a los más
-                pequeños un lugar entretenido, seguro y bien pensado para jugar de verdad.
-              </p>
-              <p>
-                Queríamos un espacio donde la diversión estuviera acompañada de orden, calidez y una
-                experiencia agradable también para los adultos que acompañan.
-              </p>
-              <p>
-                Hoy seguimos construyendo ese lugar con cariño, energía y atención al detalle, para
-                que cada familia se lleve una buena experiencia y quiera volver.
-              </p>
-            </div>
+            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
+              Personas reales detrás de cada experiencia
+            </h2>
           </div>
-
-          <div className="grid gap-5">
-            {values.map((value) => (
-              <article
-                key={value.title}
-                className="rounded-[30px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100"
-              >
-                <h2 className="font-display text-4xl font-black leading-none text-[#0a72ce]">
-                  {value.title}
-                </h2>
-                <p className="mt-4 text-base font-semibold leading-7 text-slate-600">
-                  {value.text}
-                </p>
-              </article>
-            ))}
-          </div>
+          <AboutGalleryCarousel slides={gallery} />
         </div>
       </section>
 

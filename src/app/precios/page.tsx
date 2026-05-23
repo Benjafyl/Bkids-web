@@ -78,17 +78,17 @@ export default function PricesPage() {
       </section>
 
       <section className="bg-[#e9f9ff] py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-2 lg:px-8">
-          <article className="rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
+        <div className="mx-auto grid max-w-7xl items-stretch gap-6 px-4 md:grid-cols-2 lg:px-8">
+          <article className="flex h-full flex-col rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
             <Cake className="h-10 w-10 text-[#ef3854]" />
             <h2 className="mt-4 font-display text-4xl font-black text-[#0a72ce]">
               Cumpleaños
             </h2>
             <p className="mt-3 text-base font-semibold leading-7 text-slate-600">
               Los packs de cumpleaños pueden variar según disponibilidad y formato. Si quieres
-              celebrar en BKids, te ayudamos a revisar las mejores alternativas.
+                celebrar en BKids, te ayudamos a revisar las mejores alternativas.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
               <Link
                 href={contact.whatsappUrl}
                 target="_blank"
@@ -106,7 +106,7 @@ export default function PricesPage() {
             </div>
           </article>
 
-          <article className="rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
+          <article className="flex h-full flex-col rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
             <GraduationCap className="h-10 w-10 text-[#00a9c7]" />
             <h2 className="mt-4 font-display text-4xl font-black text-[#0a72ce]">
               Talleres y actividades
@@ -115,7 +115,7 @@ export default function PricesPage() {
               Los talleres y actividades se irán actualizando con sus horarios, edades y valores.
               Si te interesa, podemos avisarte cuando estén disponibles.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
               <Link
                 href={contact.whatsappUrl}
                 target="_blank"

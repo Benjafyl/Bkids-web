@@ -13,7 +13,7 @@ export function BirthdayConditionsSection() {
               Información clave
             </p>
             <h2 className="mt-4 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
-              Condiciones importantes
+              Condiciones generales
             </h2>
           </div>
           <Link
