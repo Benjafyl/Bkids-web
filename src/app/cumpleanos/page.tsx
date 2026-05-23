@@ -7,7 +7,9 @@ import { BirthdayPlansSection } from "@/components/BirthdayPlansSection";
 import { BirthdayPricesTable } from "@/components/BirthdayPricesTable";
 import { BirthdayScheduleSection } from "@/components/BirthdayScheduleSection";
 import { Hero } from "@/components/Hero";
+import { PromotionBanner } from "@/components/PromotionBanner";
 import { birthdayPdfUrl, getBirthdayWhatsappUrl } from "@/data/birthday";
+import { birthdayPromotion } from "@/data/promotions";
 import { heroImages } from "@/data/site";
 
 export default function BirthdaysPage() {
@@ -25,6 +27,7 @@ export default function BirthdaysPage() {
         eyebrow="Celebraciones BKids"
       />
 
+      <PromotionBanner promotion={birthdayPromotion} />
       <BirthdayPlansSection />
       <BirthdayPricesTable />
       <BirthdayScheduleSection />

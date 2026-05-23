@@ -4,6 +4,8 @@ import { CTASection } from "@/components/CTASection";
 import { GoogleReviews } from "@/components/GoogleReviews";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { LocationHoursSection } from "@/components/LocationHoursSection";
+import { PromotionBanner } from "@/components/PromotionBanner";
+import { homePromotion } from "@/data/promotions";
 import { contact, homeHeroSlides } from "@/data/site";
 
 export default function Home() {
@@ -19,6 +21,7 @@ export default function Home() {
       />
 
       <AttractionsSection />
+      <PromotionBanner promotion={homePromotion} />
       <BirthdayWorkshopsSection />
       <LocationHoursSection />
       <GoogleReviews />

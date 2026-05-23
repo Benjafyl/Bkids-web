@@ -101,6 +101,9 @@ workshops/taller-bkids-06.jpg
 workshops/taller-bkids-07.jpg
 workshops/taller-mesa-gorritos-bkids.jpg
 workshops/workshop-hero-taller-creativo-bkids.jpg
+promotions/home-lunes-2x1-bkids.jpg
+promotions/cumpleanos-mayo-descuento-bkids.jpg
+promotions/talleres-invierno-bkids.jpg
 heroes/hero-precios-bkids.jpg
 about/equipo-bkids-01.jpg
 about/equipo-bkids-02.jpg
