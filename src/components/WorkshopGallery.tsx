@@ -1,16 +1,7 @@
 import Image from "next/image";
 import { workshopGallery } from "@/data/workshops";
 
-function collageClass(index: number) {
-  if (index === 0) return "col-span-2";
-  if (index === 1) return "row-span-2";
-  if (index === 4) return "col-span-2";
-  return "";
-}
-
 export function WorkshopGallery() {
-  const [featuredImage, ...collageImages] = workshopGallery;
-
   return (
     <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -27,35 +18,22 @@ export function WorkshopGallery() {
           </p>
         </div>
 
-        <div className="mt-9 grid gap-5 lg:grid-cols-[minmax(0,1.12fr)_minmax(360px,0.88fr)] lg:items-stretch">
-          {featuredImage ? (
-            <figure className="group relative min-h-[430px] overflow-hidden rounded-[32px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[540px] lg:min-h-[650px]">
+        <div className="mt-9 columns-1 gap-5 sm:columns-2 lg:columns-3">
+          {workshopGallery.map((item) => (
+            <figure
+              key={item.src}
+              className="mb-5 break-inside-avoid overflow-hidden rounded-[26px] shadow-xl shadow-sky-100"
+            >
               <Image
-                src={featuredImage.src}
-                alt={featuredImage.alt}
-                fill
-                sizes="(min-width: 1024px) 58vw, 100vw"
-                className="object-cover transition duration-500 group-hover:scale-105"
+                src={item.src}
+                alt={item.alt}
+                width={1200}
+                height={1600}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="h-auto w-full object-cover"
               />
             </figure>
-          ) : null}
-
-          <div className="grid auto-rows-[180px] grid-cols-2 gap-4 sm:auto-rows-[220px] lg:auto-rows-[190px] xl:auto-rows-[205px]">
-            {collageImages.map((item, index) => (
-              <figure
-                key={item.src}
-                className={`relative overflow-hidden rounded-[26px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white ${collageClass(index)}`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes="(min-width: 1024px) 22vw, 50vw"
-                  className="object-contain p-2"
-                />
-              </figure>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

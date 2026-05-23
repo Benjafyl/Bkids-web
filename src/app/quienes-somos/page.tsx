@@ -97,70 +97,70 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bubble-pattern bg-white py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-2 lg:px-8">
-          <article className="rounded-[36px] bg-[#e9f9ff] p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
-              <Sparkles className="h-4 w-4" />
-              Somos BKids
-            </p>
-            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
-              Nuestra historia
-            </h2>
-            <div className="mt-6 space-y-5 text-lg font-semibold leading-8 text-slate-600">
-              <p>
-                BKids nace desde una necesidad real: crear un lugar entretenido, seguro y cercano
-                donde los niños puedan jugar, explorar y compartir, mientras sus familias disfrutan
-                con tranquilidad.
-              </p>
-              <p>
-                Diseñamos un espacio pensado para acompañar la infancia con experiencias alegres,
-                creativas y llenas de momentos memorables.
-              </p>
-            </div>
-          </article>
-
-          <article className="rounded-[36px] bg-white p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[#fff7da] px-4 py-2 text-sm font-black uppercase text-[#ef3854] shadow-sm">
-              <Heart className="h-4 w-4" />
-              Momentos BKids
-            </p>
-            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
-              Creamos momentos mágicos para niños y familias
-            </h2>
-            <p className="mt-6 text-lg font-semibold leading-8 text-slate-600">
-              En BKids creemos que la infancia está llena de descubrimientos, juego y recuerdos
-              felices. Por eso creamos un espacio donde cada visita invita a disfrutar, compartir y
-              crecer con alegría.
-            </p>
-            <div className="mt-6 space-y-4">
-              {highlights.map((item) => (
-                <p
-                  key={item}
-                  className="flex gap-3 rounded-[24px] bg-[#e9f9ff] px-5 py-4 text-base font-bold leading-7 text-slate-700 shadow-sm ring-1 ring-sky-100"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#00a9c7]" />
-                  <span>{item}</span>
+      <section className="bubble-pattern bg-white py-14 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-5 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:px-8">
+              <article className="rounded-[30px] bg-[#e9f9ff] p-6 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-8 lg:p-9">
+                <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
+                  <Sparkles className="h-4 w-4" />
+                  Somos BKids
                 </p>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/formulario"
-                className="inline-flex rounded-full bg-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-sky-200 transition hover:-translate-y-0.5 hover:bg-[#045ca9]"
-              >
-                Consultar por correo
-              </Link>
-              <Link
-                href={contact.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-full border-2 border-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-[#0a72ce] transition hover:-translate-y-0.5 hover:bg-[#0a72ce] hover:text-white"
-              >
-                Consultar por WhatsApp
-              </Link>
-            </div>
-          </article>
+                <h2 className="mt-5 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
+                  Nuestra historia
+                </h2>
+                <div className="mt-5 space-y-4 text-base font-semibold leading-8 text-slate-600 sm:text-lg">
+                  <p>
+                    BKids nace desde una necesidad real: crear un lugar entretenido, seguro y
+                    cercano donde los niños puedan jugar, explorar y compartir, mientras sus
+                    familias disfrutan con tranquilidad.
+                  </p>
+                  <p>
+                    Diseñamos un espacio pensado para acompañar la infancia con experiencias
+                    alegres, creativas y llenas de momentos memorables.
+                  </p>
+                </div>
+              </article>
+
+              <article className="rounded-[28px] bg-white p-6 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-8 lg:p-9">
+                <p className="inline-flex items-center gap-2 rounded-full bg-[#fff7da] px-4 py-2 text-sm font-black uppercase text-[#ef3854] shadow-sm">
+                  <Heart className="h-4 w-4" />
+                  Momentos BKids
+                </p>
+                <h2 className="mt-5 max-w-2xl font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
+                  Creamos momentos mágicos para niños y familias
+                </h2>
+                <p className="mt-5 max-w-2xl text-base font-semibold leading-8 text-slate-600 sm:text-lg">
+                  En BKids creemos que la infancia está llena de descubrimientos, juego y recuerdos
+                  felices. Por eso creamos un espacio donde cada visita invita a disfrutar,
+                  compartir y crecer con alegría.
+                </p>
+                <div className="mt-6 grid gap-3">
+                  {highlights.map((item) => (
+                    <p
+                      key={item}
+                      className="flex gap-3 rounded-[22px] bg-[#e9f9ff] px-4 py-3 text-sm font-bold leading-6 text-slate-700 shadow-sm ring-1 ring-sky-100 sm:text-base"
+                    >
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#00a9c7]" />
+                      <span>{item}</span>
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Link
+                    href="/formulario"
+                    className="inline-flex justify-center rounded-full bg-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-white shadow-lg shadow-sky-200 transition hover:-translate-y-0.5 hover:bg-[#045ca9]"
+                  >
+                    Consultar por correo
+                  </Link>
+                  <Link
+                    href={contact.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex justify-center rounded-full border-2 border-[#0a72ce] px-7 py-4 text-sm font-black uppercase text-[#0a72ce] transition hover:-translate-y-0.5 hover:bg-[#0a72ce] hover:text-white"
+                  >
+                    Consultar por WhatsApp
+                  </Link>
+                </div>
+              </article>
         </div>
       </section>
 
@@ -175,23 +175,40 @@ export default function AboutPage() {
               Personas reales detrás de cada experiencia
             </h2>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {gallery.map((image, index) => (
-              <figure
-                key={image.src}
-                className={`relative min-h-[340px] overflow-hidden rounded-[34px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[430px] ${
-                  index === 0 ? "md:col-span-2 md:min-h-[520px]" : ""
-                }`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes={index === 0 ? "(min-width: 768px) 100vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
-                  className="object-cover"
-                />
-              </figure>
-            ))}
+
+          <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+            <figure className="relative min-h-[360px] overflow-hidden rounded-[34px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[460px] lg:min-h-[560px]">
+              <Image
+                src={gallery[0].src}
+                alt={gallery[0].alt}
+                fill
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                className="object-cover object-center"
+              />
+            </figure>
+
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+              {gallery.slice(1).map((image, index) => (
+                <figure
+                  key={image.src}
+                  className={`relative min-h-[240px] overflow-hidden rounded-[30px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[260px] ${
+                    index === 0 ? "sm:col-span-2 lg:min-h-[270px]" : ""
+                  }`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes={
+                      index === 0
+                        ? "(min-width: 1024px) 45vw, (min-width: 640px) 100vw, 100vw"
+                        : "(min-width: 1024px) 22vw, (min-width: 640px) 50vw, 100vw"
+                    }
+                    className="object-cover object-center"
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
