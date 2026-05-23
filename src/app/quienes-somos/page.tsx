@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { CheckCircle2, Heart, ShieldCheck, Sparkles, SmilePlus } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
+import { TeamGalleryLightbox } from "@/components/TeamGalleryLightbox";
 import { contact, heroImages } from "@/data/site";
 
 const values = [
@@ -176,40 +176,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
-            <figure className="relative min-h-[360px] overflow-hidden rounded-[34px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[460px] lg:min-h-[560px]">
-              <Image
-                src={gallery[0].src}
-                alt={gallery[0].alt}
-                fill
-                sizes="(min-width: 1024px) 55vw, 100vw"
-                className="object-cover object-center"
-              />
-            </figure>
-
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
-              {gallery.slice(1).map((image, index) => (
-                <figure
-                  key={image.src}
-                  className={`relative min-h-[240px] overflow-hidden rounded-[30px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[260px] ${
-                    index === 0 ? "sm:col-span-2 lg:min-h-[270px]" : ""
-                  }`}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes={
-                      index === 0
-                        ? "(min-width: 1024px) 45vw, (min-width: 640px) 100vw, 100vw"
-                        : "(min-width: 1024px) 22vw, (min-width: 640px) 50vw, 100vw"
-                    }
-                    className="object-cover object-center"
-                  />
-                </figure>
-              ))}
-            </div>
-          </div>
+          <TeamGalleryLightbox images={gallery} />
         </div>
       </section>
 

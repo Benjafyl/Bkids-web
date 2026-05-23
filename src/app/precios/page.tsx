@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cake, Clock, GraduationCap, Sparkles } from "lucide-react";
+import { ArrowRight, Cake, Clock, GraduationCap, Sparkles } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { PriceCard } from "@/components/PriceCard";
@@ -79,7 +79,10 @@ export default function PricesPage() {
 
       <section className="bg-[#e9f9ff] py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl items-stretch gap-6 px-4 md:grid-cols-2 lg:px-8">
-          <article className="flex h-full flex-col rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
+          <Link
+            href="/cumpleanos"
+            className="group flex h-full flex-col rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-200"
+          >
             <Cake className="h-10 w-10 text-[#ef3854]" />
             <h2 className="mt-4 font-display text-4xl font-black text-[#0a72ce]">
               Cumpleaños
@@ -88,25 +91,16 @@ export default function PricesPage() {
               Los packs de cumpleaños pueden variar según disponibilidad y formato. Si quieres
                 celebrar en BKids, te ayudamos a revisar las mejores alternativas.
             </p>
-            <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
-              <Link
-                href={contact.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
-              >
-                Consultar por WhatsApp
-              </Link>
-              <Link
-                href="/formulario"
-                className="inline-flex justify-center rounded-full border-2 border-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-[#0a72ce] transition hover:bg-[#0a72ce] hover:text-white"
-              >
-                Consultar por correo
-              </Link>
-            </div>
-          </article>
+            <span className="mt-auto inline-flex items-center pt-6 text-sm font-black uppercase text-[#0a72ce]">
+              Ver p&aacute;gina de cumplea&ntilde;os
+              <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
+            </span>
+          </Link>
 
-          <article className="flex h-full flex-col rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100">
+          <Link
+            href="/talleres"
+            className="group flex h-full flex-col rounded-[28px] bg-white p-7 shadow-xl shadow-sky-100 ring-1 ring-sky-100 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-200"
+          >
             <GraduationCap className="h-10 w-10 text-[#00a9c7]" />
             <h2 className="mt-4 font-display text-4xl font-black text-[#0a72ce]">
               Talleres y actividades
@@ -115,23 +109,11 @@ export default function PricesPage() {
               Los talleres y actividades se irán actualizando con sus horarios, edades y valores.
               Si te interesa, podemos avisarte cuando estén disponibles.
             </p>
-            <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
-              <Link
-                href={contact.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-black uppercase text-white"
-              >
-                Consultar por WhatsApp
-              </Link>
-              <Link
-                href="/formulario"
-                className="inline-flex justify-center rounded-full border-2 border-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-[#0a72ce] transition hover:bg-[#0a72ce] hover:text-white"
-              >
-                Consultar por correo
-              </Link>
-            </div>
-          </article>
+            <span className="mt-auto inline-flex items-center pt-6 text-sm font-black uppercase text-[#0a72ce]">
+              Ver p&aacute;gina de talleres
+              <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
+            </span>
+          </Link>
         </div>
       </section>
 
