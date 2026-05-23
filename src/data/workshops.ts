@@ -6,7 +6,7 @@ export const workshopsHero = {
   title: "Talleres",
   subtitle: "Diversión sin fin",
   text: "Actividades creativas y entretenidas para que los niños aprendan, compartan y desarrollen nuevas habilidades jugando.",
-  primaryImage: "/images/workshops/taller-bkids-04.jpg",
+  primaryImage: "/images/workshops/workshop-hero-taller-creativo-bkids.jpg",
   secondaryImage: "/images/workshops/taller-bkids-06.jpg",
   tertiaryImage: "/images/workshops/taller-bkids-01.jpg",
 };
@@ -27,10 +27,6 @@ export const workshopGallery = [
   {
     src: "/images/workshops/taller-bkids-01.jpg",
     alt: "Niño jugando con masas de colores en taller BKids",
-  },
-  {
-    src: "/images/workshops/taller-bkids-05.jpg",
-    alt: "Niña pintando en una actividad creativa BKids",
   },
   {
     src: "/images/workshops/taller-bkids-03.jpg",

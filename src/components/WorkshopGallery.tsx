@@ -1,14 +1,16 @@
 import Image from "next/image";
 import { workshopGallery } from "@/data/workshops";
 
-function galleryClass(index: number) {
-  if (index === 0) return "min-[560px]:col-span-2 lg:row-span-2";
-  if (index === 3) return "lg:row-span-2";
-  if (index === 5) return "min-[560px]:col-span-2 lg:col-span-1";
+function collageClass(index: number) {
+  if (index === 0) return "col-span-2";
+  if (index === 1) return "row-span-2";
+  if (index === 4) return "col-span-2";
   return "";
 }
 
 export function WorkshopGallery() {
+  const [featuredImage, ...collageImages] = workshopGallery;
+
   return (
     <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -25,21 +27,35 @@ export function WorkshopGallery() {
           </p>
         </div>
 
-        <div className="mt-9 grid auto-rows-[190px] gap-4 min-[560px]:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[180px]">
-          {workshopGallery.map((item, index) => (
-            <figure
-              key={item.src}
-              className={`group relative overflow-hidden rounded-[28px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white ${galleryClass(index)}`}
-            >
+        <div className="mt-9 grid gap-5 lg:grid-cols-[minmax(0,1.12fr)_minmax(360px,0.88fr)] lg:items-stretch">
+          {featuredImage ? (
+            <figure className="group relative min-h-[430px] overflow-hidden rounded-[32px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[540px] lg:min-h-[650px]">
               <Image
-                src={item.src}
-                alt={item.alt}
+                src={featuredImage.src}
+                alt={featuredImage.alt}
                 fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 560px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 58vw, 100vw"
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
             </figure>
-          ))}
+          ) : null}
+
+          <div className="grid auto-rows-[145px] grid-cols-2 gap-4 sm:auto-rows-[175px] lg:auto-rows-[150px] xl:auto-rows-[154px]">
+            {collageImages.map((item, index) => (
+              <figure
+                key={item.src}
+                className={`group relative overflow-hidden rounded-[26px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white ${collageClass(index)}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 50vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>
