@@ -5,8 +5,6 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { workshopGallery } from "@/data/workshops";
 
-type WorkshopGalleryItem = (typeof workshopGallery)[number];
-
 export function WorkshopGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
   const total = workshopGallery.length;
@@ -25,15 +23,15 @@ export function WorkshopGallery() {
 
   const activeImage = workshopGallery[activeIndex] ?? workshopGallery[0];
 
-  const previewImages = useMemo(() => {
+  const previewSlots = useMemo(() => {
     if (total <= 1) {
       return [];
     }
 
     return Array.from({ length: Math.min(4, total - 1) }, (_, offset) => {
-      return workshopGallery[(activeIndex + offset + 1) % total];
-    }).filter((item): item is WorkshopGalleryItem => Boolean(item));
-  }, [activeIndex, total]);
+      return offset + 1;
+    });
+  }, [total]);
 
   if (!activeImage) {
     return null;
@@ -66,16 +64,27 @@ export function WorkshopGallery() {
         <div className="mt-9 grid gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)]">
           <div className="relative overflow-hidden rounded-[30px] shadow-2xl shadow-sky-100">
             <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/11]">
-              <Image
-                key={activeImage.src}
-                src={activeImage.src}
-                alt={activeImage.alt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 64vw, 100vw"
-                className="object-cover"
-                style={{ objectPosition: activeImage.objectPosition }}
-              />
+              {workshopGallery.map((item, index) => {
+                const isActive = index === activeIndex;
+
+                return (
+                  <Image
+                    key={item.src}
+                    src={item.src}
+                    alt={isActive ? item.alt : ""}
+                    aria-hidden={!isActive}
+                    fill
+                    priority={index === 0}
+                    sizes="(min-width: 1024px) 64vw, 100vw"
+                    className={`object-cover transition-[opacity,transform,filter] duration-1000 ease-out ${
+                      isActive
+                        ? "scale-100 opacity-100 blur-0"
+                        : "pointer-events-none scale-[1.03] opacity-0 blur-[1px]"
+                    }`}
+                    style={{ objectPosition: item.objectPosition }}
+                  />
+                );
+              })}
             </div>
 
             <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3">
@@ -115,26 +124,39 @@ export function WorkshopGallery() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2">
-            {previewImages.map((item, index) => {
-              const imageIndex = workshopGallery.findIndex((galleryItem) => galleryItem.src === item.src);
+            {previewSlots.map((offset, index) => {
+              const targetIndex = (activeIndex + offset) % total;
+              const targetImage = workshopGallery[targetIndex] ?? activeImage;
 
               return (
                 <button
-                  key={item.src}
+                  key={offset}
                   type="button"
-                  aria-label={`Ver ${item.alt}`}
-                  onClick={() => setActiveIndex(imageIndex)}
+                  aria-label={`Ver ${targetImage.alt}`}
+                  onClick={() => setActiveIndex(targetIndex)}
                   className="group overflow-hidden rounded-[24px] shadow-xl shadow-sky-100 transition hover:-translate-y-1 hover:shadow-2xl"
                 >
                   <span className="relative block aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      fill
-                      sizes="(min-width: 1024px) 18vw, (min-width: 640px) 25vw, 50vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                      style={{ objectPosition: item.objectPosition }}
-                    />
+                    {workshopGallery.map((item, itemIndex) => {
+                      const isVisible = itemIndex === targetIndex;
+
+                      return (
+                        <Image
+                          key={item.src}
+                          src={item.src}
+                          alt=""
+                          aria-hidden
+                          fill
+                          sizes="(min-width: 1024px) 18vw, (min-width: 640px) 25vw, 50vw"
+                          className={`object-cover transition-[opacity,transform] duration-700 ease-out ${
+                            isVisible
+                              ? "scale-100 opacity-100 group-hover:scale-105"
+                              : "pointer-events-none scale-[1.04] opacity-0"
+                          }`}
+                          style={{ objectPosition: item.objectPosition }}
+                        />
+                      );
+                    })}
                   </span>
                   <span className="sr-only">Cambiar a la imagen {index + 1}</span>
                 </button>
