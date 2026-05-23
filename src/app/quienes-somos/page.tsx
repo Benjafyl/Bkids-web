@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Heart, ShieldCheck, Sparkles, SmilePlus } from "lucide-react";
-import { AboutGalleryCarousel } from "@/components/AboutGalleryCarousel";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
 import { contact, heroImages } from "@/data/site";
@@ -31,16 +31,20 @@ const highlights = [
 
 const gallery = [
   {
-    src: "/images/quienes-somos-foto-nosotros.jpg",
-    alt: "Familia BKids compartiendo en el espacio de juegos",
+    src: "/images/about/equipo-bkids-01.jpg",
+    alt: "Equipo BKids saludando junto a niños en el espacio de juegos",
   },
   {
-    src: "/images/quienes-somos-equipo-secundaria.jpg",
-    alt: "Equipo BKids compartiendo con niños en la piscina de pelotas",
+    src: "/images/about/equipo-bkids-02.jpg",
+    alt: "Equipo BKids compartiendo en la piscina de pelotas",
   },
   {
-    src: "/images/about-juego-grupal.jpg",
-    alt: "Niños y familias disfrutando los juegos de BKids",
+    src: "/images/about/equipo-bkids-03.jpg",
+    alt: "Integrantes del equipo BKids en el espacio de juegos",
+  },
+  {
+    src: "/images/about/equipo-bkids-04.jpg",
+    alt: "Equipo BKids sonriendo en el centro de juegos",
   },
 ];
 
@@ -93,12 +97,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white py-14 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="max-w-4xl rounded-[36px] bg-[#e9f9ff] p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
+      <section className="bubble-pattern bg-white py-16 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-2 lg:px-8">
+          <article className="rounded-[36px] bg-[#e9f9ff] p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
               <Sparkles className="h-4 w-4" />
-              Nuestra historia
+              Somos BKids
             </p>
             <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
               Nuestra historia
@@ -114,20 +118,16 @@ export default function AboutPage() {
                 creativas y llenas de momentos memorables.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section className="bubble-pattern bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="max-w-4xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
+          <article className="rounded-[36px] bg-white p-8 shadow-xl shadow-sky-100 ring-1 ring-sky-100 sm:p-10">
+            <p className="inline-flex items-center gap-2 rounded-full bg-[#fff7da] px-4 py-2 text-sm font-black uppercase text-[#ef3854] shadow-sm">
               <Heart className="h-4 w-4" />
-              Somos BKids
+              Momentos BKids
             </p>
-            <h1 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
+            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
               Creamos momentos mágicos para niños y familias
-            </h1>
+            </h2>
             <p className="mt-6 text-lg font-semibold leading-8 text-slate-600">
               En BKids creemos que la infancia está llena de descubrimientos, juego y recuerdos
               felices. Por eso creamos un espacio donde cada visita invita a disfrutar, compartir y
@@ -160,7 +160,7 @@ export default function AboutPage() {
                 Consultar por WhatsApp
               </Link>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -175,7 +175,24 @@ export default function AboutPage() {
               Personas reales detrás de cada experiencia
             </h2>
           </div>
-          <AboutGalleryCarousel slides={gallery} />
+          <div className="grid gap-5 md:grid-cols-2">
+            {gallery.map((image, index) => (
+              <figure
+                key={image.src}
+                className={`relative min-h-[340px] overflow-hidden rounded-[34px] bg-white shadow-xl shadow-sky-100 ring-4 ring-white sm:min-h-[430px] ${
+                  index === 0 ? "md:col-span-2 md:min-h-[520px]" : ""
+                }`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes={index === 0 ? "(min-width: 768px) 100vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
+                  className="object-cover"
+                />
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 

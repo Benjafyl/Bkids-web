@@ -102,6 +102,10 @@ workshops/taller-bkids-07.jpg
 workshops/taller-mesa-gorritos-bkids.jpg
 workshops/workshop-hero-taller-creativo-bkids.jpg
 heroes/hero-precios-bkids.jpg
+about/equipo-bkids-01.jpg
+about/equipo-bkids-02.jpg
+about/equipo-bkids-03.jpg
+about/equipo-bkids-04.jpg
 ```
 
 Documentos:

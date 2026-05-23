@@ -40,18 +40,18 @@ export function WorkshopGallery() {
             </figure>
           ) : null}
 
-          <div className="grid auto-rows-[145px] grid-cols-2 gap-4 sm:auto-rows-[175px] lg:auto-rows-[150px] xl:auto-rows-[154px]">
+          <div className="grid auto-rows-[180px] grid-cols-2 gap-4 sm:auto-rows-[220px] lg:auto-rows-[190px] xl:auto-rows-[205px]">
             {collageImages.map((item, index) => (
               <figure
                 key={item.src}
-                className={`group relative overflow-hidden rounded-[26px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white ${collageClass(index)}`}
+                className={`relative overflow-hidden rounded-[26px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-4 ring-white ${collageClass(index)}`}
               >
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
                   sizes="(min-width: 1024px) 22vw, 50vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  className="object-contain p-2"
                 />
               </figure>
             ))}
