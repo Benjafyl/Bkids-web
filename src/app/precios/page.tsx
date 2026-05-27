@@ -42,7 +42,7 @@ export default function PricesPage() {
             ))}
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             <article className="rounded-[28px] bg-[#e9f9ff] p-6 shadow-lg shadow-sky-100 ring-1 ring-sky-100">
               <Clock className="h-8 w-8 text-[#0a72ce]" />
               <h2 className="mt-4 font-display text-3xl font-black text-[#0a72ce]">
@@ -63,16 +63,6 @@ export default function PricesPage() {
                 la alternativa más conveniente.
               </p>
             </article>
-            <article className="rounded-[28px] bg-[#eefcf5] p-6 shadow-lg shadow-emerald-100 ring-1 ring-emerald-100">
-              <GraduationCap className="h-8 w-8 text-[#00a9c7]" />
-              <h2 className="mt-4 font-display text-3xl font-black text-[#0a72ce]">
-                Próximas novedades
-              </h2>
-              <p className="mt-3 text-base font-semibold leading-7 text-slate-600">
-                Talleres, cumpleaños y nuevas experiencias pueden sumar valores y formatos
-                especiales más adelante.
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -89,10 +79,10 @@ export default function PricesPage() {
             </h2>
             <p className="mt-3 text-base font-semibold leading-7 text-slate-600">
               Los packs de cumpleaños pueden variar según disponibilidad y formato. Si quieres
-                celebrar en BKids, te ayudamos a revisar las mejores alternativas.
+              celebrar en BKids, te ayudamos a revisar las mejores alternativas.
             </p>
             <span className="mt-auto inline-flex items-center pt-6 text-sm font-black uppercase text-[#0a72ce]">
-              Ver p&aacute;gina de cumplea&ntilde;os
+              Ver página de cumpleaños
               <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
             </span>
           </Link>
@@ -110,7 +100,7 @@ export default function PricesPage() {
               Si te interesa, podemos avisarte cuando estén disponibles.
             </p>
             <span className="mt-auto inline-flex items-center pt-6 text-sm font-black uppercase text-[#0a72ce]">
-              Ver p&aacute;gina de talleres
+              Ver página de talleres
               <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
             </span>
           </Link>
