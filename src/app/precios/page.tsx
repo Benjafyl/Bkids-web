@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Cake, Clock, GraduationCap, Sparkles } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
+import { LocalCatalogSection } from "@/components/LocalCatalogSection";
 import { PriceCard } from "@/components/PriceCard";
 import { contact, entryPrices, heroImages } from "@/data/site";
 
@@ -66,6 +67,8 @@ export default function PricesPage() {
           </div>
         </div>
       </section>
+
+      <LocalCatalogSection />
 
       <section className="bg-[#e9f9ff] py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl items-stretch gap-6 px-4 md:grid-cols-2 lg:px-8">

@@ -24,7 +24,7 @@ export const contact = {
   address: location.address,
   legalAddress: "Camino El Alba 12.620 Local 16 B, Las Condes",
   phone: "+56 9 8711 7154",
-  email: "contactobkitschile@gmail.com",
+  email: "contactobkidschile@gmail.com",
   schedule: {
     weekdays: "Lunes a viernes: 09:00 a 19:00 hrs",
     weekends: "Sábado, domingo y festivos: 10:00 a 19:00 hrs",
@@ -159,6 +159,59 @@ export const entryPrices = [
     title: "Pack familiar",
     price: "$18.000",
     detail: "3 niños por 1 hora para venir en familia o con amigos.",
+  },
+];
+
+export const localCatalogProducts = [
+  {
+    title: "Galletas",
+    image: "/images/catalog/galletas-bkids.jpeg",
+    alt: "Galletas disponibles en BKids",
+  },
+  {
+    title: "Jugos",
+    image: "/images/catalog/jugos-bkids.jpeg",
+    alt: "Jugos disponibles en BKids",
+  },
+  {
+    title: "Bebidas",
+    image: "/images/catalog/bebidas-bkids.jpeg",
+    alt: "Bebidas disponibles en BKids",
+  },
+  {
+    title: "Agua",
+    image: "/images/catalog/agua-bkids.jpeg",
+    alt: "Agua disponible en BKids",
+  },
+  {
+    title: "Compotas",
+    image: "/images/catalog/compotas-bkids.jpeg",
+    alt: "Compotas disponibles en BKids",
+  },
+  {
+    title: "Snacks",
+    image: "/images/catalog/snacks-bkids.jpeg",
+    alt: "Snacks disponibles en BKids",
+  },
+  {
+    title: "Leches",
+    image: "/images/catalog/leches-bkids.jpeg",
+    alt: "Leches disponibles en BKids",
+  },
+  {
+    title: "Muffin",
+    image: "/images/catalog/muffin-bkids.jpeg",
+    alt: "Muffin disponible en BKids",
+  },
+  {
+    title: "Brownie",
+    image: "/images/catalog/brownie-bkids.jpeg",
+    alt: "Brownie disponible en BKids",
+  },
+  {
+    title: "Galleta de coco",
+    image: "/images/catalog/galleta-coco-bkids.jpeg",
+    alt: "Galleta de coco disponible en BKids",
   },
 ];
 

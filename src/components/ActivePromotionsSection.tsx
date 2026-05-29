@@ -42,10 +42,10 @@ export function ActivePromotionsSection() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center gap-2 rounded-full bg-[#e9f9ff] px-4 py-2 text-sm font-black uppercase text-[#0a72ce]">
             <Sparkles className="h-4 w-4" />
-            Activos BKids
+            Novedades BKids
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
-            Promoción y taller activo
+            Promociones y talleres de temporada
           </h2>
         </div>
 

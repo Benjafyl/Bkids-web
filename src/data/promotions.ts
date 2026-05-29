@@ -14,7 +14,7 @@ export type PromotionBanner = {
 };
 
 export const homePromotion: PromotionBanner = {
-  eyebrow: "Promoción BKids",
+  eyebrow: "Promoción vigente",
   title: "Todos los lunes 2x1 en entradas",
   text: "Una invitación especial para empezar la semana jugando, explorando y compartiendo en familia.",
   image: "/images/promotions/home-lunes-2x1-vertical-bkids.png",
@@ -26,7 +26,7 @@ export const homePromotion: PromotionBanner = {
 };
 
 export const homeWorkshopPromotion: PromotionBanner = {
-  eyebrow: "Taller activo",
+  eyebrow: "Taller de temporada",
   title: "Talleres de invierno",
   text: "Talleres para niños de 3 a 7 años, de 9:00 a 13:00 hrs, con materiales y colación incluidos.",
   image: "/images/promotions/talleres-invierno-promocion-bkids.jpeg",

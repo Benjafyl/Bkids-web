@@ -30,7 +30,7 @@ export default function BirthdaysPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="relative aspect-[16/7] overflow-hidden rounded-[34px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-1 ring-sky-100">
             <Image
-              src="/images/cumpleanos-celebracion.jpg"
+              src="/images/cumpleanos-celebracion-grupo-bkids.png"
               alt="Celebración de cumpleaños en BKids"
               fill
               sizes="(min-width: 1280px) 1216px, 100vw"
