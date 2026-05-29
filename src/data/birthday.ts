@@ -42,11 +42,15 @@ export const birthdayPlans = [
   },
   {
     name: "Plan Medio",
-    badge: "Más completo",
+    badge: "Más contratado",
     color: "blue" as const,
     fromPrice: "$125.000",
     includes: [
-      "Todo lo del Plan Básico",
+      "2 horas de acceso a todos los juegos",
+      "Salón exclusivo con mesas y sillas",
+      "Pulsera identificativa para cada niño",
+      "Invitación digital para enviar a invitados",
+      "Decoración básica: globos y banderín",
       "Torta de cuchuflí bañada en chocolate",
       "Regalo para el cumpleañero",
     ],
@@ -70,8 +74,14 @@ export const birthdayPlans = [
     color: "coral" as const,
     fromPrice: "$200.000",
     includes: [
-      "Todo lo del Plan Medio",
-      "Snack por niño",
+      "2 horas de acceso a todos los juegos",
+      "Salón exclusivo con mesas y sillas",
+      "Pulsera identificativa para cada niño",
+      "Invitación digital para enviar a invitados",
+      "Decoración básica: globos y banderín",
+      "Torta de 80 unidades de cuchuflí bañado en chocolate",
+      "Regalo para el cumpleañero",
+      "Snack por niño: jugo, mini sándwich Subway y galletón Subway",
       "Sorpresas para invitados",
     ],
     prices: {
@@ -95,17 +105,15 @@ export const birthdaySchedules = [
   {
     title: "Lunes a viernes",
     slots: ["13:00 a 15:00 hrs", "16:00 a 18:00 hrs"],
-    notes: ["Sin exclusividad cuando corresponda según horario y cantidad de invitados."],
   },
   {
     title: "Sábado, domingo y festivos",
-    slots: ["10:00 a 12:00 hrs", "13:00 a 15:00 hrs"],
-    notes: [
-      "10:00 a 12:00 hrs: sin exclusividad, máximo 10 niños.",
-      "13:00 a 15:00 hrs: con exclusividad, máximo 30 niños.",
-    ],
+    slots: ["10:00 a 12:00 hrs", "13:00 a 15:00 hrs", "16:00 a 18:00 hrs"],
   },
 ];
+
+export const birthdayScheduleNote =
+  "Los horarios se coordinan directamente con el equipo BKids según disponibilidad.";
 
 export const birthdayConditions = [
   "Acceso permitido para niños de hasta 7 años o estatura máxima de 1,40 m.",
@@ -114,7 +122,7 @@ export const birthdayConditions = [
   "El cumpleañero también cuenta dentro de la lista de invitados.",
   "Se considera 1 adulto por niño invitado y 4 adultos para el cumpleañero.",
   "El salón es de uso exclusivo del contratante.",
-  "El área de juegos puede permanecer abierta al público, salvo planes cerrados de 30 niños.",
+  "El local puede permanecer abierto al público, salvo planes cerrados de 30 niños.",
   "Está prohibido el consumo de bebidas alcohólicas.",
   "No se permite confetti ni piñatas, salvo condiciones específicas del plan.",
   "Para confirmar la reserva se abona el 50%.",
@@ -125,11 +133,11 @@ export const birthdayConditions = [
 ];
 
 export const birthdayExtras = [
-  { name: "20 mini sándwich Subway 8 cm a elección", price: "$22.000" },
-  { name: "Bebidas 1.5 lts", price: "$2.500" },
-  { name: "Agua 1.5 lts", price: "$2.000" },
-  { name: "Jugos 1.5 lts", price: "$2.000" },
-  { name: "Refill jugo", price: "$1.000 por niño" },
+  "20 mini sándwich Subway 8 cm a elección",
+  "Bebidas 1.5 lts",
+  "Agua 1.5 lts",
+  "Jugos 1.5 lts",
+  "Refill jugo",
 ];
 
 export const birthdaySnack = {

@@ -1,4 +1,3 @@
-import { getBirthdayWhatsappUrl } from "@/data/birthday";
 import { contact } from "@/data/site";
 import { workshopWhatsappUrl } from "@/data/workshops";
 
@@ -15,10 +14,10 @@ export type PromotionBanner = {
 };
 
 export const homePromotion: PromotionBanner = {
-  eyebrow: "Promoción semanal",
+  eyebrow: "Promoción BKids",
   title: "Todos los lunes 2x1 en entradas",
   text: "Una invitación especial para empezar la semana jugando, explorando y compartiendo en familia.",
-  image: "/images/promotions/home-lunes-2x1-bkids.jpg",
+  image: "/images/promotions/home-lunes-2x1-vertical-bkids.png",
   alt: "Promoción todos los lunes 2x1 en entradas BKids",
   primaryLabel: "Ver precios",
   primaryHref: "/precios",
@@ -26,19 +25,17 @@ export const homePromotion: PromotionBanner = {
   secondaryHref: contact.whatsappUrl,
 };
 
-export const birthdayPromotion: PromotionBanner = {
-  eyebrow: "Promoción cumpleaños",
-  title: "Celebra durante mayo con 15% de descuento",
-  text: "Promoción disponible para planes Básico y Medio. Escríbenos para revisar disponibilidad y reservar tu fecha.",
-  image: "/images/promotions/cumpleanos-mayo-descuento-bkids.jpg",
-  alt: "Promoción de cumpleaños BKids durante mayo con 15% de descuento",
-  primaryLabel: "Consultar cumpleaños",
-  primaryHref: getBirthdayWhatsappUrl(
-    "Hola BKids, quiero consultar por la promoción de cumpleaños con 15% de descuento.",
-  ),
-  secondaryLabel: "Ver planes",
-  secondaryHref: "#packs",
+export const homeWorkshopPromotion: PromotionBanner = {
+  eyebrow: "Taller activo",
+  title: "Talleres de invierno",
+  text: "Talleres para niños de 3 a 7 años, de 9:00 a 13:00 hrs, con materiales y colación incluidos.",
+  image: "/images/promotions/talleres-invierno-promocion-bkids.jpeg",
+  alt: "Promoción talleres de invierno BKids",
+  primaryLabel: "Consultar por WhatsApp",
+  primaryHref: workshopWhatsappUrl,
 };
+
+export const homeActivePromotions = [homePromotion, homeWorkshopPromotion];
 
 export const workshopPromotion: PromotionBanner = {
   eyebrow: "Talleres de invierno",

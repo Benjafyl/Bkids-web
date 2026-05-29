@@ -1,5 +1,38 @@
-import { Cookie, PlusCircle } from "lucide-react";
+import { Cookie, Droplets, GlassWater, PlusCircle, Sandwich } from "lucide-react";
 import { birthdayExtras, birthdaySnack } from "@/data/birthday";
+
+const extraStyles = [
+  {
+    icon: Sandwich,
+    card: "bg-[#e9f9ff] ring-sky-100",
+    accent: "bg-[#0a72ce]",
+    text: "text-[#063f83]",
+  },
+  {
+    icon: GlassWater,
+    card: "bg-[#fff7da] ring-yellow-100",
+    accent: "bg-[#ffcc33]",
+    text: "text-[#0a72ce]",
+  },
+  {
+    icon: Droplets,
+    card: "bg-[#e9fbf7] ring-cyan-100",
+    accent: "bg-[#00a9c7]",
+    text: "text-[#063f83]",
+  },
+  {
+    icon: GlassWater,
+    card: "bg-[#fff0f3] ring-rose-100",
+    accent: "bg-[#ef3854]",
+    text: "text-[#0a72ce]",
+  },
+  {
+    icon: Droplets,
+    card: "bg-[#f2fbff] ring-sky-100",
+    accent: "bg-[#ff6078]",
+    text: "text-[#063f83]",
+  },
+];
 
 export function BirthdayExtrasSection() {
   return (
@@ -16,32 +49,42 @@ export function BirthdayExtrasSection() {
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {birthdayExtras.map((extra) => (
-            <article
-              key={extra.name}
-              className="rounded-[24px] bg-[#f8fdff] p-5 shadow-sm ring-1 ring-sky-100"
-            >
-              <h3 className="text-sm font-black leading-6 text-slate-700">{extra.name}</h3>
-              <p className="mt-3 font-display text-2xl font-black text-[#ef3854]">{extra.price}</p>
-            </article>
-          ))}
+          {birthdayExtras.map((extra, index) => {
+            const style = extraStyles[index % extraStyles.length];
+            const Icon = style.icon;
+
+            return (
+              <article
+                key={extra}
+                className={`relative overflow-hidden rounded-[24px] p-5 shadow-sm ring-1 ${style.card}`}
+              >
+                <span className={`absolute left-0 top-0 h-1.5 w-full ${style.accent}`} />
+                <span
+                  className={`mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full text-white ${style.accent}`}
+                >
+                  <Icon className="h-5 w-5" />
+                </span>
+                <h3 className={`text-base font-black leading-6 ${style.text}`}>{extra}</h3>
+              </article>
+            );
+          })}
         </div>
 
         <p className="mt-5 text-sm font-bold leading-6 text-slate-600">
           Opciones sujetas a disponibilidad y confirmación al momento de reservar.
         </p>
 
-        <details className="mt-8 rounded-[28px] bg-[#fff7da] p-6 shadow-lg shadow-yellow-100 ring-1 ring-yellow-100">
-          <summary className="flex cursor-pointer list-none items-center gap-3 font-display text-3xl font-black text-[#063f83]">
+        <div className="mt-8 rounded-[28px] bg-[#fff7da] p-6 shadow-lg shadow-yellow-100 ring-1 ring-yellow-100">
+          <div className="flex items-center gap-3 font-display text-3xl font-black text-[#063f83]">
             <Cookie className="h-7 w-7 text-[#ef3854]" />
-            Ver opciones de snack
-          </summary>
+            Opciones de snack
+          </div>
           <div className="mt-6 grid gap-5 md:grid-cols-3">
             <SnackList title="Incluye" items={birthdaySnack.includes} />
             <SnackList title="Sándwich" items={birthdaySnack.sandwiches} />
             <SnackList title="Galletón" items={birthdaySnack.cookies} />
           </div>
-        </details>
+        </div>
       </div>
     </section>
   );

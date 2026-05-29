@@ -1,5 +1,6 @@
-import { CalendarDays, Clock3 } from "lucide-react";
-import { birthdaySchedules } from "@/data/birthday";
+import Link from "next/link";
+import { CalendarDays, Clock3, MessageCircle } from "lucide-react";
+import { birthdayScheduleNote, birthdaySchedules, getBirthdayWhatsappUrl } from "@/data/birthday";
 
 export function BirthdayScheduleSection() {
   return (
@@ -35,13 +36,23 @@ export function BirthdayScheduleSection() {
                   </p>
                 ))}
               </div>
-              <ul className="mt-5 space-y-2 text-sm font-bold leading-6 text-slate-600">
-                {schedule.notes.map((note) => (
-                  <li key={note}>{note}</li>
-                ))}
-              </ul>
             </article>
           ))}
+        </div>
+
+        <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center gap-4 text-center">
+          <p className="text-base font-bold leading-7 text-slate-600">{birthdayScheduleNote}</p>
+          <Link
+            href={getBirthdayWhatsappUrl(
+              "Hola BKids, quiero consultar horarios disponibles para cumpleaños.",
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-fit items-center justify-center rounded-full bg-[#0a72ce] px-6 py-3 text-sm font-black uppercase text-white shadow-lg shadow-sky-100 transition hover:-translate-y-0.5 hover:bg-[#045ca9]"
+          >
+            <MessageCircle className="mr-2 h-4 w-4" />
+            Consultar horarios
+          </Link>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Download } from "lucide-react";
 import { BirthdayConditionsSection } from "@/components/BirthdayConditionsSection";
@@ -7,9 +8,7 @@ import { BirthdayPlansSection } from "@/components/BirthdayPlansSection";
 import { BirthdayPricesTable } from "@/components/BirthdayPricesTable";
 import { BirthdayScheduleSection } from "@/components/BirthdayScheduleSection";
 import { Hero } from "@/components/Hero";
-import { PromotionBanner } from "@/components/PromotionBanner";
 import { birthdayPdfUrl, getBirthdayWhatsappUrl } from "@/data/birthday";
-import { birthdayPromotion } from "@/data/promotions";
 import { heroImages } from "@/data/site";
 
 export default function BirthdaysPage() {
@@ -27,7 +26,19 @@ export default function BirthdaysPage() {
         eyebrow="Celebraciones BKids"
       />
 
-      <PromotionBanner promotion={birthdayPromotion} />
+      <section className="bg-white py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="relative aspect-[16/7] overflow-hidden rounded-[34px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-1 ring-sky-100">
+            <Image
+              src="/images/cumpleanos-celebracion.jpg"
+              alt="Celebración de cumpleaños en BKids"
+              fill
+              sizes="(min-width: 1280px) 1216px, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
       <BirthdayPlansSection />
       <BirthdayPricesTable />
       <BirthdayScheduleSection />
