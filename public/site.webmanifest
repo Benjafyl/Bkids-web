@@ -1,0 +1,21 @@
+{
+  "name": "BKids Stay and Play",
+  "short_name": "BKids",
+  "description": "Juegos infantiles, cumpleaños y talleres para niños en Las Condes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a72ce",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

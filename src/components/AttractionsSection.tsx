@@ -15,7 +15,8 @@ export function AttractionsSection() {
             Nuestras atracciones
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base font-bold leading-7 text-white/88">
-            Juegos para explorar, saltar y celebrar en un espacio pensado para niños y familias.
+            Juegos infantiles en Las Condes para explorar, saltar y celebrar en un espacio pensado
+            para niños y familias.
           </p>
         </div>
 

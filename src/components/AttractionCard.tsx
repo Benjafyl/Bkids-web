@@ -12,7 +12,7 @@ export function AttractionCard({ title, image, description }: AttractionCardProp
       <div className="relative aspect-[16/10] overflow-hidden rounded-[8px] border-[6px] border-white bg-sky-100 shadow-md">
         <Image
           src={image}
-          alt={title}
+          alt={`${title} en BKids Las Condes`}
           fill
           sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 520px) 50vw, 100vw"
           className="object-cover transition duration-500 group-hover:scale-105"

@@ -158,7 +158,7 @@ export function WorkshopGallery() {
                       );
                     })}
                   </span>
-                  <span className="sr-only">Cambiar a la imagen {index + 1}</span>
+                  <span className="sr-only">Ver foto de taller {index + 1}</span>
                 </button>
               );
             })}

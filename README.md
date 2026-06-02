@@ -31,11 +31,11 @@ Crear un `.env.local` para desarrollo o configurar estas variables en Dockploy:
 
 ```bash
 CONTACT_FORM_TO_EMAIL=benjafyl@gmail.com
-CONTACT_FORM_FROM_EMAIL=contactobkitschile@gmail.com
+CONTACT_FORM_FROM_EMAIL=contactobkidschile@gmail.com
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=contactobkitschile@gmail.com
+SMTP_USER=contactobkidschile@gmail.com
 SMTP_PASS=GMAIL_APP_PASSWORD
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
 RECAPTCHA_SECRET_KEY=
@@ -45,7 +45,7 @@ RECAPTCHA_MIN_SCORE=0.5
 Para que las consultas lleguen al correo oficial de BKids, cambiar solo:
 
 ```bash
-CONTACT_FORM_TO_EMAIL=contactobkitschile@gmail.com
+CONTACT_FORM_TO_EMAIL=contactobkidschile@gmail.com
 ```
 
 `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` es publica y se usa en el formulario. `RECAPTCHA_SECRET_KEY`

@@ -8,6 +8,7 @@ type HeroProps = {
   title: string;
   subtitle: string;
   image: string;
+  imageAlt?: string;
   ctaLabel?: string;
   ctaHref?: string;
   secondaryCtaLabel?: string;
@@ -57,6 +58,7 @@ export function Hero({
   title,
   subtitle,
   image,
+  imageAlt,
   ctaLabel,
   ctaHref,
   secondaryCtaLabel,
@@ -90,7 +92,7 @@ export function Hero({
           </div>
 
           <div className="relative min-h-[330px] overflow-hidden rounded-[32px] border-4 border-white bg-white shadow-2xl shadow-sky-100 sm:min-h-[440px]">
-            <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" />
+            <Image src={image} alt={imageAlt ?? title} fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" />
             {badge ? (
               <div className="absolute bottom-5 left-5 rounded-full bg-[#ffcc33] px-5 py-3 text-sm font-black uppercase text-[#063f83] shadow-xl">
                 {badge}
@@ -126,7 +128,7 @@ export function Hero({
             />
           </div>
           <div className="relative min-h-[280px] lg:min-h-full">
-            <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+            <Image src={image} alt={imageAlt ?? title} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0a72ce]/35 to-transparent lg:from-[#0a72ce]/45" />
           </div>
         </div>
@@ -160,7 +162,7 @@ export function Hero({
 
           <div className="relative min-h-[430px]">
             <div className="absolute left-0 top-0 h-[78%] w-[76%] overflow-hidden rounded-[34px] border-4 border-white bg-white shadow-2xl shadow-sky-100">
-              <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
+              <Image src={image} alt={imageAlt ?? title} fill priority sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
             </div>
             <div className="absolute bottom-0 right-0 h-[46%] w-[48%] overflow-hidden rounded-[28px] border-4 border-white bg-white shadow-xl shadow-sky-100">
               <Image
@@ -184,7 +186,7 @@ export function Hero({
 
   return (
     <section className="relative isolate min-h-[430px] overflow-hidden bg-[#078ad7] text-white sm:min-h-[520px]">
-      <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+      <Image src={image} alt={imageAlt ?? title} fill priority sizes="100vw" className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#005ca8]/85 via-[#049bd8]/55 to-[#ffcc33]/20" />
       <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.92))]" />
       <div className="relative z-10 mx-auto flex min-h-[430px] max-w-7xl items-center px-4 py-20 sm:min-h-[520px] lg:px-8">

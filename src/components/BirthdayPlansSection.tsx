@@ -9,9 +9,9 @@ export function BirthdayPlansSection() {
           <p className="inline-flex rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
             Packs de cumpleaños
           </p>
-          <h1 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
+          <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
             {birthdayIntro.title}
-          </h1>
+          </h2>
           <p className="mt-5 text-lg font-semibold leading-8 text-slate-600">
             {birthdayIntro.text}
           </p>

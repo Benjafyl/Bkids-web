@@ -2,15 +2,20 @@ import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { Hero } from "@/components/Hero";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { contact, heroImages, location } from "@/data/site";
+import { buildMetadata } from "@/data/seo";
+
+export const metadata = buildMetadata("/formulario");
 
 export default function ContactPage() {
   return (
     <>
       <Hero
-        title="Contacto"
-        subtitle="Diversión sin fin!"
+        title="Contacto BKids"
+        subtitle="Escríbenos para consultar juegos infantiles, cumpleaños, talleres y disponibilidad."
         image={heroImages.contact}
+        imageAlt="Familia consultando en BKids Las Condes"
       />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">
@@ -19,9 +24,9 @@ export default function ContactPage() {
             <p className="inline-flex rounded-full bg-[#ffcc33] px-4 py-2 text-sm font-black uppercase text-[#063f83]">
               Hablemos
             </p>
-            <h1 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce]">
-              Datos de contacto
-            </h1>
+            <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce]">
+              Póngase en contacto
+            </h2>
             <div className="mt-7 space-y-5 text-base font-bold text-slate-700">
               <p className="flex gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#ef3854]" />
@@ -47,6 +52,9 @@ export default function ContactPage() {
           </aside>
 
           <div>
+            <h2 className="mb-5 font-display text-4xl font-black leading-none text-[#0a72ce]">
+              Formulario de contacto
+            </h2>
             <ContactForm />
           </div>
         </div>
@@ -66,7 +74,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h2 className="font-display text-5xl font-black leading-none text-[#0a72ce]">
-                Encuentranos en Las Condes
+                Ubicación
               </h2>
               <p className="mt-4 text-lg font-semibold leading-8 text-slate-600">
                 Revisa la ubicacion exacta de BKids, planifica tu visita y abre la ruta en Google
@@ -83,6 +91,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <BreadcrumbJsonLd route="/formulario" />
     </>
   );
 }

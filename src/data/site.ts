@@ -1,7 +1,7 @@
 export const siteMeta = {
-  title: "BKids | Entretención infantil en Las Condes",
+  title: "Juegos infantiles en Las Condes | BKids Stay & Play",
   description:
-    "Centro de entretención infantil, cumpleaños, talleres y juegos para niños en Las Condes.",
+    "BKids es un espacio de juegos infantiles, cumpleaños y talleres para niños en Las Condes.",
 };
 
 export const comingSoon = {
@@ -13,7 +13,7 @@ export const comingSoon = {
 };
 
 export const location = {
-  address: "Camino El Alba 12.620, Local 16B, Las Condes",
+  address: "Camino El Alba 12620, Local 16B, Las Condes",
   mapsUrl:
     "https://www.google.com/maps/place/Bkids+Stay+and+Play/data=!4m2!3m1!1s0x0:0x18d716bf682bcc03?sa=X&ved=1t:2428&ictx=111",
   embedUrl:
@@ -22,7 +22,7 @@ export const location = {
 
 export const contact = {
   address: location.address,
-  legalAddress: "Camino El Alba 12.620 Local 16 B, Las Condes",
+  legalAddress: "Camino El Alba 12620, Local 16B, Las Condes",
   phone: "+56 9 8711 7154",
   email: "contactobkidschile@gmail.com",
   schedule: {
@@ -60,19 +60,19 @@ export const homeHeroSlides = [
     type: "video" as const,
     src: "/images/hero-home-video.mp4",
     poster: "/images/hero-home-local.jpg",
-    alt: "Niña jugando en la piscina de pelotas de BKids",
+    alt: "Niños jugando en stay and play BKids Las Condes",
   },
   {
     src: "/images/espacio-principal-bkids.jpg",
-    alt: "Familias jugando en el espacio principal de BKids",
+    alt: "Familias jugando en el espacio principal de BKids Las Condes",
   },
   {
     src: "/images/tobogan-nino.jpg",
-    alt: "Tobogán amarillo de BKids",
+    alt: "Tobogán amarillo en BKids Las Condes",
   },
   {
     src: "/images/maquina-pelotas-ninos.jpg",
-    alt: "Piscina de pelotas de BKids",
+    alt: "Piscina de pelotas en BKids Las Condes",
   },
 ];
 
@@ -166,52 +166,52 @@ export const localCatalogProducts = [
   {
     title: "Galletas",
     image: "/images/catalog/galletas-bkids.jpeg",
-    alt: "Galletas disponibles en BKids",
+    alt: "Galletas disponibles en BKids Las Condes",
   },
   {
     title: "Jugos",
     image: "/images/catalog/jugos-bkids.jpeg",
-    alt: "Jugos disponibles en BKids",
+    alt: "Jugos disponibles en BKids Las Condes",
   },
   {
     title: "Bebidas",
     image: "/images/catalog/bebidas-bkids.jpeg",
-    alt: "Bebidas disponibles en BKids",
+    alt: "Bebidas disponibles en BKids Las Condes",
   },
   {
     title: "Agua",
     image: "/images/catalog/agua-bkids.jpeg",
-    alt: "Agua disponible en BKids",
+    alt: "Agua disponible en BKids Las Condes",
   },
   {
     title: "Compotas",
     image: "/images/catalog/compotas-bkids.jpeg",
-    alt: "Compotas disponibles en BKids",
+    alt: "Compotas disponibles en BKids Las Condes",
   },
   {
     title: "Snacks",
     image: "/images/catalog/snacks-bkids.jpeg",
-    alt: "Snacks disponibles en BKids",
+    alt: "Snacks disponibles en BKids Las Condes",
   },
   {
     title: "Leches",
     image: "/images/catalog/leches-bkids.jpeg",
-    alt: "Leches disponibles en BKids",
+    alt: "Leches disponibles en BKids Las Condes",
   },
   {
     title: "Muffin",
     image: "/images/catalog/muffin-bkids.jpeg",
-    alt: "Muffin disponible en BKids",
+    alt: "Muffin disponible en BKids Las Condes",
   },
   {
     title: "Brownie",
     image: "/images/catalog/brownie-bkids.jpeg",
-    alt: "Brownie disponible en BKids",
+    alt: "Brownie disponible en BKids Las Condes",
   },
   {
     title: "Galleta de coco",
     image: "/images/catalog/galleta-coco-bkids.jpeg",
-    alt: "Galleta de coco disponible en BKids",
+    alt: "Galleta de coco disponible en BKids Las Condes",
   },
 ];
 

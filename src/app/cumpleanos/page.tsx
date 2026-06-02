@@ -8,16 +8,21 @@ import { BirthdayPlansSection } from "@/components/BirthdayPlansSection";
 import { BirthdayPricesTable } from "@/components/BirthdayPricesTable";
 import { BirthdayScheduleSection } from "@/components/BirthdayScheduleSection";
 import { Hero } from "@/components/Hero";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { birthdayPdfUrl, getBirthdayWhatsappUrl } from "@/data/birthday";
 import { heroImages } from "@/data/site";
+import { buildMetadata } from "@/data/seo";
+
+export const metadata = buildMetadata("/cumpleanos");
 
 export default function BirthdaysPage() {
   return (
     <>
       <Hero
-        title="Cumpleaños"
+        title="Cumpleaños infantiles en BKids"
         subtitle="Ven a jugar y a reír"
         image={heroImages.birthdays}
+        imageAlt="Cumpleaños infantil en BKids Las Condes"
         ctaLabel="Consultar por WhatsApp"
         ctaHref={getBirthdayWhatsappUrl("Hola BKids, quiero consultar por los packs de cumpleaños.")}
         secondaryCtaLabel="Consultar por correo"
@@ -31,7 +36,7 @@ export default function BirthdaysPage() {
           <div className="relative aspect-[16/7] overflow-hidden rounded-[34px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-1 ring-sky-100">
             <Image
               src="/images/cumpleanos-celebracion-grupo-bkids.png"
-              alt="Celebración de cumpleaños en BKids"
+              alt="Celebración de cumpleaños infantil en BKids Las Condes"
               fill
               sizes="(min-width: 1280px) 1216px, 100vw"
               className="object-cover"
@@ -64,6 +69,7 @@ export default function BirthdaysPage() {
       </section>
 
       <BirthdayFinalCTA />
+      <BreadcrumbJsonLd route="/cumpleanos" />
     </>
   );
 }

@@ -2,8 +2,12 @@ import Link from "next/link";
 import { CheckCircle2, Heart, ShieldCheck, Sparkles, SmilePlus } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { TeamGalleryLightbox } from "@/components/TeamGalleryLightbox";
 import { contact, heroImages } from "@/data/site";
+import { buildMetadata } from "@/data/seo";
+
+export const metadata = buildMetadata("/quienes-somos");
 
 const values = [
   {
@@ -55,6 +59,7 @@ export default function AboutPage() {
         title="Quiénes somos"
         subtitle="Un proyecto familiar pensado para crear momentos felices, seguros y llenos de juego."
         image={heroImages.about}
+        imageAlt="Equipo BKids en Las Condes"
         variant="collage"
         secondaryImage="/images/quienes-somos-familia-secundaria.jpg"
         badge="Be happy on the sea"
@@ -172,7 +177,7 @@ export default function AboutPage() {
               Equipo BKids
             </p>
             <h2 className="mt-5 font-display text-5xl font-black leading-none text-[#0a72ce] sm:text-6xl">
-              Personas reales detrás de cada experiencia
+              El equipo detrás de BKids
             </h2>
           </div>
 
@@ -188,6 +193,7 @@ export default function AboutPage() {
         secondaryButtonLabel="Consultar por correo"
         secondaryHref="/formulario"
       />
+      <BreadcrumbJsonLd route="/quienes-somos" />
     </>
   );
 }

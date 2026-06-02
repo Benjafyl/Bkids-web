@@ -8,7 +8,7 @@ export function getBirthdayWhatsappUrl(message: string) {
 }
 
 export const birthdayIntro = {
-  title: "Celebra su cumpleaños en BKids",
+  title: "Packs de cumpleaños",
   text: "Tenemos distintas opciones para que puedas celebrar el cumpleaños de tu hijo a tu medida, con acceso a juegos, salón exclusivo y una experiencia pensada para niños y familias.",
   note: "Packs disponibles para niños de 1 a 7 años.",
 };

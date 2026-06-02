@@ -49,7 +49,7 @@ export function WorkshopsHero() {
           <div className="absolute left-0 top-8 h-[78%] w-[68%] overflow-hidden rounded-[34px] bg-white shadow-2xl shadow-sky-200 ring-8 ring-white">
             <Image
               src={workshopsHero.primaryImage}
-              alt="Taller creativo en BKids"
+              alt="Taller infantil creativo en BKids Las Condes"
               fill
               priority
               sizes="(min-width: 1024px) 45vw, 80vw"
@@ -59,7 +59,7 @@ export function WorkshopsHero() {
           <div className="absolute right-0 top-0 h-[38%] w-[43%] overflow-hidden rounded-[28px] bg-white shadow-xl shadow-sky-100 ring-8 ring-white">
             <Image
               src={workshopsHero.secondaryImage}
-              alt="Mesa preparada para taller en BKids"
+              alt="Mesa preparada para taller infantil en BKids"
               fill
               sizes="(min-width: 1024px) 24vw, 45vw"
               className="object-cover"
@@ -68,7 +68,7 @@ export function WorkshopsHero() {
           <div className="absolute bottom-0 right-8 h-[34%] w-[42%] overflow-hidden rounded-[28px] bg-white shadow-xl shadow-sky-100 ring-8 ring-white">
             <Image
               src={workshopsHero.tertiaryImage}
-              alt="Niño participando en taller BKids"
+              alt="Niño participando en taller infantil BKids"
               fill
               sizes="(min-width: 1024px) 24vw, 45vw"
               className="object-cover"

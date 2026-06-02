@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Baloo_2, Nunito } from "next/font/google";
 import { ComingSoon } from "@/components/ComingSoon";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { LocalBusinessJsonLd, WebsiteJsonLd } from "@/components/seo/JsonLd";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
-import { comingSoon, siteMeta } from "@/data/site";
+import { comingSoon } from "@/data/site";
+import { buildMetadata } from "@/data/seo";
 import "./globals.css";
 
 const baloo = Baloo_2({
@@ -20,14 +22,22 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: siteMeta.title,
-  description: siteMeta.description,
+  ...buildMetadata("/"),
   metadataBase: new URL("https://bkids.cl"),
-  openGraph: {
-    title: siteMeta.title,
-    description: siteMeta.description,
-    type: "website",
+  applicationName: "BKids",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a72ce",
 };
 
 export default function RootLayout({
@@ -42,6 +52,8 @@ export default function RootLayout({
       className={`${baloo.variable} ${nunito.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <WebsiteJsonLd />
+        <LocalBusinessJsonLd />
         {comingSoon.enabled ? (
           <ComingSoon />
         ) : (

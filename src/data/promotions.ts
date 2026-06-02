@@ -19,7 +19,7 @@ export const homePromotion: PromotionBanner = {
   text: "Una invitación especial para empezar la semana jugando, explorando y compartiendo en familia.",
   image: "/images/promotions/home-lunes-2x1-vertical-bkids.png",
   alt: "Promoción todos los lunes 2x1 en entradas BKids",
-  primaryLabel: "Ver precios",
+  primaryLabel: "Ver precios de entradas",
   primaryHref: "/precios",
   secondaryLabel: "Consultar por WhatsApp",
   secondaryHref: contact.whatsappUrl,

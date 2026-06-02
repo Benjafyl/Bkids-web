@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <Image
               src="/images/logo-bkids.png"
-              alt="Logo BKids"
+              alt="BKids Stay and Play Las Condes"
               width={230}
               height={132}
               className="h-auto w-48 rounded-[8px] bg-white/95 p-3 shadow-xl"

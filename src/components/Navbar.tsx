@@ -17,7 +17,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3" aria-label="Inicio BKids">
           <Image
             src="/images/logo-bkids.png"
-            alt="Logo BKids"
+            alt="BKids Stay and Play Las Condes"
             width={150}
             height={86}
             priority

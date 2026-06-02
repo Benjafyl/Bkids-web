@@ -47,9 +47,9 @@ export function BirthdayPlanCard({ plan }: BirthdayPlanCardProps) {
       <span className={`w-fit rounded-full px-4 py-2 text-xs font-black uppercase ${theme.pill}`}>
         Desde {plan.fromPrice}
       </span>
-      <h2 className={`mt-5 font-display text-4xl font-black ${isBlue ? "text-white" : "text-[#0a72ce]"}`}>
+      <h3 className={`mt-5 font-display text-4xl font-black ${isBlue ? "text-white" : "text-[#0a72ce]"}`}>
         {plan.name}
-      </h2>
+      </h3>
       <ul className="mt-5 space-y-3">
         {plan.includes.map((item) => (
           <li

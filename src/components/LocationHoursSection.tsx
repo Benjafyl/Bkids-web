@@ -20,8 +20,8 @@ export function LocationHoursSection() {
                 Ven a visitarnos
               </h2>
               <p className="mt-4 max-w-xl text-base font-bold leading-7 text-slate-600 sm:text-lg">
-                Estamos en Las Condes, listos para recibirte con diversión para toda la
-                familia.
+                Estamos en Camino El Alba 12620, Las Condes, listos para recibirte con entretención
+                infantil para toda la familia.
               </p>
 
               <div className="mt-7 space-y-4">
