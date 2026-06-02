@@ -57,7 +57,7 @@ export default function AboutPage() {
     <>
       <Hero
         title="Quiénes somos"
-        subtitle="Un proyecto familiar pensado para crear momentos felices, seguros y llenos de juego."
+        subtitle="Un proyecto familiar creado para que niños y familias vivan momentos seguros, felices y llenos de juego."
         image={heroImages.about}
         imageAlt="Equipo BKids en Las Condes"
         variant="collage"

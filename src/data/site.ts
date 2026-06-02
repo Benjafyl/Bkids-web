@@ -52,7 +52,7 @@ export const heroImages = {
   birthdays: "/images/cumpleanos-header.jpg",
   workshops: "/images/workshops/taller-bkids-02.jpg",
   prices: "/images/heroes/hero-precios-bkids.jpg",
-  contact: "/images/contacto-familia.jpg",
+  contact: "/images/espacio-principal-bkids.jpg",
 };
 
 export const homeHeroSlides = [

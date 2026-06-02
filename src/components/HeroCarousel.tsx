@@ -58,7 +58,7 @@ export function HeroCarousel({
   }
 
   return (
-    <section className="relative isolate min-h-[520px] overflow-hidden bg-[#0a72ce] text-white sm:min-h-[620px]">
+    <section className="relative isolate min-h-[500px] overflow-hidden bg-[#0a72ce] text-white sm:min-h-[600px]">
       {slides.map((slide, index) => {
         const isActive = index === activeIndex;
         const wasPrevious = index === previousIndex;
@@ -104,8 +104,8 @@ export function HeroCarousel({
         );
       })}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#005ca8]/86 via-[#078ad7]/58 to-[#ffcc33]/20" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,45,90,0.24),transparent_40%,rgba(4,91,169,0.38))]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#005ca8]/76 via-[#078ad7]/46 to-[#ffcc33]/14" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,45,90,0.16),transparent_42%,rgba(4,91,169,0.28))]" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.94))]" />
 
       <button
@@ -125,7 +125,7 @@ export function HeroCarousel({
         <ChevronRight className="h-8 w-8" />
       </button>
 
-      <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-4 pb-20 pt-14 text-center sm:min-h-[620px] sm:pb-24 sm:pt-16 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-4 pb-16 pt-12 text-center sm:min-h-[600px] sm:pb-20 sm:pt-14 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <p className="mx-auto mb-4 inline-flex rounded-full bg-white/92 px-5 py-2 text-sm font-black uppercase text-[#ef3854] shadow-lg">
             {eyebrow}

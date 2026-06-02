@@ -15,7 +15,7 @@ export default function PricesPage() {
     <>
       <Hero
         title="Precios BKids"
-        subtitle="Revisa todos nuestros precios"
+        subtitle="Valores claros para venir a jugar"
         image={heroImages.prices}
         imageAlt="Juegos infantiles en BKids Las Condes"
         ctaLabel="Consultar por WhatsApp"

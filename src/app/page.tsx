@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <HeroCarousel
         eyebrow="Diversión sin fin"
-        title="Sumérgete en una aventura de juegos"
-        subtitle="BKids es un stay and play en Las Condes, un espacio seguro para jugar, celebrar cumpleaños y vivir momentos inolvidables en familia."
+        title="Sumérgete en nuestra aventura"
+        subtitle="Un espacio seguro y entretenido para jugar, celebrar y disfrutar en familia."
         ctaLabel="Ver precios"
         ctaHref="/precios"
         slides={homeHeroSlides}

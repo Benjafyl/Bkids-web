@@ -3,9 +3,9 @@ export const workshopWhatsappUrl =
 
 export const workshopsHero = {
   eyebrow: "Aprender jugando",
-  title: "Talleres infantiles en BKids",
+  title: "Talleres para crear, jugar y aprender",
   subtitle: "Diversión sin fin",
-  text: "Talleres infantiles en Las Condes con actividades creativas, sensoriales y entretenidas para que los niños aprendan, compartan y desarrollen nuevas habilidades jugando.",
+  text: "Actividades creativas para que los niños exploren, compartan y desarrollen nuevas habilidades jugando.",
   primaryImage: "/images/workshops/workshop-hero-taller-creativo-bkids.jpg",
   secondaryImage: "/images/workshops/taller-bkids-06.jpg",
   tertiaryImage: "/images/workshops/taller-bkids-01.jpg",

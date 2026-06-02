@@ -5,7 +5,7 @@ import { workshopsHero, workshopWhatsappUrl } from "@/data/workshops";
 
 export function WorkshopsHero() {
   return (
-    <section className="relative overflow-hidden bg-[#e9f9ff] py-16 sm:py-24">
+    <section className="relative overflow-hidden bg-[#e9f9ff] py-12 sm:py-16">
       <div className="absolute -left-10 top-24 h-28 w-28 rounded-full bg-[#ffcc33]/45" />
       <div className="absolute right-8 top-16 h-20 w-20 rounded-full bg-[#ff6078]/30" />
       <div className="absolute bottom-10 right-1/4 h-24 w-24 rounded-full bg-[#00a9c7]/20" />
@@ -16,10 +16,10 @@ export function WorkshopsHero() {
             <Sparkles className="h-4 w-4" />
             {workshopsHero.eyebrow}
           </p>
-          <h1 className="mt-5 font-display text-6xl font-black leading-none text-[#0a72ce] sm:text-7xl">
+          <h1 className="mt-5 max-w-2xl font-display text-5xl font-black leading-[1.02] text-[#0a72ce] sm:text-6xl">
             {workshopsHero.title}
           </h1>
-          <p className="mt-4 font-display text-3xl font-black text-[#00a9c7]">
+          <p className="mt-4 font-display text-2xl font-black text-[#00a9c7] sm:text-3xl">
             {workshopsHero.subtitle}
           </p>
           <p className="mt-5 max-w-xl text-lg font-semibold leading-8 text-slate-700">
@@ -45,7 +45,7 @@ export function WorkshopsHero() {
           </div>
         </div>
 
-        <div className="relative min-h-[430px] sm:min-h-[540px]">
+        <div className="relative min-h-[390px] sm:min-h-[510px]">
           <div className="absolute left-0 top-8 h-[78%] w-[68%] overflow-hidden rounded-[34px] bg-white shadow-2xl shadow-sky-200 ring-8 ring-white">
             <Image
               src={workshopsHero.primaryImage}

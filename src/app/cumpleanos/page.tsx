@@ -19,8 +19,8 @@ export default function BirthdaysPage() {
   return (
     <>
       <Hero
-        title="Cumpleaños infantiles en BKids"
-        subtitle="Ven a jugar y a reír"
+        title="Celebra su cumpleaños en BKids"
+        subtitle="Ven a jugar, reír y vivir una celebración inolvidable."
         image={heroImages.birthdays}
         imageAlt="Cumpleaños infantil en BKids Las Condes"
         ctaLabel="Consultar por WhatsApp"

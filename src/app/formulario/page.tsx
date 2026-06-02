@@ -13,9 +13,10 @@ export default function ContactPage() {
     <>
       <Hero
         title="Contacto BKids"
-        subtitle="Escríbenos para consultar juegos infantiles, cumpleaños, talleres y disponibilidad."
+        subtitle="Escríbenos para consultar juegos, cumpleaños, talleres y disponibilidad."
         image={heroImages.contact}
-        imageAlt="Familia consultando en BKids Las Condes"
+        imageAlt="Niños jugando en BKids Las Condes"
+        imagePosition="center 45%"
       />
 
       <section className="bubble-pattern bg-white py-16 sm:py-24">
