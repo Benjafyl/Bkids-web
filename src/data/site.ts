@@ -37,6 +37,8 @@ export const contact = {
 export const legal = {
   businessName: "Entretenciones QR SPA",
   rut: "77.927.601-5",
+  copyrightName: "BKids",
+  developerName: "Benjamin Yañez Lasalvia",
 };
 
 export const navItems = [

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { contact, legal } from "@/data/site";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="relative mt-auto overflow-hidden bg-[#0a72ce] text-white">
       <div className="wave-top absolute inset-x-0 top-0 h-16 bg-white" aria-hidden="true" />
@@ -54,8 +56,11 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-white/20 pt-6 text-center text-xs font-semibold text-white/80">
-          BKids. Entretención infantil en Las Condes.
+        <div className="mt-10 border-t border-white/20 pt-6 text-center text-xs font-semibold leading-6 text-white/80">
+          <p>
+            © {currentYear} {legal.copyrightName}. Todos los derechos reservados.
+          </p>
+          <p>Desarrollado por {legal.developerName}.</p>
         </div>
       </div>
     </footer>
