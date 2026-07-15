@@ -40,7 +40,7 @@ export const legal = {
   copyrightName: "BKids",
   developerName: "Dream Web Chile",
   developerUrl: "https://www.instagram.com/dreamwebchile/",
-  developerLogo: "/images/brand/dream-web-chile-logo.png",
+  developerLogo: "/images/brand/dream-web-chile-icon.png",
 };
 
 export const navItems = [
