@@ -65,7 +65,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Instagram de ${legal.developerName}`}
-            className="mx-auto mt-3 inline-flex items-center justify-center gap-3 rounded-xl bg-[#061d3f]/55 px-4 py-3 text-sm text-white/80 shadow-lg shadow-sky-950/10 ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:bg-[#061d3f]/70 hover:text-white hover:ring-white/20"
+            className="mx-auto mt-3 inline-flex items-center justify-center gap-3 rounded-xl bg-white/95 px-4 py-3 text-sm text-[#12314d] shadow-lg shadow-sky-950/10 ring-1 ring-white/60 transition hover:-translate-y-0.5 hover:bg-[#fff7da] hover:shadow-xl"
           >
             <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-black/85 shadow-sm ring-1 ring-white/10">
               <Image
@@ -78,7 +78,7 @@ export function Footer() {
             </span>
             <span>
               Desarrollado por{" "}
-              <span className="font-black text-white">{legal.developerName}</span>
+              <span className="font-black text-[#0a72ce]">{legal.developerName}</span>
             </span>
           </Link>
         </div>
