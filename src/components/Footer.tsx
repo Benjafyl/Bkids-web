@@ -60,7 +60,24 @@ export function Footer() {
           <p>
             © {currentYear} {legal.copyrightName}. Todos los derechos reservados.
           </p>
-          <p>Desarrollado por {legal.developerName}.</p>
+          <Link
+            href={legal.developerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Instagram de ${legal.developerName}`}
+            className="mx-auto mt-2 inline-flex flex-wrap items-center justify-center gap-2 rounded-full bg-white/10 px-3 py-2 text-white/85 transition hover:bg-white/15 hover:text-white"
+          >
+            <span>Desarrollado por {legal.developerName}</span>
+            <span className="inline-flex h-7 items-center rounded-full bg-white px-2 py-1 shadow-sm">
+              <Image
+                src={legal.developerLogo}
+                alt=""
+                width={112}
+                height={28}
+                className="h-5 w-auto object-contain"
+              />
+            </span>
+          </Link>
         </div>
       </div>
     </footer>

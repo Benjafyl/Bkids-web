@@ -38,7 +38,9 @@ export const legal = {
   businessName: "Entretenciones QR SPA",
   rut: "77.927.601-5",
   copyrightName: "BKids",
-  developerName: "Benjamin Yañez Lasalvia",
+  developerName: "Dream Web Chile",
+  developerUrl: "https://www.instagram.com/dreamwebchile/",
+  developerLogo: "/images/brand/dream-web-chile-logo.png",
 };
 
 export const navItems = [
