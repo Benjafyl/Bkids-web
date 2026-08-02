@@ -14,7 +14,7 @@ export default function WorkshopsPage() {
     <>
       <WorkshopsHero />
       <WorkshopInfoSection />
-      <PromotionBanner promotion={workshopPromotion} imageAspect="poster" />
+      <PromotionBanner promotion={workshopPromotion} />
       <WorkshopGallery />
       <WorkshopCTA />
       <BreadcrumbJsonLd route="/talleres" />
