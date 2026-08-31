@@ -101,7 +101,7 @@ export const faqItems = [
   {
     question: "¿Cuáles son los horarios de BKids?",
     answer:
-      "BKids atiende de lunes a viernes de 09:00 a 19:00 hrs, y sábado, domingo y festivos de 10:00 a 19:00 hrs.",
+      "Para información actualizada de horarios y cambios especiales, revisa las historias de @bkids_chile en Instagram.",
   },
   {
     question: "¿Qué es BKids Stay and Play?",
@@ -116,6 +116,6 @@ export const faqItems = [
   {
     question: "¿BKids realiza talleres infantiles?",
     answer:
-      "Sí, BKids realiza talleres y actividades infantiles por temporada, festividades y fechas especiales.",
+      "Sí, BKids realiza talleres y actividades infantiles por temporada. Revisa las historias de @bkids_chile para conocer novedades y fechas disponibles.",
   },
 ];

@@ -6,10 +6,34 @@ import { GoogleReviews } from "@/components/GoogleReviews";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { LocationHoursSection } from "@/components/LocationHoursSection";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
-import { contact, homeHeroSlides } from "@/data/site";
+import { contact, homeHeroSlides, socialLinks } from "@/data/site";
 import { buildMetadata, faqItems } from "@/data/seo";
 
 export const metadata = buildMetadata("/");
+
+function FaqAnswer({ answer }: { answer: string }) {
+  const instagramUsername = "@bkids_chile";
+  const [before, after] = answer.split(instagramUsername);
+
+  if (after === undefined) {
+    return answer;
+  }
+
+  return (
+    <>
+      {before}
+      <a
+        href={socialLinks.instagram}
+        target="_blank"
+        rel="noreferrer"
+        className="font-black text-[#0a72ce] underline decoration-[#ffcc33] decoration-2 underline-offset-4 transition hover:text-[#ef3854]"
+      >
+        {instagramUsername}
+      </a>
+      {after}
+    </>
+  );
+}
 
 export default function Home() {
   return (
@@ -49,7 +73,7 @@ export default function Home() {
                   {item.question}
                 </h3>
                 <p className="mt-2 text-base font-semibold leading-7 text-slate-600">
-                  {item.answer}
+                  <FaqAnswer answer={item.answer} />
                 </p>
               </article>
             ))}

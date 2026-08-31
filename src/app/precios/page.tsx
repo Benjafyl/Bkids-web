@@ -5,7 +5,7 @@ import { Hero } from "@/components/Hero";
 import { LocalCatalogSection } from "@/components/LocalCatalogSection";
 import { PriceCard } from "@/components/PriceCard";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
-import { contact, entryPrices, heroImages } from "@/data/site";
+import { contact, entryPrices, heroImages, socialLinks } from "@/data/site";
 import { buildMetadata } from "@/data/seo";
 
 export const metadata = buildMetadata("/precios");
@@ -55,8 +55,16 @@ export default function PricesPage() {
                 Horarios claros
               </h3>
               <p className="mt-3 text-base font-semibold leading-7 text-slate-600">
-                Si quieres confirmar disponibilidad antes de venir, te recomendamos escribirnos por
-                formulario o WhatsApp.
+                Para confirmar horarios, disponibilidad o cambios especiales, revisa las historias de{" "}
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-black text-[#0a72ce] underline decoration-[#ffcc33] decoration-2 underline-offset-4 transition hover:text-[#ef3854]"
+                >
+                  @bkids_chile
+                </a>{" "}
+                en Instagram antes de venir.
               </p>
             </article>
             <article className="rounded-[28px] bg-[#fff7da] p-6 shadow-lg shadow-yellow-100 ring-1 ring-yellow-100">

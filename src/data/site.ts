@@ -220,8 +220,7 @@ export const localCatalogProducts = [
 ];
 
 export const socialLinks = {
-  instagram:
-    "https://www.instagram.com/bkids_chile?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  instagram: "https://www.instagram.com/bkids_chile/?hl=es-la",
   facebook: "https://www.facebook.com/profile.php?id=61581802253114#",
   whatsapp: contact.whatsappUrl,
 };
