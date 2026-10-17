@@ -151,6 +151,10 @@ El proyecto usa:
 - `Nunito` para textos legibles de interfaz.
 
 Las fuentes se configuran en `src/app/layout.tsx` y se aplican desde `src/app/globals.css`.
+Los archivos variables viven en `src/app/fonts/`, junto con sus licencias OFL, y provienen
+del [repositorio oficial de Google Fonts](https://github.com/google/fonts).
+Se cargan con `next/font/local` para que el build de Docker no dependa de descargar fuentes
+de Google durante cada despliegue.
 
 ## Reseñas De Google
 

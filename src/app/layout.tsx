@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Baloo_2, Nunito } from "next/font/google";
+import localFont from "next/font/local";
 import { ComingSoon } from "@/components/ComingSoon";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -9,16 +9,18 @@ import { comingSoon } from "@/data/site";
 import { buildMetadata } from "@/data/seo";
 import "./globals.css";
 
-const baloo = Baloo_2({
+const baloo = localFont({
+  src: "./fonts/Baloo2-Variable.woff2",
   variable: "--font-baloo",
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "600 800",
+  display: "swap",
 });
 
-const nunito = Nunito({
+const nunito = localFont({
+  src: "./fonts/Nunito-Variable.woff2",
   variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
+  weight: "400 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

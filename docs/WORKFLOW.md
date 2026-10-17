@@ -35,6 +35,16 @@ npm run build
 
 Ambos deben pasar.
 
+## Verificación De Publicación En Dokploy
+
+Después de cada push a `main`, entrar a [Dokploy](http://100.77.7.28:3000/dashboard/home)
+y revisar **BKids → production → Web → Deployments**.
+
+- Confirmar que el redeploy automático corresponde al commit que se acaba de subir.
+- Esperar a que termine con estado **Done**. Si falla, revisar el registro y resolver la causa.
+- Comprobar en [bkids.cl](https://bkids.cl/) que los cambios estén publicados.
+- Dar por terminada la publicación solo después de estas verificaciones.
+
 ## Variables De Entorno Del Formulario
 
 Para probar el envío real de correos, configura:
