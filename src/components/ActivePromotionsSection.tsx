@@ -45,11 +45,15 @@ export function ActivePromotionsSection() {
             Novedades BKids
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
-            Promociones y talleres de temporada
+            Promociones vigentes
           </h2>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-6xl gap-5 md:grid-cols-2">
+        <div
+          className={`mx-auto mt-8 grid gap-5 ${
+            homeActivePromotions.length === 1 ? "max-w-xl" : "max-w-6xl md:grid-cols-2"
+          }`}
+        >
           {homeActivePromotions.map((promotion) => {
             return (
               <article

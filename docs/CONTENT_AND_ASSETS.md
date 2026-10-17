@@ -73,7 +73,6 @@ cama-elastica.jpg
 pared-legos.jpg
 maquina-pelotas.jpg
 area-ninja.jpg
-talleres-generico.jpg
 cumpleanos.jpg
 hero-home-video.mp4
 maquina-pelotas-ninos.jpg
@@ -82,9 +81,7 @@ resfalin-ninos.jpg
 tobogan-nino.jpg
 equipo-bkids-conocenos.jpg
 cumpleanos-header.jpg
-cumpleanos-info.jpg
 quienes-somos-familia-secundaria.jpg
-taller-invierno-recap.jpg
 quienes-somos-foto-nosotros.jpg
 quienes-somos-equipo-secundaria.jpg
 attractions/area-ninja-bkids.jpg
@@ -102,8 +99,7 @@ workshops/taller-bkids-07.jpg
 workshops/taller-mesa-gorritos-bkids.jpg
 workshops/workshop-hero-taller-creativo-bkids.jpg
 promotions/home-lunes-2x1-bkids.jpg
-promotions/cumpleanos-mayo-descuento-bkids.jpg
-promotions/talleres-invierno-bkids.jpg
+promotions/home-lunes-2x1-vertical-bkids.png
 heroes/hero-precios-bkids.jpg
 about/equipo-bkids-01.jpg
 about/equipo-bkids-02.jpg
