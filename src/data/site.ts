@@ -41,7 +41,6 @@ export const legal = {
   developerName: "BYL",
   developerUrl: "https://byl-software.vercel.app/",
   developerLogo: "/images/brand/byl-icon.svg",
-  developerWordmark: "/images/brand/byl-logo.svg",
 };
 
 export const navItems = [

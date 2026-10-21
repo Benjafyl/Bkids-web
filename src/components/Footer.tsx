@@ -56,7 +56,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-white/20 pt-6 text-center text-xs font-semibold leading-6 text-white/80">
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-white/20 pt-6 text-center text-xs font-semibold leading-6 text-white/80 sm:flex-row sm:justify-between sm:gap-6 sm:pr-20 sm:text-left 2xl:pr-0">
           <p>
             © {currentYear} {legal.copyrightName}. Todos los derechos reservados.
           </p>
@@ -65,24 +65,17 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Desarrollado por ${legal.developerName}. Visitar su sitio web (abre en una nueva pestaña)`}
-            className="mx-auto mt-3 inline-flex items-center justify-center gap-3 rounded-xl bg-white/95 px-4 py-2 text-sm text-[#12314d] ring-1 ring-white/60 transition-colors duration-200 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="group inline-flex min-h-11 shrink-0 items-center gap-2.5 rounded-lg px-2 py-1.5 text-xs font-normal text-white transition-colors duration-200 ease-out hover:bg-white hover:text-foreground focus-visible:bg-white focus-visible:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
-            <span>Desarrollado por</span>
-            <span className="inline-flex shrink-0 items-center gap-1">
-              <Image
-                src={legal.developerLogo}
-                alt=""
-                width={32}
-                height={32}
-                className="h-8 w-8"
-              />
-              <Image
-                src={legal.developerWordmark}
-                alt={legal.developerName}
-                width={62}
-                height={48}
-                className="h-12 w-auto"
-              />
+            <Image
+              src={legal.developerLogo}
+              alt=""
+              width={30}
+              height={30}
+              className="size-7.5 shrink-0 transition-transform duration-200 ease-out motion-safe:group-hover:-rotate-[5deg] motion-safe:group-focus-visible:-rotate-[5deg] motion-safe:group-active:-rotate-[5deg] motion-safe:group-active:scale-95"
+            />
+            <span>
+              Desarrollado por <strong className="font-extrabold">{legal.developerName}</strong>
             </span>
           </Link>
         </div>

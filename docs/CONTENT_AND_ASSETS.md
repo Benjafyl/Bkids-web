@@ -158,9 +158,13 @@ de Google durante cada despliegue.
 
 ## Firma De Desarrollo
 
-El footer muestra “Desarrollado por BYL” con el icono y logotipo originales de la marca.
-Los SVG de `public/images/brand/byl-icon.svg` y `byl-logo.svg` provienen del paquete
-de identidad BYL compartido en Drive. Conservar sus proporciones y colores.
+El footer muestra una firma compacta “Desarrollado por BYL”, sin recuadro permanente.
+El icono original `public/images/brand/byl-icon.svg` proviene del paquete de identidad
+BYL compartido en Drive. Conservar sus proporciones y colores.
+La firma se alinea a la derecha en escritorio y se centra en móvil, dejando espacio
+para el botón flotante de WhatsApp. El icono gira suavemente al pasar el cursor o
+enfocar con teclado y se comprime ligeramente al pulsar; estos movimientos se omiten
+si el usuario prefiere movimiento reducido.
 El nombre, enlace e imágenes se configuran en `legal` dentro de `src/data/site.ts`.
 El enlace actual es `https://byl-software.vercel.app/` y se abre en una nueva pestaña.
 
