@@ -156,6 +156,14 @@ del [repositorio oficial de Google Fonts](https://github.com/google/fonts).
 Se cargan con `next/font/local` para que el build de Docker no dependa de descargar fuentes
 de Google durante cada despliegue.
 
+## Firma De Desarrollo
+
+El footer muestra “Desarrollado por BYL” con el icono y logotipo originales de la marca.
+Los SVG de `public/images/brand/byl-icon.svg` y `byl-logo.svg` provienen del paquete
+de identidad BYL compartido en Drive. Conservar sus proporciones y colores.
+El nombre, enlace e imágenes se configuran en `legal` dentro de `src/data/site.ts`.
+El enlace actual es `https://byl-software.vercel.app/` y se abre en una nueva pestaña.
+
 ## Reseñas De Google
 
 Las 2 reseñas visibles de Inicio se editan en:

@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="relative mt-auto overflow-hidden bg-[#0a72ce] text-white">
       <div className="wave-top absolute inset-x-0 top-0 h-16 bg-white" aria-hidden="true" />
-      <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-28 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 pb-24 pt-28 sm:pb-10 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <Image
@@ -64,21 +64,25 @@ export function Footer() {
             href={legal.developerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Instagram de ${legal.developerName}`}
-            className="mx-auto mt-3 inline-flex items-center justify-center gap-3 rounded-xl bg-white/95 px-4 py-3 text-sm text-[#12314d] shadow-lg shadow-sky-950/10 ring-1 ring-white/60 transition hover:-translate-y-0.5 hover:bg-[#fff7da] hover:shadow-xl"
+            aria-label={`Desarrollado por ${legal.developerName}. Visitar su sitio web (abre en una nueva pestaña)`}
+            className="mx-auto mt-3 inline-flex items-center justify-center gap-3 rounded-xl bg-white/95 px-4 py-2 text-sm text-[#12314d] ring-1 ring-white/60 transition-colors duration-200 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
-            <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-black/85 shadow-sm ring-1 ring-white/10">
+            <span>Desarrollado por</span>
+            <span className="inline-flex shrink-0 items-center gap-1">
               <Image
                 src={legal.developerLogo}
                 alt=""
                 width={32}
                 height={32}
-                className="h-full w-full object-cover"
+                className="h-8 w-8"
               />
-            </span>
-            <span>
-              Desarrollado por{" "}
-              <span className="font-black text-[#0a72ce]">{legal.developerName}</span>
+              <Image
+                src={legal.developerWordmark}
+                alt={legal.developerName}
+                width={62}
+                height={48}
+                className="h-12 w-auto"
+              />
             </span>
           </Link>
         </div>

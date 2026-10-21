@@ -38,9 +38,10 @@ export const legal = {
   businessName: "Entretenciones QR SPA",
   rut: "77.927.601-5",
   copyrightName: "BKids",
-  developerName: "Dream Web Chile",
-  developerUrl: "https://www.instagram.com/dreamwebchile/",
-  developerLogo: "/images/brand/dream-web-chile-icon.png",
+  developerName: "BYL",
+  developerUrl: "https://byl-software.vercel.app/",
+  developerLogo: "/images/brand/byl-icon.svg",
+  developerWordmark: "/images/brand/byl-logo.svg",
 };
 
 export const navItems = [
