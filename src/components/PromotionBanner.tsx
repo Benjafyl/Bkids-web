@@ -8,6 +8,7 @@ type PromotionBannerProps = {
   imageAspect?: "square" | "poster";
   reverse?: boolean;
   className?: string;
+  embedded?: boolean;
 };
 
 function isExternalLink(href: string) {
@@ -47,15 +48,18 @@ export function PromotionBanner({
   imageAspect = "square",
   reverse = false,
   className = "bg-white",
+  embedded = false,
 }: PromotionBannerProps) {
+  const Container = embedded ? "article" : "section";
+  const Heading = embedded ? "h3" : "h2";
   const aspectClass =
     imageAspect === "poster"
       ? "aspect-[9/16] max-w-[390px] sm:max-w-[430px]"
       : "aspect-square max-w-[520px]";
 
   return (
-    <section className={`py-12 sm:py-16 ${className}`}>
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <Container className={embedded ? undefined : `py-12 sm:py-16 ${className}`}>
+      <div className={embedded ? undefined : "mx-auto max-w-7xl px-4 lg:px-8"}>
         <div className="overflow-hidden rounded-[34px] bg-[#e9f9ff] p-5 shadow-xl shadow-sky-100 sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className={reverse ? "lg:order-2" : ""}>
@@ -63,9 +67,9 @@ export function PromotionBanner({
                 <Sparkles className="h-4 w-4" />
                 {promotion.eyebrow}
               </span>
-              <h2 className="mt-5 max-w-xl text-4xl font-black leading-[0.95] text-[#0a72ce] sm:text-5xl">
+              <Heading className="mt-5 max-w-xl font-display text-4xl font-black leading-tight text-[#0a72ce] sm:text-5xl">
                 {promotion.title}
-              </h2>
+              </Heading>
               <p className="mt-5 max-w-2xl text-lg font-semibold leading-8 text-slate-700">
                 {promotion.text}
               </p>
@@ -101,6 +105,6 @@ export function PromotionBanner({
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 }

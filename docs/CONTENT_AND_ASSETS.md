@@ -156,6 +156,17 @@ del [repositorio oficial de Google Fonts](https://github.com/google/fonts).
 Se cargan con `next/font/local` para que el build de Docker no dependa de descargar fuentes
 de Google durante cada despliegue.
 
+## Promociones Y Novedades De Inicio
+
+`src/data/promotions.ts` centraliza la promoción destacada de octubre de 2026,
+el afiche de días fríos y de lluvia y la promoción de lunes 2x1.
+Los afiches originales están en `public/images/promotions/` y se muestran completos.
+La oferta de octubre es de 2 horas de juego por $10.000 y vence el 1 de noviembre
+de 2026 a las 00:00 de Santiago (`expiresAt`, límite exclusivo).
+`ActivePromotionsSection` usa `connection()` para evaluar la vigencia en cada petición:
+Inicio se renderiza en el servidor y la oferta vencida desaparece sin otro redeploy.
+Los precios regulares de entradas se mantienen en `src/data/site.ts`.
+
 ## Firma De Desarrollo
 
 El footer muestra una firma compacta “Desarrollado por BYL”, sin recuadro permanente.

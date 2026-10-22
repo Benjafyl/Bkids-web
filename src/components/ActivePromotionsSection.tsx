@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { connection } from "next/server";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { homeActivePromotions } from "@/data/promotions";
+import { PromotionBanner } from "@/components/PromotionBanner";
+import { homeActivePromotions, homeFeaturedPromotion, isPromotionActive } from "@/data/promotions";
 
 function isExternalLink(href: string) {
   return href.startsWith("http");
@@ -35,7 +37,14 @@ function PromotionLink({
   );
 }
 
-export function ActivePromotionsSection() {
+export async function ActivePromotionsSection() {
+  await connection();
+  const now = new Date();
+  const promotions = homeActivePromotions.filter((promotion) => isPromotionActive(promotion, now));
+  const showFeaturedPromotion = isPromotionActive(homeFeaturedPromotion, now);
+
+  if (!showFeaturedPromotion && promotions.length === 0) return null;
+
   return (
     <section className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -45,37 +54,47 @@ export function ActivePromotionsSection() {
             Novedades BKids
           </p>
           <h2 className="mt-4 font-display text-4xl font-black leading-none text-[#0a72ce] sm:text-5xl">
-            Promociones vigentes
+            Promociones y novedades
           </h2>
         </div>
 
+        {showFeaturedPromotion ? (
+          <div className="mt-8">
+            <PromotionBanner promotion={homeFeaturedPromotion} embedded />
+          </div>
+        ) : null}
+
         <div
           className={`mx-auto mt-8 grid gap-5 ${
-            homeActivePromotions.length === 1 ? "max-w-xl" : "max-w-6xl md:grid-cols-2"
+            promotions.length === 1 ? "max-w-xl" : "max-w-6xl md:grid-cols-2"
           }`}
         >
-          {homeActivePromotions.map((promotion) => {
+          {promotions.map((promotion) => {
             return (
               <article
                 key={promotion.title}
-                className="rounded-[28px] bg-[#f8fdff] p-5 text-center shadow-lg shadow-sky-100 ring-1 ring-sky-100"
+                className="flex flex-col rounded-[28px] bg-[#f8fdff] p-5 text-center shadow-lg shadow-sky-100 ring-1 ring-sky-100"
               >
                 <p className="mx-auto inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-black uppercase text-[#ef3854] shadow-sm">
                   <Sparkles className="h-4 w-4" />
                   {promotion.eyebrow}
                 </p>
-                <div className="mx-auto mt-5 flex h-[520px] max-w-[295px] items-center justify-center sm:h-[590px] sm:max-w-[332px]">
+                <div className="mx-auto mt-5 flex h-[520px] w-full max-w-[295px] items-center justify-center sm:h-[590px] sm:max-w-[332px]">
                   <div className="relative h-full w-full overflow-hidden rounded-[24px] bg-white shadow-md shadow-sky-100 ring-4 ring-white">
                     <Image
                       src={promotion.image}
                       alt={promotion.alt}
                       fill
                       sizes="(min-width: 768px) 245px, 80vw"
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 </div>
-                <div className="mx-auto mt-5 grid max-w-[280px] gap-3">
+                <h3 className="mt-5 font-display text-2xl font-black leading-tight text-[#0a72ce]">
+                  {promotion.title}
+                </h3>
+                <p className="mt-2 text-sm font-semibold leading-6 text-slate-600">{promotion.text}</p>
+                <div className="mx-auto mt-auto grid w-full max-w-[280px] gap-3 pt-5">
                   <PromotionLink href={promotion.primaryHref} label={promotion.primaryLabel} />
                   {promotion.secondaryHref && promotion.secondaryLabel ? (
                     <PromotionLink
