@@ -39,7 +39,7 @@ export const legal = {
   rut: "77.927.601-5",
   copyrightName: "BKids",
   developerName: "BYL",
-  developerUrl: "https://byl-software.vercel.app/",
+  developerUrl: "https://bylsoftware.cl/",
   developerLogo: "/images/brand/byl-icon.svg",
 };
 

@@ -166,7 +166,7 @@ para el botón flotante de WhatsApp. El icono gira suavemente al pasar el cursor
 enfocar con teclado y se comprime ligeramente al pulsar; estos movimientos se omiten
 si el usuario prefiere movimiento reducido.
 El nombre, enlace e imágenes se configuran en `legal` dentro de `src/data/site.ts`.
-El enlace actual es `https://byl-software.vercel.app/` y se abre en una nueva pestaña.
+El enlace actual es `https://bylsoftware.cl/` y se abre en una nueva pestaña.
 
 ## Reseñas De Google
 
