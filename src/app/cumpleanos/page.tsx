@@ -8,6 +8,8 @@ import { BirthdayPlansSection } from "@/components/BirthdayPlansSection";
 import { BirthdayPricesTable } from "@/components/BirthdayPricesTable";
 import { BirthdayScheduleSection } from "@/components/BirthdayScheduleSection";
 import { Hero } from "@/components/Hero";
+import { ScheduledPromotionBanner } from "@/components/ScheduledPromotionBanner";
+import { birthdayNovemberPromotion } from "@/data/promotions";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { birthdayPdfUrl, getBirthdayWhatsappUrl } from "@/data/birthday";
 import { heroImages } from "@/data/site";
@@ -31,6 +33,7 @@ export default function BirthdaysPage() {
         eyebrow="Celebraciones BKids"
       />
 
+      <ScheduledPromotionBanner promotion={birthdayNovemberPromotion} id="promocion-cumpleanos" />
       <section className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="relative aspect-[16/7] overflow-hidden rounded-[34px] bg-[#e9f9ff] shadow-xl shadow-sky-100 ring-1 ring-sky-100">

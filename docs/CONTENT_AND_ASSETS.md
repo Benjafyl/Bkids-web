@@ -158,13 +158,21 @@ de Google durante cada despliegue.
 
 ## Promociones Y Novedades De Inicio
 
-`src/data/promotions.ts` centraliza la promoción destacada de octubre de 2026,
-el afiche de días fríos y de lluvia y la promoción de lunes 2x1.
+`src/data/promotions.ts` centraliza las novedades destacadas, el afiche de días fríos
+y de lluvia y la promoción de lunes 2x1.
 Los afiches originales están en `public/images/promotions/` y se muestran completos.
-La oferta de octubre es de 2 horas de juego por $10.000 y vence el 1 de noviembre
-de 2026 a las 00:00 de Santiago (`expiresAt`, límite exclusivo).
-`ActivePromotionsSection` usa `connection()` para evaluar la vigencia en cada petición:
-Inicio se renderiza en el servidor y la oferta vencida desaparece sin otro redeploy.
+En Inicio, los afiches y botones de cumpleaños y Navidad enlazan a sus respectivas páginas:
+- Cumpleaños: 20% de descuento solo en planes básicos durante noviembre de 2026;
+  vence el 1 de diciembre de 2026 a las 00:00 de Santiago.
+- Talleres de Navidad: 14 al 18 de diciembre de 2026, 9:00 a 13:00, niños de 3 a 8 años
+  sin pañales; $20.000 diario, $18.000 hermanos y $80.000 semana. Incluye materiales,
+  juego y colación. Se oculta el 19 de diciembre a las 00:00 de Santiago.
+Los originales recibidos el 5 de noviembre de 2026 se conservan sin recortes como
+`cumpleanos-noviembre-2026-bkids.jpg` y `talleres-navidad-diciembre-2026-bkids.jpg`.
+`ActivePromotionsSection` y `ScheduledPromotionBanner` usan `connection()` para evaluar
+la vigencia en cada petición. Inicio, Cumpleaños y Talleres se renderizan en servidor:
+los anuncios vencidos desaparecen sin otro redeploy (`expiresAt`, límite exclusivo).
+La oferta de octubre de 2026 ya no se publica.
 Los precios regulares de entradas se mantienen en `src/data/site.ts`.
 
 ## Firma De Desarrollo

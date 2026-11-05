@@ -5,7 +5,8 @@ import type { PromotionBanner as PromotionBannerData } from "@/data/promotions";
 
 type PromotionBannerProps = {
   promotion: PromotionBannerData;
-  imageAspect?: "square" | "poster";
+  imageAspect?: "square" | "poster" | "portrait";
+  imageHref?: string;
   reverse?: boolean;
   className?: string;
   embedded?: boolean;
@@ -45,7 +46,8 @@ function PromoLink({
 
 export function PromotionBanner({
   promotion,
-  imageAspect = "square",
+  imageAspect = promotion.imageAspect ?? "square",
+  imageHref,
   reverse = false,
   className = "bg-white",
   embedded = false,
@@ -55,7 +57,18 @@ export function PromotionBanner({
   const aspectClass =
     imageAspect === "poster"
       ? "aspect-[9/16] max-w-[390px] sm:max-w-[430px]"
-      : "aspect-square max-w-[520px]";
+      : imageAspect === "portrait"
+        ? "aspect-[533/640] max-w-[480px]"
+        : "aspect-square max-w-[520px]";
+  const flyer = (
+    <Image
+      src={promotion.image}
+      alt={promotion.alt}
+      fill
+      sizes={imageAspect === "poster" ? "(min-width: 1024px) 430px, 90vw" : "(min-width: 1024px) 520px, 90vw"}
+      className="object-contain"
+    />
+  );
 
   return (
     <Container className={embedded ? undefined : `py-12 sm:py-16 ${className}`}>
@@ -89,17 +102,11 @@ export function PromotionBanner({
               <div
                 className={`relative mx-auto w-full ${aspectClass} overflow-hidden rounded-[30px] bg-white shadow-xl shadow-sky-200 ring-4 ring-white`}
               >
-                <Image
-                  src={promotion.image}
-                  alt={promotion.alt}
-                  fill
-                  sizes={
-                    imageAspect === "poster"
-                      ? "(min-width: 1024px) 430px, 90vw"
-                      : "(min-width: 1024px) 520px, 90vw"
-                  }
-                  className="object-contain"
-                />
+                {imageHref ? (
+                  <Link href={imageHref} aria-label={promotion.primaryLabel} className="absolute inset-0 rounded-[30px] focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-[#0a72ce]">
+                    {flyer}
+                  </Link>
+                ) : flyer}
               </div>
             </div>
           </div>

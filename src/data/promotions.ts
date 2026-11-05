@@ -11,6 +11,7 @@ export type PromotionBanner = {
   secondaryLabel?: string;
   secondaryHref?: string;
   expiresAt?: string;
+  imageAspect?: "square" | "poster" | "portrait";
 };
 
 export const homePromotion: PromotionBanner = {
@@ -25,18 +26,45 @@ export const homePromotion: PromotionBanner = {
   secondaryHref: contact.whatsappUrl,
 };
 
-export const homeFeaturedPromotion: PromotionBanner = {
-  eyebrow: "Solo por octubre de 2026",
-  title: "2 horas de juego por $10.000",
-  text: "¡Octubre de miedo en BKids! Aprovecha esta promoción durante octubre de 2026 y ven a disfrutar de nuestros juegos.",
-  image: "/images/promotions/octubre-2026-dos-horas-bkids.jpeg",
-  alt: "Octubre de miedo en BKids: 2 horas de juego por $10.000 durante octubre de 2026",
-  primaryLabel: "Consultar promoción",
+export const birthdayNovemberPromotion: PromotionBanner = {
+  eyebrow: "Noviembre de 2026 · Solo planes básicos",
+  title: "20% de descuento en cumpleaños",
+  text: "Celebra su cumpleaños en BKids durante noviembre de 2026 con un 20% de descuento, válido solo para planes básicos. Consulta disponibilidad y organiza su gran día con nosotros.",
+  image: "/images/promotions/cumpleanos-noviembre-2026-bkids.jpg",
+  alt: "20% de descuento en cumpleaños en BKids durante noviembre de 2026, solo válido para planes básicos",
+  primaryLabel: "Consultar descuento",
   primaryHref: `${contact.whatsappUrl.split("?")[0]}?text=${encodeURIComponent(
-    "Hola BKids, quiero consultar por la promoción de octubre de 2026: 2 horas de juego por $10.000.",
+    "Hola BKids, quiero consultar por el 20% de descuento en planes básicos de cumpleaños durante noviembre de 2026.",
   )}`,
-  expiresAt: "2026-11-01T00:00:00-03:00",
+  expiresAt: "2026-12-01T00:00:00-03:00",
 };
+
+export const christmasWorkshopPromotion: PromotionBanner = {
+  eyebrow: "14 al 18 de diciembre de 2026",
+  title: "Talleres de Navidad",
+  text: "De 9:00 a 13:00, para niños de 3 a 8 años sin pañales. $20.000 diario, $18.000 hermanos y $80.000 la semana. Incluye materiales, juego y colación. Te esperamos en Camino El Alba 12620, Local 16B, Las Condes.",
+  image: "/images/promotions/talleres-navidad-diciembre-2026-bkids.jpg",
+  alt: "Talleres de Navidad BKids del 14 al 18 de diciembre, de 9:00 a 13:00, para niños de 3 a 8 años sin pañales: $20.000 diario, $18.000 hermanos y $80.000 semana; incluye materiales, juego y colación",
+  imageAspect: "portrait",
+  primaryLabel: "Consultar talleres",
+  primaryHref: `${contact.whatsappUrl.split("?")[0]}?text=${encodeURIComponent(
+    "Hola BKids, quiero consultar por los talleres de Navidad del 14 al 18 de diciembre de 2026.",
+  )}`,
+  expiresAt: "2026-12-19T00:00:00-03:00",
+};
+
+export const homeFeaturedPromotions: PromotionBanner[] = [
+  {
+    ...birthdayNovemberPromotion,
+    primaryLabel: "Ver cumpleaños",
+    primaryHref: "/cumpleanos#promocion-cumpleanos",
+  },
+  {
+    ...christmasWorkshopPromotion,
+    primaryLabel: "Ver talleres de Navidad",
+    primaryHref: "/talleres#talleres-navidad",
+  },
+];
 
 export const rainyDaysPromotion: PromotionBanner = {
   eyebrow: "Diversión bajo techo",

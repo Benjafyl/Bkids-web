@@ -3,7 +3,7 @@ import Link from "next/link";
 import { connection } from "next/server";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { PromotionBanner } from "@/components/PromotionBanner";
-import { homeActivePromotions, homeFeaturedPromotion, isPromotionActive } from "@/data/promotions";
+import { homeActivePromotions, homeFeaturedPromotions, isPromotionActive } from "@/data/promotions";
 
 function isExternalLink(href: string) {
   return href.startsWith("http");
@@ -41,9 +41,9 @@ export async function ActivePromotionsSection() {
   await connection();
   const now = new Date();
   const promotions = homeActivePromotions.filter((promotion) => isPromotionActive(promotion, now));
-  const showFeaturedPromotion = isPromotionActive(homeFeaturedPromotion, now);
+  const featuredPromotions = homeFeaturedPromotions.filter((promotion) => isPromotionActive(promotion, now));
 
-  if (!showFeaturedPromotion && promotions.length === 0) return null;
+  if (featuredPromotions.length === 0 && promotions.length === 0) return null;
 
   return (
     <section className="bg-white py-12 sm:py-16">
@@ -58,11 +58,11 @@ export async function ActivePromotionsSection() {
           </h2>
         </div>
 
-        {showFeaturedPromotion ? (
-          <div className="mt-8">
-            <PromotionBanner promotion={homeFeaturedPromotion} embedded />
+        {featuredPromotions.map((promotion) => (
+          <div key={promotion.image} className="mt-8">
+            <PromotionBanner promotion={promotion} imageHref={promotion.primaryHref} embedded />
           </div>
-        ) : null}
+        ))}
 
         <div
           className={`mx-auto mt-8 grid gap-5 ${
