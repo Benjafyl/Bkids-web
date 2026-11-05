@@ -66,17 +66,7 @@ export const homeFeaturedPromotions: PromotionBanner[] = [
   },
 ];
 
-export const rainyDaysPromotion: PromotionBanner = {
-  eyebrow: "Diversión bajo techo",
-  title: "En días fríos y de lluvia, ¡ven a BKids!",
-  text: "Tenemos calefacción y un ambiente grato y seguro para jugar, aunque afuera haga frío o llueva.",
-  image: "/images/promotions/dias-frios-lluvia-bkids.jpeg",
-  alt: "BKids te espera en días fríos y de lluvia, con calefacción y un ambiente grato y seguro para jugar",
-  primaryLabel: "Consultar por WhatsApp",
-  primaryHref: contact.whatsappUrl,
-};
-
-export const homeActivePromotions = [rainyDaysPromotion, homePromotion];
+export const homeActivePromotions = [homePromotion];
 
 export function isPromotionActive(promotion: PromotionBanner, now = new Date()) {
   return !promotion.expiresAt || now.getTime() < new Date(promotion.expiresAt).getTime();

@@ -158,8 +158,8 @@ de Google durante cada despliegue.
 
 ## Promociones Y Novedades De Inicio
 
-`src/data/promotions.ts` centraliza las novedades destacadas, el afiche de días fríos
-y de lluvia y la promoción de lunes 2x1.
+`src/data/promotions.ts` centraliza las novedades destacadas y la promoción de lunes 2x1.
+El afiche de días fríos y lluvia fue retirado de Inicio.
 Los afiches originales están en `public/images/promotions/` y se muestran completos.
 En Inicio, los afiches y botones de cumpleaños y Navidad enlazan a sus respectivas páginas:
 - Cumpleaños: 20% de descuento solo en planes básicos durante noviembre de 2026;
