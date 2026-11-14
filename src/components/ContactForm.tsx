@@ -136,6 +136,7 @@ export function ContactForm() {
         }
 
         setSubmitted(true);
+        window.dispatchEvent(new Event("site:lead"));
         setForm(initialState);
       } catch (error) {
         setSubmitError(

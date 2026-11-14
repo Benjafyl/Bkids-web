@@ -141,3 +141,7 @@ git add .
 git commit -m "dockeriza bkids para dockploy"
 git push
 ```
+# Medición opcional
+
+El sitio admite un flujo propio de Google Analytics 4 con `NEXT_PUBLIC_SITE_GA4_ID` en el entorno de compilación. La etiqueta se carga solo después de que el visitante acepte estadísticas. Se registran visitas, navegación, clics de contacto y formularios enviados correctamente, sin datos escritos en el formulario. No se instala Microsoft Clarity en este sitio infantil.
+

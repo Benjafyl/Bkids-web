@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import { ComingSoon } from "@/components/ComingSoon";
 import { Footer } from "@/components/Footer";
@@ -54,6 +55,18 @@ export default function RootLayout({
       className={`${baloo.variable} ${nunito.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <script
+          id="site-measurement-config"
+          type="application/json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              ga4Id: process.env.NEXT_PUBLIC_SITE_GA4_ID || "",
+              clarityId: "",
+              hosts: ["bkids.cl", "www.bkids.cl"],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+        <Script src="/site-measurement.js" strategy="afterInteractive" />
         <WebsiteJsonLd />
         <LocalBusinessJsonLd />
         {comingSoon.enabled ? (
